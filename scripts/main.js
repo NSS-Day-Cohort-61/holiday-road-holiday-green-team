@@ -1,10 +1,19 @@
-import { HolidayRoad } from "./HolidayRoad.js"
+import { fetchParks } from "./data/dataAccess.js";
+import { HolidayRoad } from "./HolidayRoad.js";
 
+const applicationElement = document.querySelector("#container");
 
-const applicationElement = document.querySelector("#container")
+applicationElement.addEventListener(
+  "stateChanged",
+  customEvent => {
+    renderApp()
+  }
+)
 
-export const renderApp = () => {
-  applicationElement.innerHTML = HolidayRoad()
-}
+const renderApp = () => {
+  fetchParks().then(() => {
+    applicationElement.innerHTML = HolidayRoad();
+  });
+};
 
-renderApp()
+renderApp();
