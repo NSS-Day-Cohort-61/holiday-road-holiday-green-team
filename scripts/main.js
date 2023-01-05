@@ -1,10 +1,14 @@
+import { fetchEateries } from "./data/dataAccess.js"
 import { HolidayRoad } from "./HolidayRoad.js"
 
 
 const applicationElement = document.querySelector("#container")
 
 export const renderApp = () => {
-  applicationElement.innerHTML = HolidayRoad()
+  fetchEateries() 
+  .then(() => {
+    applicationElement.innerHTML = HolidayRoad()
+  })
 }
 
 renderApp()

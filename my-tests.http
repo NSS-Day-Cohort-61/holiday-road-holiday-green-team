@@ -1,0 +1,14 @@
+@weatherAPI = api.openweathermap.org/data/2.5/forecast?lat=37.83930035&lon=-119.51646348068644&appid=cb84428be67a66a9ee7236c569d3185c
+
+Get {{weatherAPI}}
+###
+
+post {{weatherAPI}}
+Content-Type: application/json
+
+{
+    "message": "hello world"
+}
+
+
+

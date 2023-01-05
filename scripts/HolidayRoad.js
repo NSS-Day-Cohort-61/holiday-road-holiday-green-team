@@ -1,3 +1,5 @@
+import { eateryDropdown } from "./eateries/EateryProvider.js"
+
 export const HolidayRoad = () => {
   return `
   <h2> Holiday Road </h2>
@@ -8,9 +10,10 @@ export const HolidayRoad = () => {
     <select>
       <option>Choose your bizzarary...</option>
     </select>
-    <select>
-      <option>Choose your eatery...</option>
-    </select>
+    
+      ${eateryDropdown()}
+      
+    
   </div>
   <div id="mainContent">
     <div id="itineraryPreviewContainer">
