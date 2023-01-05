@@ -1,14 +1,24 @@
+import { fetchParks } from "./data/dataAccess.js";
 import { fetchEateries } from "./data/dataAccess.js"
-import { HolidayRoad } from "./HolidayRoad.js"
+import { HolidayRoad } from "./HolidayRoad.js";
 
+const applicationElement = document.querySelector("#container");
 
-const applicationElement = document.querySelector("#container")
+applicationElement.addEventListener(
+  "stateChanged",
+  customEvent => {
+    renderApp()
+  }
+)
 
-export const renderApp = () => {
-  fetchEateries() 
+const renderApp = () => {
+  fetchEateries()
   .then(() => {
-    applicationElement.innerHTML = HolidayRoad()
+    fetchParks()
   })
-}
+  .then(() => {
+    applicationElement.innerHTML = HolidayRoad();
+  });
+};
 
-renderApp()
+renderApp();
