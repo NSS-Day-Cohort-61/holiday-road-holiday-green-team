@@ -1,0 +1,30 @@
+#selectDropdowns {
+  display: flex;
+  border: 1px solid black;
+}
+
+#mainContent {
+  display: flex;
+  border: 1px solid black;
+}
+
+#itineraryPreviewContainer {
+  display: flex;
+  border: 1px solid black;
+  width: 34%;
+  flex-direction: column;
+}
+
+#weatherContainer {
+  display: flex;
+  border: 1px solid black;
+  width: 33%;
+  height: 400px;
+}
+
+#savedItineraryListContainer {
+  display: flex;
+  border: 1px solid black;
+  width: 33%;
+  flex-direction: column;
+}
