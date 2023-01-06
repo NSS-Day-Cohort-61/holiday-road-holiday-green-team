@@ -1,0 +1,3 @@
+@parksAPI = https://developer.nps.gov/api/v1/parks?api_key=hXdijlOhZoMkut0bIJNz43BasnOA8NpbOIiLSTiT
+
+get {{parksAPI}}
