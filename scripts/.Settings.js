@@ -1,4 +1,4 @@
-export default  {
+export default {
 	graphhopperKey: "",
 	npsKey: "",
 	weatherKey: ""

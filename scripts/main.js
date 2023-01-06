@@ -1,4 +1,4 @@
-import { fetchParks } from "./data/dataAccess.js";
+import { fetchBizarreries, fetchParks } from "./data/dataAccess.js";
 import { fetchEateries } from "./data/dataAccess.js"
 import { HolidayRoad } from "./HolidayRoad.js";
 
@@ -13,12 +13,15 @@ applicationElement.addEventListener(
 
 const renderApp = () => {
   fetchEateries()
-  .then(() => {
-    fetchParks()
-  })
-  .then(() => {
-    applicationElement.innerHTML = HolidayRoad();
-  });
+    .then(() => {
+      fetchParks()
+    })
+    .then(() => {
+      fetchBizarreries()
+    })
+    .then(() => {
+      applicationElement.innerHTML = HolidayRoad();
+    });
 };
 
 renderApp();
