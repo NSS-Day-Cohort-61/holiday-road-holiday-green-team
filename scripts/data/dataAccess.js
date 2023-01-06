@@ -9,10 +9,13 @@ const applicationState = {
   parks: [],
   eateries: [],
   bizarreries: [],
-  selectedPark: {},
-  selectedEatery: {},
-  selectedBizarrerie: {},
-  weather: []
+  currentItinerary: {
+    selectedPark: {},
+    selectedEatery: {},
+    selectedBizarrerie: {}
+  },
+  weather: [],
+  savedItineraries: []
 };
 
 export const fetchParks = () => {
@@ -57,11 +60,11 @@ export const getWeather = () => {
 };
 
 export const getSelectedPark = () => {
-  return { ...applicationState.selectedPark };
+  return { ...applicationState.currentItinerary.selectedPark };
 };
 
 export const getSelectedBizarrerie = () => {
-  return { ...applicationState.selectedBizarrerie };
+  return { ...applicationState.currentItinerary.selectedBizarrerie };
 };
 
 export const getEateries = () => {
@@ -69,7 +72,7 @@ export const getEateries = () => {
 }
 
 export const getSelectedEatery = () => {
-  return { ...applicationState.selectedEatery };
+  return { ...applicationState.currentItinerary.selectedEatery };
 }
 
 export const getBizarreries = () => {
@@ -77,16 +80,16 @@ export const getBizarreries = () => {
 }
 
 export const setSelectedPark = (parkObject) => {
-  applicationState.selectedPark = parkObject;
+  applicationState.currentItinerary.selectedPark = parkObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
 export const setSelectedEatery = (eateryObject) => {
-  applicationState.selectedEatery = eateryObject;
+  applicationState.currentItinerary.selectedEatery = eateryObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 }
 
 export const setSelectedBizarrerie = (bizObject) => {
-  applicationState.selectedBizarrerie = bizObject;
+  applicationState.currentItinerary.selectedBizarrerie = bizObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
