@@ -6,6 +6,7 @@ const parksURL = `https://developer.nps.gov/api/v1/parks?api_key=${keys.npsKey}`
 
 //https://openweathermap.org/forecast5 <--- weather API endpoint
 
+
 const applicationState = {
   itineraries: [],
   parks: [],
@@ -26,4 +27,13 @@ export const getParks = () => {
     console.log(park.fullName)
   }
   return applicationState.parks.map((park) => ({ ...park }));
+};
+
+export const fetchWeather = (lat,lon) => {
+  const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}appid=${keys.weatherKey}&units=imperial`
+  return fetch(`${weatherURL}`)
+    .then((response) => response.json())
+    .then((data) => {
+      applicationState.weather = data.data;
+    });
 };
