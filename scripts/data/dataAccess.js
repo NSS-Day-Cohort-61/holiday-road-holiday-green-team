@@ -11,6 +11,7 @@ const applicationState = {
   bizarreries: [],
   selectedPark: {},
   selectedEatery: {},
+  selectedBizarrerie: {},
   weather: []
 };
 
@@ -59,6 +60,10 @@ export const getSelectedPark = () => {
   return { ...applicationState.selectedPark };
 };
 
+export const getSelectedBizarrerie = () => {
+  return { ...applicationState.selectedBizarrerie };
+};
+
 export const getEateries = () => {
   return applicationState.eateries.map((eatery) => ({...eatery}));
 }
@@ -80,3 +85,8 @@ export const setSelectedEatery = (eateryObject) => {
   applicationState.selectedEatery = eateryObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 }
+
+export const setSelectedBizarrerie = (bizObject) => {
+  applicationState.selectedBizarrerie = bizObject;
+  applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+};
