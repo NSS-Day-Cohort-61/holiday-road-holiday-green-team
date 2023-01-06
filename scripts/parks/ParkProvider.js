@@ -1,10 +1,9 @@
 import {
   getParks,
-  fetchWeather,
   setSelectedPark,
   getSelectedPark,
+  fetchWeather,
 } from "../data/dataAccess.js";
-import { selectWeather } from "../weather/WeatherProvider.js";
 
 export const ParkList = () => {
   const parks = getParks();
@@ -43,13 +42,8 @@ export const showSelectedPark = () => {
 document.addEventListener("change", (e) => {
   if (e.target.id === "parks") {
     const parksList = getParks();
-    // const selectedPark = document.querySelector("#selectedPark");
-    // const selectedWeather = document.querySelector("#location");
     const chosenPark = parksList.find((park) => park.id == e.target.value);
     setSelectedPark(chosenPark);
-    selectedWeather.innerHTML = selectWeather(
-      chosenPark.latitude,
-      chosenPark.longitude
-    );
+    fetchWeather(chosenPark.latitude, chosenPark.longitude);
   }
 });

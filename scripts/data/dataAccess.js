@@ -3,14 +3,13 @@ const applicationElement = document.querySelector("#container");
 import { keys } from "../Settings.js";
 const parksURL = `https://developer.nps.gov/api/v1/parks?api_key=${keys.npsKey}`;
 
-//https://openweathermap.org/forecast5 <--- weather API endpoint
-
 const applicationState = {
   itineraries: [],
   parks: [],
   eateries: [],
   bizarraries: [],
   selectedPark: {},
+  weather: []
 };
 
 export const fetchParks = () => {
@@ -22,9 +21,6 @@ export const fetchParks = () => {
 };
 
 export const getParks = () => {
-  for (let park of applicationState.parks) {
-    console.log(park.fullName);
-  }
   return applicationState.parks.map((park) => ({ ...park }));
 };
 

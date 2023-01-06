@@ -1,5 +1,6 @@
 import { getParks } from "./data/dataAccess.js"
 import { ParkList, showSelectedPark } from "./parks/ParkProvider.js"
+import { showSelectedWeather } from "./weather/WeatherProvider.js"
 
 export const HolidayRoad = () => {
   return `
@@ -34,8 +35,7 @@ export const HolidayRoad = () => {
       </div>
       <div id="weatherContainer">
       <h3>Weather</h3>
-      <h2>Latitude and Longitude</h2>
-      <div id="location">Location</div>
+      ${showSelectedWeather()}
       </div>
       <div id="savedItineraryListContainer">
       <h3>Saved Itineraries</h3>
