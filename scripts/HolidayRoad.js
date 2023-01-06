@@ -1,6 +1,6 @@
 import { parkDropdown, showSelectedPark } from "./parks/ParkProvider.js"
 import { showSelectedWeather } from "./weather/WeatherProvider.js"
-import { eateryDropdown } from "./eateries/EateryProvider.js"
+import { eateryDropdown, showSelectedEatery } from "./eateries/EateryProvider.js"
 import { bizarrerieDropdown } from "./bizarreries/bizarrerieProvider.js"
 
 export const HolidayRoad = () => {
@@ -21,7 +21,7 @@ export const HolidayRoad = () => {
             <div class="selectedLabel">Bizarrerie</div>
             <div id="selectedBizarrerie"></div>
             <div class="selectedLabel">Eatery</div>
-            <div id="selectedEatery"></div>
+            ${showSelectedEatery()}
         </div>
         <div id="moreDetailsContainer">
           <h3>More Details</h3>
