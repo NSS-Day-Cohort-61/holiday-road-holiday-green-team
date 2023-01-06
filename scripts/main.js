@@ -12,16 +12,14 @@ applicationElement.addEventListener(
 )
 
 const renderApp = () => {
-  fetchEateries()
-    .then(() => {
-      fetchParks()
-    })
-    .then(() => {
-      fetchBizarreries()
-    })
+  const promArray = [fetchEateries(), fetchBizarreries(), fetchParks()]
+  Promise.all(promArray)
     .then(() => {
       applicationElement.innerHTML = HolidayRoad();
-    });
+    })
+    .catch(() => {
+      console.log(`shit happens...`)
+    })
 };
 
 renderApp();

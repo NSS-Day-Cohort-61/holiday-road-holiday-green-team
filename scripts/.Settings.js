@@ -1,4 +1,6 @@
-export const keys = {
+
+export default {
+
 	graphhopperKey: "",
 	npsKey: "",
 	weatherKey: ""
