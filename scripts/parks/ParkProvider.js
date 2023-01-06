@@ -5,7 +5,7 @@ import {
   fetchWeather,
 } from "../data/dataAccess.js";
 
-export const ParkList = () => {
+export const parkDropdown = () => {
   const parks = getParks();
   const selectedPark = getSelectedPark();
 

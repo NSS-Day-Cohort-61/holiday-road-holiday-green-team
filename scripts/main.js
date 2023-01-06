@@ -1,4 +1,5 @@
-import { fetchParks } from "./data/dataAccess.js";
+import { fetchBizarreries, fetchParks } from "./data/dataAccess.js";
+import { fetchEateries } from "./data/dataAccess.js"
 import { HolidayRoad } from "./HolidayRoad.js";
 
 const applicationElement = document.querySelector("#container");
@@ -11,9 +12,14 @@ applicationElement.addEventListener(
 )
 
 const renderApp = () => {
-  fetchParks().then(() => {
-    applicationElement.innerHTML = HolidayRoad();
-  });
+  const promArray = [fetchEateries(), fetchBizarreries(), fetchParks()]
+  Promise.all(promArray)
+    .then(() => {
+      applicationElement.innerHTML = HolidayRoad();
+    })
+    .catch(() => {
+      console.log(`shit happens...`)
+    })
 };
 
 renderApp();
