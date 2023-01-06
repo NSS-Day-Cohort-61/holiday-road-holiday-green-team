@@ -1,5 +1,5 @@
-import { getParks } from "./data/dataAccess.js"
-import { ParkList } from "./weather/WeatherProvider.js"
+import { parkDropdown, showSelectedPark } from "./parks/ParkProvider.js"
+import { showSelectedWeather } from "./weather/WeatherProvider.js"
 import { eateryDropdown } from "./eateries/EateryProvider.js"
 import { bizarrerieDropdown } from "./bizarreries/bizarrerieProvider.js"
 
@@ -8,7 +8,7 @@ export const HolidayRoad = () => {
   <div id="body">
     <h2> Holiday Road </h2>
     <div id="selectDropdowns">
-      ${ParkList()}
+      ${parkDropdown()}
       ${bizarrerieDropdown()}
       ${eateryDropdown()}
     </div>
@@ -16,14 +16,12 @@ export const HolidayRoad = () => {
       <div id="itineraryPreviewContainer">
         <h3>Itinerary Preview</h3>
         <div id="selectedChoicesContainer">
-          <div>
             <div class="selectedLabel">Park Name</div>
-            <div id="selectedPark"></div>
-            <div class="selectedLabel">Bizzarary</div>
+            ${showSelectedPark()}
+            <div class="selectedLabel">Bizarrerie</div>
             <div id="selectedBizarrerie"></div>
             <div class="selectedLabel">Eatery</div>
             <div id="selectedEatery"></div>
-          </div>
         </div>
         <div id="moreDetailsContainer">
           <h3>More Details</h3>
@@ -32,8 +30,7 @@ export const HolidayRoad = () => {
       </div>
       <div id="weatherContainer">
       <h3>Weather</h3>
-      <h2>Latitude and Longitude</h2>
-      <div id="location">Location</div>
+      ${showSelectedWeather()}
       </div>
       <div id="savedItineraryListContainer">
       <h3>Saved Itineraries</h3>
