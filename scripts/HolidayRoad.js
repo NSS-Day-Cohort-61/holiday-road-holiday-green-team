@@ -1,7 +1,7 @@
 import { parkDropdown, showSelectedPark } from "./parks/ParkProvider.js"
 import { showSelectedWeather } from "./weather/WeatherProvider.js"
-import { eateryDropdown } from "./eateries/EateryProvider.js"
-import { bizarrerieDropdown } from "./bizarreries/bizarrerieProvider.js"
+import { eateryDropdown, showSelectedEatery } from "./eateries/EateryProvider.js"
+import { bizarrerieDropdown, showSelectedBizarrerie } from "./bizarreries/bizarrerieProvider.js"
 
 export const HolidayRoad = () => {
   return `
@@ -13,30 +13,35 @@ export const HolidayRoad = () => {
       ${eateryDropdown()}
     </div>
     <div id="mainContent">
-      <div id="itineraryPreviewContainer">
-        <h3>Itinerary Preview</h3>
-        <div id="selectedChoicesContainer">
+      <div id="leftSideContainer">
+        <div id="itineraryPreviewContainer">
+          <div id="selectedChoicesContainer">
+            <h3>Itinerary Preview</h3>
             <div class="selectedLabel">Park Name</div>
             ${showSelectedPark()}
             <div class="selectedLabel">Bizarrerie</div>
-            <div id="selectedBizarrerie"></div>
+            ${showSelectedBizarrerie()}
             <div class="selectedLabel">Eatery</div>
-            <div id="selectedEatery"></div>
+            ${showSelectedEatery()}
+            <button id="save" class="btn">Save</button>
+          </div>
+          <div id="moreDetailsContainer">
+            <h3>More Details</h3>
+          </div>
+          
         </div>
-        <div id="moreDetailsContainer">
-          <h3>More Details</h3>
+        <div id="weatherContainer">
+          <h3>Weather</h3>
+          <div id="weather">
+          ${showSelectedWeather()}
+          </div>
         </div>
-        <button id="save">Save</button>
-      </div>
-      <div id="weatherContainer">
-      <h3>Weather</h3>
-      ${showSelectedWeather()}
       </div>
       <div id="savedItineraryListContainer">
-      <h3>Saved Itineraries</h3>
-      <ul>
-        <li>First Itinerary</li>
-      </ul>
+        <h3>Saved Itineraries</h3>
+        <ul>
+          <li>First Itinerary</li>
+        </ul>
       </div>
     </div>
   </div>
