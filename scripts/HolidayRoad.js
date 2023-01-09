@@ -7,7 +7,7 @@ import { showMoreDetails } from "./attractions/AttractionProvider.js"
 export const HolidayRoad = () => {
   return `
   <div id="body">
-    <h2> Holiday Road </h2>
+    <h1> Holiday Road </h1>
     <div id="selectDropdowns">
       ${parkDropdown()}
       ${bizarrerieDropdown()}
@@ -37,7 +37,6 @@ export const HolidayRoad = () => {
             
           </div>
           <div id="moreDetailsContainer">
-            <h3>More Details</h3>
             <div id="moreDetailsInfo">
             ${showMoreDetails()}
             </div>
