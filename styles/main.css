@@ -47,8 +47,10 @@ h2, h3 {
 #weatherContainer {
   border: 1px solid black;
   background-color: white;
-  height: 500px;
+  height: 200px;
   margin-top: 25px;
+  height:fit-content
+  
 }
 
 #savedItineraryListContainer {
@@ -92,6 +94,62 @@ h2, h3 {
 .btn {
   width: 100px;
   margin: 10px;
+}
+/*******************************************************************************/
+#weather {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+img {
+  background-color: rgb(129, 158, 252);
+  margin: auto;
+   width:50px;
+  height: 50px;
+  border: .5px black solid;
+ 
+}
+.dates {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+    font-size: small;
+    list-style-type: none;    
+}
+
+.date_container {
+  text-align: center;
+}
+
+.weather_icon{
+  width: 25px;
+  height: 25px;
+}
+
+
+
+#bck_image {
+  background-image: linear-gradient(
+      rgba(255,255,255,0.5), 
+      rgba(255,255,255,0.25)), 
+      url( http://openweathermap.org/img/wn/10d@2x.png);
+
+  background-color: rgb(129, 158, 252);
+  background-repeat: no-repeat;
+  
+}
+
+.big_temp {
+  font-size: 45px;
+  
+}
+.a{
+  color:rgb(129, 158, 252)
 }
 
 .deets-btn {

@@ -18,7 +18,7 @@ const renderApp = () => {
       applicationElement.innerHTML = HolidayRoad();
     })
     .catch(() => {
-      console.log(`shit happens...`)
+      console.log(`shit happens`)
     })
 };
 
