@@ -32,7 +32,9 @@ export const HolidayRoad = () => {
         </div>
         <div id="weatherContainer">
           <h3>Weather</h3>
+          <div id="weather">
           ${showSelectedWeather()}
+          </div>
         </div>
       </div>
       <div id="savedItineraryListContainer">
