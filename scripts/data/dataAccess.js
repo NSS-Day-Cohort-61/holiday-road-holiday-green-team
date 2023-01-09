@@ -4,7 +4,7 @@ const apiURL = "http://localhost:8088";
 const applicationElement = document.querySelector("#container");
 const parksURL = `https://developer.nps.gov/api/v1/parks?api_key=${keys.npsKey}`;
 
-const applicationState = {
+export const applicationState = {
   itineraries: [],
   parks: [],
   eateries: [],
@@ -12,8 +12,17 @@ const applicationState = {
   selectedPark: {},
   selectedEatery: {},
   selectedBizarrerie: {},
-  weather: []
+  currentItinerary: {
+    selectedPark: {},
+    selectedBizarrerie: {},
+    selectedEatery: {}
+  },
+  weather: [],
+  savedItineraries: []
 };
+
+//make sendItin, fetchItin,
+
 
 export const fetchParks = () => {
   return fetch(`${parksURL}`)
@@ -57,11 +66,11 @@ export const getWeather = () => {
 };
 
 export const getSelectedPark = () => {
-  return { ...applicationState.selectedPark };
+  return { ...applicationState.currentItinerary.selectedPark };
 };
 
 export const getSelectedBizarrerie = () => {
-  return { ...applicationState.selectedBizarrerie };
+  return { ...applicationState.currentItinerary.selectedBizarrerie };
 };
 
 export const getEateries = () => {
@@ -69,7 +78,7 @@ export const getEateries = () => {
 }
 
 export const getSelectedEatery = () => {
-  return { ...applicationState.selectedEatery };
+  return { ...applicationState.currentItinerary.selectedEatery };
 }
 
 export const getBizarreries = () => {
@@ -77,16 +86,59 @@ export const getBizarreries = () => {
 }
 
 export const setSelectedPark = (parkObject) => {
-  applicationState.selectedPark = parkObject;
+  applicationState.currentItinerary.selectedPark = parkObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
 export const setSelectedEatery = (eateryObject) => {
-  applicationState.selectedEatery = eateryObject;
+  applicationState.currentItinerary.selectedEatery = eateryObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 }
 
 export const setSelectedBizarrerie = (bizObject) => {
-  applicationState.selectedBizarrerie = bizObject;
+  applicationState.currentItinerary.selectedBizarrerie = bizObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
+
+const API = "http://localhost:8088"
+
+export const sendItinerary = (currentItin) => {
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(currentItin)
+  }
+  const applicationElement = document.querySelector("#container")
+  return fetch(`${API}/itineraries`, fetchOptions)
+    .then(response => response.json())
+    .then(
+      () => {
+          applicationElement.dispatchEvent(new CustomEvent("stateChanged"))
+      }
+    )
+}
+
+
+
+export const fetchItinerary = () => {
+  return fetch(`${API}/itineraries`)
+    .then(response => response.json())
+    .then(
+      (data) => {
+        applicationState.savedItineraries = data
+      }
+    )
+}
+
+export const getItineraries = () => {
+  return [...applicationState.savedItineraries]
+}
+
+export const getCurrentItinerary = () => {
+  return {...applicationState.currentItinerary}
+}
+
+
+

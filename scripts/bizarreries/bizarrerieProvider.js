@@ -3,13 +3,14 @@ import {
   setSelectedBizarrerie,
   getSelectedBizarrerie,
 } from "../data/dataAccess.js";
+// import { enableSaveButton } from "../itineraries/savedItineraries.js";
 
 export const bizarrerieDropdown = () => {
   const bizarreries = getBizarreries();
   const selectedBizarrerie = getSelectedBizarrerie();
   let html = ``;
-  html += `<select id="bizarrerie">`;
-  html += `<option value="0">Select Bizarrerie</option>`;
+  html += `<select id="bizarrerie" class="reqInputs" name="bizarreries" onkeyup="${enableSaveButton()}">`;
+  html += `<option value=0>Select Bizarrerie</option>`;
 
   for (const bizarrerie of bizarreries) {
     if (bizarrerie.id === selectedBizarrerie.id) {

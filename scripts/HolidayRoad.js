@@ -2,6 +2,7 @@ import { parkDropdown, showSelectedPark } from "./parks/ParkProvider.js"
 import { showSelectedWeather } from "./weather/WeatherProvider.js"
 import { eateryDropdown, showSelectedEatery } from "./eateries/EateryProvider.js"
 import { bizarrerieDropdown, showSelectedBizarrerie } from "./bizarreries/bizarrerieProvider.js"
+import { savedItineraryHTML } from "./itineraries/savedItineraries.js"
 
 export const HolidayRoad = () => {
   return `
@@ -23,7 +24,7 @@ export const HolidayRoad = () => {
             ${showSelectedBizarrerie()}
             <div class="selectedLabel">Eatery</div>
             ${showSelectedEatery()}
-            <button id="save" class="btn">Save</button>
+            <input disabled type="submit" id="save" class="btn">
           </div>
           <div id="moreDetailsContainer">
             <h3>More Details</h3>
@@ -37,9 +38,7 @@ export const HolidayRoad = () => {
       </div>
       <div id="savedItineraryListContainer">
         <h3>Saved Itineraries</h3>
-        <ul>
-          <li>First Itinerary</li>
-        </ul>
+        ${savedItineraryHTML()}
       </div>
     </div>
   </div>

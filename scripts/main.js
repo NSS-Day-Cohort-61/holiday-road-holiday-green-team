@@ -1,4 +1,4 @@
-import { fetchBizarreries, fetchParks } from "./data/dataAccess.js";
+import { fetchBizarreries, fetchItinerary, fetchParks } from "./data/dataAccess.js";
 import { fetchEateries } from "./data/dataAccess.js"
 import { HolidayRoad } from "./HolidayRoad.js";
 
@@ -12,7 +12,7 @@ applicationElement.addEventListener(
 )
 
 const renderApp = () => {
-  const promArray = [fetchEateries(), fetchBizarreries(), fetchParks()]
+  const promArray = [fetchEateries(), fetchBizarreries(), fetchParks(), fetchItinerary()]
   Promise.all(promArray)
     .then(() => {
       applicationElement.innerHTML = HolidayRoad();
