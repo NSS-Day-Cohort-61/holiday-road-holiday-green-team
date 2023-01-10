@@ -1,6 +1,6 @@
 import {
   fetchBizarreries,
-  fetchParks,
+  fetchItinerary, fetchParks,
   fetchWeather,
   getCurrentGPS,
   setCurrentGPS,
@@ -15,6 +15,17 @@ applicationElement.addEventListener("stateChanged", (customEvent) => {
   renderApp();
 });
 
+// const renderApp = () => {
+//   const promArray = [fetchEateries(), fetchBizarreries(), fetchParks(), fetchItinerary()]
+//   Promise.all(promArray)
+//     .then(() => {
+//       applicationElement.innerHTML = HolidayRoad();
+//     })
+//     .catch(() => {
+//       console.log(`shit happens...`)
+//     })
+// };
+
 const renderApp = () => {
   getPosition().then((position) => {
     if (Object.keys(getCurrentGPS()).length === 0) {
@@ -24,13 +35,14 @@ const renderApp = () => {
     const lat = currentGPS.lat;
     const lon = currentGPS.lon;
     fetchEateries()
-      .then(() => fetchBizarreries())
-      .then(() => fetchParks())
-      .then(() => fetchWeather(lat, lon))
-      .then(() => {
-        applicationElement.innerHTML = HolidayRoad();
-      });
+    .then(() => fetchBizarreries())
+    .then(() => fetchParks())
+    .then(() => fetchWeather(lat, lon))
+    .then(() => fetchItinerary())
+    .then(() => {
+      applicationElement.innerHTML = HolidayRoad();
+    })
   });
-};
+}
 
 renderApp();

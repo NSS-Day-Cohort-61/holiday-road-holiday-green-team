@@ -4,7 +4,7 @@ const apiURL = "http://localhost:8088";
 const applicationElement = document.querySelector("#container");
 const parksURL = `https://developer.nps.gov/api/v1/parks?api_key=${keys.npsKey}`;
 
-const applicationState = {
+export const applicationState = {
   itineraries: [],
   parks: [],
   eateries: [],
@@ -14,12 +14,16 @@ const applicationState = {
     selectedEatery: {},
     selectedBizarrerie: {},
   },
+
   weather: [],
   savedItineraries: [],
   moreDetailsDisplay: "N",
   currentGPS: {},
   currentDay: "",
 };
+
+//make sendItin, fetchItin,
+
 
 export const fetchParks = () => {
   return fetch(`${parksURL}`)
@@ -114,6 +118,38 @@ export const setCurrentGPS = (lat, lon) => {
 export const getCurrentGPS = () => {
   return { ...applicationState.currentGPS };
 };
+
+export const sendItinerary = (currentItin) => {
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(currentItin)
+  }
+  const applicationElement = document.querySelector("#container")
+  return fetch(`${apiURL}/itineraries`, fetchOptions)
+    .then(response => response.json())
+    .then(
+      () => {
+          applicationElement.dispatchEvent(new CustomEvent("stateChanged"))
+      }
+    )
+}
+
+export const fetchItinerary = () => {
+  return fetch(`${apiURL}/itineraries`)
+    .then(response => response.json())
+    .then(
+      (data) => {
+        applicationState.savedItineraries = data
+      }
+    )
+}
+
+export const getItineraries = () => {
+  return [...applicationState.savedItineraries]
+}
 
 export const getCurrentItinerary = () => {
   return { ...applicationState.currentItinerary };
