@@ -12,6 +12,7 @@ const applicationState = {
   currentItinerary: {
     selectedPark: {},
     selectedEatery: {},
+    selectedBizarrerie: {}
   },
   weather: [],
   savedItineraries: [],

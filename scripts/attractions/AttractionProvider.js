@@ -28,8 +28,7 @@ const parkDetails = () => {
   const currentItinerary = getCurrentItinerary();
   const selectedPark = currentItinerary.selectedPark;
   return `
-  <h3>Park information:</h3>
-  <p><h4>Name:</h4> ${selectedPark.fullName}</p>
+  <h3>${selectedPark.fullName}</h3>
   <p><h4>Address:</h4> ${selectedPark.addresses[0].line1}<br>${selectedPark.addresses[0].city}, ${selectedPark.addresses[0].stateCode} ${selectedPark.addresses[0].postalCode}</p>
   <p><h4>Description:</h4> ${selectedPark.description}</p>
   `;
@@ -39,8 +38,7 @@ const bizarrerieDetails = () => {
   const currentItinerary = getCurrentItinerary();
   const selectedBizarrerie = currentItinerary.selectedBizarrerie;
   return `
-  <h3>Bizarrerie information:</h3>
-  <p><h4>Name:</h4> ${selectedBizarrerie.name}</p>
+  <h3>${selectedBizarrerie.name}</h3>
   <p><h4>Location:</h4> ${selectedBizarrerie.city}, ${selectedBizarrerie.state}</p>
   <p><h4>Description:</h4> ${selectedBizarrerie.description}</p>
   `;
@@ -50,8 +48,7 @@ const eateryDetails = () => {
   const currentItinerary = getCurrentItinerary();
   const selectedEatery = currentItinerary.selectedEatery;
   return `
-  <h3>Eatery information:</h3>
-  <p><h4>Name:</h4> ${selectedEatery.businessName}</p>
+  <h3>${selectedEatery.businessName}</h3>
   <p><h4>Location:</h4> ${selectedEatery.city}, ${selectedEatery.state}</p>
   <p><h4>Description:</h4> ${selectedEatery.description}</p>
   `;
