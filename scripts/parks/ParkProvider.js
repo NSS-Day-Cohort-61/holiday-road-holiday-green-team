@@ -3,15 +3,19 @@ import {
   setSelectedPark,
   getSelectedPark,
   fetchWeather,
+  getWeather,
+  setCurrentGPS
 } from "../data/dataAccess.js";
+
+const applicationElement = document.querySelector("#container");
 
 export const parkDropdown = () => {
   const parks = getParks();
   const selectedPark = getSelectedPark();
 
   let html = `
-          <select id="parks" name="parks">
-          <option value="null">Choose a State Park</option>
+          <select id="parks" class="reqInputs" name="parks" >
+          <option value="0">Choose a State Park</option>
       ${parks
         .map((park) => {
           if (park.id === selectedPark.id) {
@@ -44,11 +48,10 @@ document.addEventListener("change", (e) => {
     const parksList = getParks();
     const chosenPark = parksList.find((park) => park.id == e.target.value);
     setSelectedPark(chosenPark);
-    const currentTime = new Date( Date.now() )
-  const currentdisplayHour = currentTime.getHours()
-  const cnt = Math.floor(39 - currentdisplayHour/3)
-  console.log(`park: ${cnt}`)
-  
-   fetchWeather(chosenPark.latitude, chosenPark.longitude, cnt);
+    // const weather = getWeather();
+    // const currentTime = new Date(weather[0].dt_txt);
+    // const currentDisplayHour = currentTime.getHours();
+    // const cnt = Math.floor(40 - currentDisplayHour / 3);
+    setCurrentGPS(chosenPark.latitude, chosenPark.longitude)
   }
 });

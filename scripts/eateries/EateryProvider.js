@@ -2,13 +2,14 @@ import { getEateries, getSelectedEatery, setSelectedEatery } from "../data/dataA
 
 
 
+
 export const eateryDropdown = () => {
     const eateries = getEateries()
     const selectedEatery = getSelectedEatery()
 
     let html = `
-            <select id="eatery" name="eateries">
-            <option value=null>Select Eatery</option>
+            <select id="eatery" class="reqInputs" name="eateries">
+            <option value="0">Select Eatery</option>
             ${eateries
                 .map((eatery) => {
                 if (eatery.id === selectedEatery.id){
