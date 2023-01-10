@@ -11,6 +11,22 @@ applicationElement.addEventListener(
   }
 )
 
+
+
+const renderApp = () => {
+   fetchParks()
+  .then(() => fetchEateries())
+    .then(() => fetchBizarreries())
+    .then(() =>{
+      applicationElement.innerHTML = HolidayRoad();
+    
+    })
+};
+
+renderApp();
+
+/*
+
 const renderApp = () => {
   const promArray = [fetchEateries(), fetchBizarreries(), fetchParks()]
   Promise.all(promArray)
@@ -23,3 +39,4 @@ const renderApp = () => {
 };
 
 renderApp();
+*/
