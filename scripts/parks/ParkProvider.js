@@ -4,15 +4,15 @@ import {
   getSelectedPark,
   fetchWeather
 } from "../data/dataAccess.js";
-import { enableSaveButton } from "../itineraries/savedItineraries.js";
+
 
 export const parkDropdown = () => {
   const parks = getParks();
   const selectedPark = getSelectedPark();
 
   let html = `
-          <select id="parks" class="reqInputs" name="parks" onkeyup="${enableSaveButton()}">
-          <option value=0>Choose a State Park</option>
+          <select id="parks" class="reqInputs" name="parks" >
+          <option value="0">Choose a State Park</option>
       ${parks
         .map((park) => {
           if (park.id === selectedPark.id) {

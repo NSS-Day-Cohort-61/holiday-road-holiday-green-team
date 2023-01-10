@@ -1,5 +1,5 @@
 import { getEateries, getSelectedEatery, setSelectedEatery } from "../data/dataAccess.js"
-// import { enableSaveButton } from "../itineraries/savedItineraries.js";
+
 
 
 
@@ -8,8 +8,8 @@ export const eateryDropdown = () => {
     const selectedEatery = getSelectedEatery()
 
     let html = `
-            <select id="eatery" class="reqInputs" name="eateries" onkeyup="${enableSaveButton()}">
-            <option value=0>Select Eatery</option>
+            <select id="eatery" class="reqInputs" name="eateries">
+            <option value="0">Select Eatery</option>
             ${eateries
                 .map((eatery) => {
                 if (eatery.id === selectedEatery.id){

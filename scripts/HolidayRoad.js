@@ -3,6 +3,7 @@ import { showSelectedWeather } from "./weather/WeatherProvider.js"
 import { eateryDropdown, showSelectedEatery } from "./eateries/EateryProvider.js"
 import { bizarrerieDropdown, showSelectedBizarrerie } from "./bizarreries/bizarrerieProvider.js"
 import { savedItineraryHTML } from "./itineraries/savedItineraries.js"
+import { getCurrentItinerary } from "./data/dataAccess.js"
 
 export const HolidayRoad = () => {
   return `
@@ -24,7 +25,7 @@ export const HolidayRoad = () => {
             ${showSelectedBizarrerie()}
             <div class="selectedLabel">Eatery</div>
             ${showSelectedEatery()}
-            <input disabled type="submit" id="save" class="btn">
+            ${enableSaveButton()}
           </div>
           <div id="moreDetailsContainer">
             <h3>More Details</h3>
@@ -43,4 +44,14 @@ export const HolidayRoad = () => {
     </div>
   </div>
   `
+}
+
+const enableSaveButton = () => {
+  const currentItins = getCurrentItinerary();
+  if (Object.keys(currentItins.selectedBizarrerie).length == 0 || Object.keys(currentItins.selectedPark).length == 0 || Object.keys(currentItins.selectedEatery).length == 0) {
+    return `<button disabled="disabled" id="save" class="btn">Save</button>`
+  }
+  else {
+    return `<button id="save" class="btn">Save</button>`
+  }
 }

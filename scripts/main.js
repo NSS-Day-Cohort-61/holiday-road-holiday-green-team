@@ -11,15 +11,24 @@ applicationElement.addEventListener(
   }
 )
 
+// const renderApp = () => {
+//   const promArray = [fetchEateries(), fetchBizarreries(), fetchParks(), fetchItinerary()]
+//   Promise.all(promArray)
+//     .then(() => {
+//       applicationElement.innerHTML = HolidayRoad();
+//     })
+//     .catch(() => {
+//       console.log(`shit happens...`)
+//     })
+// };
 const renderApp = () => {
-  const promArray = [fetchEateries(), fetchBizarreries(), fetchParks(), fetchItinerary()]
-  Promise.all(promArray)
-    .then(() => {
-      applicationElement.innerHTML = HolidayRoad();
-    })
-    .catch(() => {
-      console.log(`shit happens...`)
-    })
-};
+  fetchEateries()
+  .then(() => fetchBizarreries())
+  .then(() => fetchParks())
+  .then(() => fetchItinerary())
+  .then(() => {
+    applicationElement.innerHTML = HolidayRoad();
+  })
+}
 
 renderApp();

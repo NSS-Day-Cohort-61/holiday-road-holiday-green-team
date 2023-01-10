@@ -782,9 +782,270 @@
       "id": 2
     },
     {
-      "selectedPark": {},
-      "selectedBizarrerie": {},
-      "selectedEatery": {},
+      "selectedPark": {
+        "id": "9463E25C-7342-4A34-9537-4A6DA74B2B06",
+        "url": "https://www.nps.gov/anac/index.htm",
+        "fullName": "Anacostia Park",
+        "parkCode": "anac",
+        "description": "Welcome to Anacostia Park, your neighborhood national park in the heart of Washington, DC! Enjoy exercise along the river trail or relax by the water, Anacostia Park is a breath of fresh air and a space to unwind amid a bustling city.",
+        "latitude": "38.8782",
+        "longitude": "-76.9703",
+        "latLong": "lat:38.8782, long:-76.9703",
+        "activities": [
+          {
+            "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
+            "name": "Biking"
+          },
+          {
+            "id": "8D778629-F603-4C50-A121-6F4BB2FE2C4B",
+            "name": "Road Biking"
+          },
+          {
+            "id": "071BA73C-1D3C-46D4-A53C-00D5602F7F0E",
+            "name": "Boating"
+          },
+          {
+            "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
+            "name": "Fishing"
+          },
+          {
+            "id": "25FB188F-5AAD-459A-9092-28A9801709FF",
+            "name": "Freshwater Fishing"
+          },
+          {
+            "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
+            "name": "Food"
+          },
+          {
+            "id": "C6D3230A-2CEA-4AFE-BFF3-DC1E2C2C4BB4",
+            "name": "Picnicking"
+          },
+          {
+            "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+            "name": "Guided Tours"
+          },
+          {
+            "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+            "name": "Self-Guided Tours - Walking"
+          },
+          {
+            "id": "4D224BCA-C127-408B-AC75-A51563C42411",
+            "name": "Paddling"
+          },
+          {
+            "id": "21DB3AFC-8AAC-4665-BC1F-7198C0685983",
+            "name": "Canoeing"
+          },
+          {
+            "id": "F353A9ED-4A08-456E-8DEC-E61974D0FEB6",
+            "name": "Kayaking"
+          },
+          {
+            "id": "7779241F-A70B-49BC-86F0-829AE332C708",
+            "name": "Playground"
+          },
+          {
+            "id": "94369BFD-F186-477E-8713-AE2A745154DA",
+            "name": "Team Sports"
+          },
+          {
+            "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+            "name": "Wildlife Watching"
+          }
+        ],
+        "topics": [
+          {
+            "id": "3B0D607D-9933-425A-BFA0-21529AC4734C",
+            "name": "Military"
+          },
+          {
+            "id": "97CCB419-196C-4B95-BB3A-621458F78415",
+            "name": "US Army"
+          },
+          {
+            "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+            "name": "Native American Heritage"
+          },
+          {
+            "id": "846E5C56-E5AC-489C-B3BF-11F4C73F12C2",
+            "name": "Urban America"
+          },
+          {
+            "id": "27BF8807-54EA-4A3D-B073-AA7AA361CD7E",
+            "name": "Wars and Conflicts"
+          },
+          {
+            "id": "F94E78D3-EC70-4B99-AB57-BC70C4E79D65",
+            "name": "War of 1812"
+          },
+          {
+            "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+            "name": "Animals"
+          },
+          {
+            "id": "A155238F-0DD2-4610-9B87-05FCE1C59283",
+            "name": "River and Riparian"
+          },
+          {
+            "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
+            "name": "Scenic Views"
+          },
+          {
+            "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+            "name": "Trails"
+          },
+          {
+            "id": "596BAA6D-F66B-4348-8433-FEFF35A8005E",
+            "name": "Water Trails"
+          },
+          {
+            "id": "1365C347-952C-475A-B755-731DD523C195",
+            "name": "Wetlands"
+          }
+        ],
+        "states": "DC",
+        "contacts": {
+          "phoneNumbers": [
+            {
+              "phoneNumber": "2026926080",
+              "description": "",
+              "extension": "",
+              "type": "Voice"
+            },
+            {
+              "phoneNumber": "2026926080",
+              "description": "",
+              "extension": "",
+              "type": "TTY"
+            }
+          ],
+          "emailAddresses": [
+            {
+              "description": "",
+              "emailAddress": "nace_superintendent@nps.gov"
+            }
+          ]
+        },
+        "entranceFees": [
+          {
+            "cost": "0.00",
+            "description": "There are no entrance fees to this park.",
+            "title": "Entrance Fees"
+          }
+        ],
+        "entrancePasses": [
+          {
+            "cost": "0.00",
+            "description": "There are no entrance passes for this park.",
+            "title": "Entrance Passes"
+          }
+        ],
+        "fees": [],
+        "directionsInfo": "Anacostia Park is located in South East Washington DC running parallel to the Anacostia river. The park can be accessed from the South Capitol bridge over the Anacostia river across from the Nationals baseball stadium. You can also enter the park from the Baltimore-Washington Parkway (295). You can enter the park from Good Hope Road or from Nicholson Street.",
+        "directionsUrl": "http://www.nps.gov/anac/planyourvisit/directions.htm",
+        "operatingHours": [
+          {
+            "exceptions": [],
+            "description": "The park is open from Dawn until Dusk.",
+            "standardHours": {
+              "wednesday": "Sunrise to Sunset",
+              "monday": "Sunrise to Sunset",
+              "thursday": "Sunrise to Sunset",
+              "sunday": "Sunrise to Sunset",
+              "tuesday": "Sunrise to Sunset",
+              "friday": "Sunrise to Sunset",
+              "saturday": "Sunrise to Sunset"
+            },
+            "name": "Park Hours"
+          }
+        ],
+        "addresses": [
+          {
+            "postalCode": "20020",
+            "city": "Washington",
+            "stateCode": "DC",
+            "line1": "1900 Anacostia Drive, S.E.",
+            "type": "Physical",
+            "line3": "",
+            "line2": ""
+          },
+          {
+            "postalCode": "20020",
+            "city": "Washington",
+            "stateCode": "DC",
+            "line1": "1900 Anacostia Drive, S.E.",
+            "type": "Mailing",
+            "line3": "",
+            "line2": ""
+          }
+        ],
+        "images": [
+          {
+            "credit": "NPS Photo/Miguel Marquez",
+            "title": "Anacostia Drive",
+            "altText": "Aerial view of Anacostia Drive and the playground",
+            "caption": "Anacostia Drive and the Anacostia river Trail run along side the Anacostia river. Views of the Navy Yard and Nats. Stadium can be seen as across the river.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C82A965-1DD8-B71B-0B42F2CD698E11A7.jpg"
+          },
+          {
+            "credit": "NPS",
+            "title": "Recreation at Anacostia",
+            "altText": "A few men are playing basketball at Anacostia with the Anacostia River in the background.",
+            "caption": "Anacostia is a great place for sports, including basketball and tennis courts.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/E90FE9D6-0571-1A74-ECA594CE99431972.jpg"
+          },
+          {
+            "credit": "NPS",
+            "title": "The Anacostia River Trail",
+            "altText": "A view of the Anacostia River and a marina from the Anacostia River Trail.",
+            "caption": "The Anacostia River trail is a wonderful paved trail that is great for biking, jogging and walking.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/E92300B8-A71B-CCA4-3E64717D74B8149A.jpg"
+          },
+          {
+            "credit": "NPS",
+            "title": "The Anacostia Skating Pavilion",
+            "altText": "A sidewalk approaches the Anacostia skating pavilion.",
+            "caption": "The Anacostia skating pavilion is a great place to roller skate. It is an open-air rink that has a cover for rain and sun protection.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/E93463E4-973F-F00C-F3FD4C81F20D5A8F.jpg"
+          },
+          {
+            "credit": "NPS",
+            "title": "Bring your dog to the park!",
+            "altText": "A man jogs his two dogs along a paved multi-use trial.",
+            "caption": "The Anacostia River trail is a great place to bring your dog for some exercise. Dogs must be on a leash and please clean up after your pet.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/E99A9CE8-911F-16D5-752156D21DD9C15A.jpg"
+          }
+        ],
+        "weatherInfo": "Spring brings mild temperatures and a light breeze along with springtime flower blooms. Summer can be hot and humid. Fall cools down and changing of the seasons brings changing of the colors in leaves. Winter gets cold and temperatures may drop below freezing.",
+        "name": "Anacostia",
+        "designation": "Park"
+      },
+      "selectedBizarrerie": {
+        "id": 47,
+        "name": "Love Butt",
+        "city": "Charlottesville",
+        "state": "VA",
+        "description": "This 10-foot-tall, 1,600-pound piece of artwork was originally featured on a comedy show pilot but is now a permanent fixture in Charlottesville, Virginia. Big, pink, and embarrassing, it’s the perfect road trip attraction for using the “I’m just pulling over to use the restroom” excuse.",
+        "ameneties": {
+          "souvenirs": false,
+          "restrooms": false
+        }
+      },
+      "selectedEatery": {
+        "businessName": "Wall Drug",
+        "description": "You begin to see signs for it about 1,000 miles before you arrive in South Dakota. They promise free ice water. Five-cent coffee. A goddamned Tyrannosaurus rex! There are many, many, many finer restaurants in South Dakota, but none are as famous, for good or ill, as the one in Wall Drug. It's impossible to avoid the Badlands-bordering, 76,000sqft wonder of tourist-trapping randomness, so just go in. Hit the cafe and score a hot beef sandwich and a maple donut. It won't hold a candle to the many, many better food options in the state. But you will emerge with a 'Where the Heck is Wall Drug' sticker. You will have chased that sandwich with a T. rex viewing. And you'll be happy you stopped every time you see a roadside Wall Drug sign every five minutes for the next 300 miles",
+        "state": "SD",
+        "city": "Wall",
+        "id": 43,
+        "ameneties": {
+          "wheelchairAccessible": true,
+          "petFriendly": false,
+          "wifi": true,
+          "diaperFacility": true,
+          "playground": false,
+          "restrooms": true
+        }
+      },
       "id": 3
     }
   ]
