@@ -1,42 +1,35 @@
-import { fetchBizarreries, fetchParks } from "./data/dataAccess.js";
-import { fetchEateries } from "./data/dataAccess.js"
+import {
+  fetchBizarreries,
+  fetchParks,
+  getBizarreries,
+} from "./data/dataAccess.js";
+import { fetchEateries } from "./data/dataAccess.js";
 import { HolidayRoad } from "./HolidayRoad.js";
 
 const applicationElement = document.querySelector("#container");
 
-applicationElement.addEventListener(
-  "stateChanged",
-  customEvent => {
-    renderApp()
-  }
-)
+applicationElement.addEventListener("stateChanged", (customEvent) => {
+  renderApp();
+});
 
-
+// const renderApp = () => {
+//   const promArray = [fetchEateries(), fetchBizarreries(), fetchParks()]
+//   Promise.all(promArray)
+//     .then(() => {
+//       applicationElement.innerHTML = HolidayRoad();
+//     })
+//     .catch(() => {
+//       console.log(`shit happens`)
+//     })
+// };
 
 const renderApp = () => {
-   fetchParks()
-  .then(() => fetchEateries())
+  fetchEateries()
     .then(() => fetchBizarreries())
-    .then(() =>{
-      applicationElement.innerHTML = HolidayRoad();
-    
-    })
-};
-
-renderApp();
-
-/*
-
-const renderApp = () => {
-  const promArray = [fetchEateries(), fetchBizarreries(), fetchParks()]
-  Promise.all(promArray)
+    .then(() => fetchParks())
     .then(() => {
       applicationElement.innerHTML = HolidayRoad();
-    })
-    .catch(() => {
-      console.log(`shit happens`)
-    })
+    });
 };
 
 renderApp();
-*/

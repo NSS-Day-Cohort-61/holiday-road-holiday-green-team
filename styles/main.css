@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
 html {
   height: 100%;
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: Lato, sans-serif;
 }
 
 #body {
@@ -7,7 +11,7 @@ html {
   background-color: rgb(241, 239, 237);
 }
 
-h2, h3 {
+h1, h2, h3 {
   text-align: center;
 }
 
@@ -64,7 +68,7 @@ h2, h3 {
 #selectedChoicesContainer {
   display: flex;
   flex-direction: column;
-  width: 65%
+  width: 53%
 }
 
 #selectedChoicesContainer .selectedLabel {
@@ -72,19 +76,30 @@ h2, h3 {
   align-self: start;
 }
 
+#moreDetailsContainer {
+  border: 1px solid black;
+  display: block;
+  min-height: 65%;
+  overflow: auto;
+  width: 45%;
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+#moreDetailsContainer h3, #moreDetailsContainer h4 {
+  margin: 0px;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+}
+
 #selectedPark, #selectedBizarrerie, #selectedEatery {
   border: 1px solid black;
   height: 20px;
   width: 95%;
-  margin-bottom: 10px;
   margin-left: 10px;
-}
-
-#moreDetailsContainer {
-  border: 1px solid black;
-  height: 200px;
-  width: 30%;
-  margin: 10px auto;
 }
 
 .btn {
@@ -147,6 +162,12 @@ img {
 .a{
   height: 35px;
   color:rgb(129, 158, 252)
+}
+
+.deets-btn {
+  width: 75px;
+  margin-left: 10px;
+  padding: 0;
 }
 
 .blank {

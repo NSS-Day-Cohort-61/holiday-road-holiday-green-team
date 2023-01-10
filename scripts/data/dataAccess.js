@@ -9,10 +9,14 @@ const applicationState = {
   parks: [],
   eateries: [],
   bizarreries: [],
-  selectedPark: {},
-  selectedEatery: {},
-  selectedBizarrerie: {},
-  weather: []
+  currentItinerary: {
+    selectedPark: {},
+    selectedEatery: {},
+    selectedBizarrerie: {}
+  },
+  weather: [],
+  savedItineraries: [],
+  moreDetailsDisplay: 'N',
 };
 
 export const fetchParks = () => {
@@ -34,19 +38,19 @@ export const fetchWeather = (lat, lon,cnt) => {
 
 export const fetchEateries = () => {
   return fetch(`http://holidayroad.nss.team/eateries`)
-  .then((response) => response.json())
-  .then((data) => {
-    applicationState.eateries = data
-  });
+    .then((response) => response.json())
+    .then((data) => {
+      applicationState.eateries = data;
+    });
 };
 
 export const fetchBizarreries = () => {
   return fetch(`http://holidayroad.nss.team/bizarreries`)
-  .then((response) => response.json())
-  .then((data) => {
-    applicationState.bizarreries = data
-  })
-}
+    .then((response) => response.json())
+    .then((data) => {
+      applicationState.bizarreries = data;
+    });
+};
 
 export const getParks = () => {
   return applicationState.parks.map((park) => ({ ...park }));
@@ -56,37 +60,50 @@ export const getWeather = () => {
   return applicationState.weather.map((w) => ({ ...w }));
 };
 
+export const getEateries = () => {
+  return applicationState.eateries.map((eatery) => ({ ...eatery }));
+};
+
+export const getBizarreries = () => {
+  return applicationState.bizarreries.map((arr) => ({ ...arr }));
+};
+
 export const getSelectedPark = () => {
-  return { ...applicationState.selectedPark };
+  return { ...applicationState.currentItinerary.selectedPark };
 };
 
 export const getSelectedBizarrerie = () => {
-  return { ...applicationState.selectedBizarrerie };
+  return { ...applicationState.currentItinerary.selectedBizarrerie };
 };
 
-export const getEateries = () => {
-  return applicationState.eateries.map((eatery) => ({...eatery}));
-}
-
 export const getSelectedEatery = () => {
-  return { ...applicationState.selectedEatery };
-}
+  return { ...applicationState.currentItinerary.selectedEatery };
+};
 
-export const getBizarreries = () => {
-  return applicationState.bizarreries.map(arr =>({...arr}))
-}
+export const getMoreDetailsDisplay = () => {
+  return applicationState.moreDetailsDisplay;
+};
 
 export const setSelectedPark = (parkObject) => {
-  applicationState.selectedPark = parkObject;
+  applicationState.currentItinerary.selectedPark = parkObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
 export const setSelectedEatery = (eateryObject) => {
-  applicationState.selectedEatery = eateryObject;
+  applicationState.currentItinerary.selectedEatery = eateryObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
-}
+};
 
 export const setSelectedBizarrerie = (bizObject) => {
-  applicationState.selectedBizarrerie = bizObject;
+  applicationState.currentItinerary.selectedBizarrerie = bizObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+};
+
+export const setMoreDetailsDisplay = (detailsState) => {
+  applicationState.moreDetailsDisplay = detailsState;
+  applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+};
+
+export const getCurrentItinerary = () => {
+  return { ...applicationState.currentItinerary };
 };
