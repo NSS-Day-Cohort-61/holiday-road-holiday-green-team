@@ -12,13 +12,14 @@ export const applicationState = {
   currentItinerary: {
     selectedPark: {},
     selectedEatery: {},
-    selectedBizarrerie: {}
+    selectedBizarrerie: {},
   },
 
   weather: [],
   savedItineraries: [],
-  moreDetailsDisplay: 'N',
-  savedItineraries: []
+  moreDetailsDisplay: "N",
+  currentGPS: {},
+  currentDay: "",
 };
 
 //make sendItin, fetchItin,
@@ -32,8 +33,8 @@ export const fetchParks = () => {
     });
 };
 
-export const fetchWeather = (lat, lon,cnt) => {
-  const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=${cnt}&appid=${keys.weatherKey}&units=imperial`;
+export const fetchWeather = (lat, lon) => {
+  const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${keys.weatherKey}&units=imperial`;
   return fetch(`${weatherURL}`)
     .then((response) => response.json())
     .then((data) => {
@@ -109,7 +110,14 @@ export const setMoreDetailsDisplay = (detailsState) => {
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
-const API = "http://localhost:8088"
+export const setCurrentGPS = (lat, lon) => {
+  applicationState.currentGPS.lat = lat;
+  applicationState.currentGPS.lon = lon;
+};
+
+export const getCurrentGPS = () => {
+  return { ...applicationState.currentGPS };
+};
 
 export const sendItinerary = (currentItin) => {
   const fetchOptions = {
@@ -120,7 +128,7 @@ export const sendItinerary = (currentItin) => {
     body: JSON.stringify(currentItin)
   }
   const applicationElement = document.querySelector("#container")
-  return fetch(`${API}/itineraries`, fetchOptions)
+  return fetch(`${apiURL}/itineraries`, fetchOptions)
     .then(response => response.json())
     .then(
       () => {
@@ -129,10 +137,8 @@ export const sendItinerary = (currentItin) => {
     )
 }
 
-
-
 export const fetchItinerary = () => {
-  return fetch(`${API}/itineraries`)
+  return fetch(`${apiURL}/itineraries`)
     .then(response => response.json())
     .then(
       (data) => {
@@ -146,8 +152,19 @@ export const getItineraries = () => {
 }
 
 export const getCurrentItinerary = () => {
-  return {...applicationState.currentItinerary}
-}
+  return { ...applicationState.currentItinerary };
+};
 
+export const getPosition = (options) => {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject, options);
+  });
+};
 
+export const getCurrentDay = () => {
+  return applicationState.currentDay;
+};
 
+export const setCurrentDay = (day) => {
+  applicationState.currentDay = day;
+};
