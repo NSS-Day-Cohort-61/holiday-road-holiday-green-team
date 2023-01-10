@@ -2,13 +2,14 @@ import { parkDropdown, showSelectedPark } from "./parks/ParkProvider.js"
 import { showSelectedWeather } from "./weather/WeatherProvider.js"
 import { eateryDropdown, showSelectedEatery } from "./eateries/EateryProvider.js"
 import { bizarrerieDropdown, showSelectedBizarrerie } from "./bizarreries/bizarrerieProvider.js"
+import { showMoreDetails } from "./attractions/AttractionProvider.js"
 import { savedItineraryHTML } from "./itineraries/savedItineraries.js"
 import { getCurrentItinerary } from "./data/dataAccess.js"
 
 export const HolidayRoad = () => {
   return `
   <div id="body">
-    <h2> Holiday Road </h2>
+    <h1> Holiday Road </h1>
     <div id="selectDropdowns">
       ${parkDropdown()}
       ${bizarrerieDropdown()}
@@ -20,21 +21,34 @@ export const HolidayRoad = () => {
           <div id="selectedChoicesContainer">
             <h3>Itinerary Preview</h3>
             <div class="selectedLabel">Park Name</div>
-            ${showSelectedPark()}
+            <div class="flexRow">
+              ${showSelectedPark()}
+              <button class="deets-btn" id="parks-btn">Details</button>
+            </div>
             <div class="selectedLabel">Bizarrerie</div>
-            ${showSelectedBizarrerie()}
+            <div class="flexRow">
+              ${showSelectedBizarrerie()}
+              <button class="deets-btn" id="biz-btn">Details</button>
+            </div>
             <div class="selectedLabel">Eatery</div>
-            ${showSelectedEatery()}
+            <div class="flexRow">
+              ${showSelectedEatery()}
+              <button class="deets-btn" id="eat-btn">Details</button>
+            </div>
             ${enableSaveButton()}
+            
           </div>
           <div id="moreDetailsContainer">
-            <h3>More Details</h3>
+            <div id="moreDetailsInfo">
+            ${showMoreDetails()}
+            </div>
           </div>
-          
         </div>
         <div id="weatherContainer">
-          <h3>Weather</h3>
+          <h3>Your Current Weather</h3>
+          <div id="weather">
           ${showSelectedWeather()}
+          </div>
         </div>
       </div>
       <div id="savedItineraryListContainer">

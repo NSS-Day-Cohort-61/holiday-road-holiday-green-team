@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
 html {
   height: 100%;
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: Lato, sans-serif;
 }
 
 #body {
@@ -7,7 +11,7 @@ html {
   background-color: rgb(241, 239, 237);
 }
 
-h2, h3 {
+h1, h2, h3 {
   text-align: center;
 }
 
@@ -47,8 +51,10 @@ h2, h3 {
 #weatherContainer {
   border: 1px solid black;
   background-color: white;
-  height: 500px;
+  height: 200px;
   margin-top: 25px;
+  height:fit-content
+  
 }
 
 #savedItineraryListContainer {
@@ -62,7 +68,7 @@ h2, h3 {
 #selectedChoicesContainer {
   display: flex;
   flex-direction: column;
-  width: 65%
+  width: 53%
 }
 
 #selectedChoicesContainer .selectedLabel {
@@ -70,25 +76,108 @@ h2, h3 {
   align-self: start;
 }
 
+#moreDetailsContainer {
+  border: 1px solid black;
+  display: block;
+  min-height: 65%;
+  overflow: auto;
+  width: 45%;
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+#moreDetailsContainer h3, #moreDetailsContainer h4 {
+  margin: 0px;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+}
+
 #selectedPark, #selectedBizarrerie, #selectedEatery {
   border: 1px solid black;
   height: 20px;
   width: 95%;
-  margin-bottom: 10px;
   margin-left: 10px;
-}
-
-#moreDetailsContainer {
-  border: 1px solid black;
-  height: 200px;
-  width: 30%;
-  margin: 10px auto;
 }
 
 .btn {
   width: 100px;
   margin: 10px;
 }
+/*******************************************************************************/
+#weather {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+img {
+  background-color: rgb(129, 158, 252);
+  margin: auto;
+   width:50px;
+  height: 50px;
+  border: .5px black solid;
+ 
+}
+.dates {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+    font-size: small;
+    list-style-type: none;    
+}
+
+.date_container {
+  text-align: center;
+}
+
+.weather_icon{
+  width: 25px;
+  height: 25px;
+}
+
+
+
+.var {
+  background-image: linear-gradient(
+      rgba(255,255,255,0.5), 
+      rgba(255,255,255,0.75)), 
+      var(--url);
+
+  background-color: rgb(129, 158, 252);
+  background-repeat: no-repeat;
+  
+}
+
+.big_temp {
+  font-size: 25px;
+  
+}
+.a{
+  height: 35px;
+  color:rgb(129, 158, 252)
+}
+
+.deets-btn {
+  width: 75px;
+  margin-left: 10px;
+  padding: 0;
+}
+
+.blank {
+  width: 140;
+  height: 74;
+  border: 1 dotted;
+}
+
+
+
 
 .savedSingles {
   border: 1px solid black;

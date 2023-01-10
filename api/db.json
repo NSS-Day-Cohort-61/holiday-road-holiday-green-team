@@ -1047,6 +1047,417 @@
         }
       },
       "id": 3
+    },
+    {
+      "selectedPark": {
+        "id": "B170CCF7-7AB9-48FF-950E-31815FD4DBB2",
+        "url": "https://www.nps.gov/badl/index.htm",
+        "fullName": "Badlands National Park",
+        "parkCode": "badl",
+        "description": "The rugged beauty of the Badlands draws visitors from around the world. These striking geologic deposits contain one of the world’s richest fossil beds. Ancient horses and rhinos once roamed here. The park’s 244,000 acres protect an expanse of mixed-grass prairie where bison, bighorn sheep, prairie dogs, and black-footed ferrets live today.",
+        "latitude": "43.68584846",
+        "longitude": "-102.482942",
+        "latLong": "lat:43.68584846, long:-102.482942",
+        "activities": [
+          {
+            "id": "5F723BAD-7359-48FC-98FA-631592256E35",
+            "name": "Auto and ATV"
+          },
+          {
+            "id": "0B4A5320-216D-451A-9990-626E1D5ACE28",
+            "name": "Scenic Driving"
+          },
+          {
+            "id": "13A57703-BB1A-41A2-94B8-53B692EB7238",
+            "name": "Astronomy"
+          },
+          {
+            "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
+            "name": "Biking"
+          },
+          {
+            "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
+            "name": "Camping"
+          },
+          {
+            "id": "4A58AF13-E8FB-4530-B41A-97DF0B0C77B7",
+            "name": "Backcountry Camping"
+          },
+          {
+            "id": "9159DF0F-951D-4AAE-9987-CEB3CE2A9ADA",
+            "name": "Car or Front Country Camping"
+          },
+          {
+            "id": "80229F2D-972E-40A8-8860-232551CC30D6",
+            "name": "Horse Camping (see also Horse/Stock Use)"
+          },
+          {
+            "id": "C11D3746-5063-4BD0-B245-7178D1AD866C",
+            "name": "Compass and GPS"
+          },
+          {
+            "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
+            "name": "Food"
+          },
+          {
+            "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+            "name": "Hiking"
+          },
+          {
+            "id": "0307955A-B65C-4CE4-A780-EB36BAAADF0B",
+            "name": "Horse Trekking"
+          },
+          {
+            "id": "788C7572-5425-49EF-A0BF-5A0DF93F7542",
+            "name": "Horse Camping (see also camping)"
+          },
+          {
+            "id": "1886DA47-0AEC-4568-B9C2-8E9BC316AAAC",
+            "name": "Horseback Riding"
+          },
+          {
+            "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+            "name": "Junior Ranger Program"
+          },
+          {
+            "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+            "name": "Wildlife Watching"
+          },
+          {
+            "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+            "name": "Birdwatching"
+          },
+          {
+            "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+            "name": "Park Film"
+          },
+          {
+            "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+            "name": "Shopping"
+          },
+          {
+            "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+            "name": "Bookstore and Park Store"
+          },
+          {
+            "id": "43800AD1-D439-40F3-AAB3-9FB651FE45BB",
+            "name": "Gift Shop and Souvenirs"
+          }
+        ],
+        "topics": [
+          {
+            "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+            "name": "Archeology"
+          },
+          {
+            "id": "00F3C3F9-2D67-4802-81AE-CCEA5D3BA370",
+            "name": "Arts"
+          },
+          {
+            "id": "7F12224B-217A-4B07-A4A2-636B1CE7F221",
+            "name": "Colonization and Settlement"
+          },
+          {
+            "id": "1F833C99-A75D-4F9E-9256-B96523485466",
+            "name": "Farming and  Agriculture"
+          },
+          {
+            "id": "3B0D607D-9933-425A-BFA0-21529AC4734C",
+            "name": "Military"
+          },
+          {
+            "id": "6766B838-9493-4EF8-830E-2D1EFB917461",
+            "name": "Indigenous and Native Warrior"
+          },
+          {
+            "id": "BEB7E470-13B2-4E00-84B2-0402D98DAF69",
+            "name": "Monuments and Memorials"
+          },
+          {
+            "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+            "name": "Native American Heritage"
+          },
+          {
+            "id": "FE2C2613-B41E-4531-BC43-03EB6E45CBCF",
+            "name": "Transportation"
+          },
+          {
+            "id": "A160B3D9-1603-4D89-B82F-21FCAF9EEE3B",
+            "name": "Tragic Events"
+          },
+          {
+            "id": "CB405E14-E2A3-4C2E-A91C-AFF8AEB3DEA0",
+            "name": "Massacres"
+          },
+          {
+            "id": "27BF8807-54EA-4A3D-B073-AA7AA361CD7E",
+            "name": "Wars and Conflicts"
+          },
+          {
+            "id": "53798A16-7CDB-4F17-9C28-095F92D2ED8D",
+            "name": "Indian and Frontier Wars"
+          },
+          {
+            "id": "C9C749E3-39C3-45F7-BCC5-9A609E30AA05",
+            "name": "Westward Expansion"
+          },
+          {
+            "id": "D1722DD1-E314-4B6D-8116-DED86305C4A4",
+            "name": "Homesteading"
+          },
+          {
+            "id": "FB3641FE-67A3-4EC7-B9C4-0A0867776798",
+            "name": "Ancient Seas"
+          },
+          {
+            "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+            "name": "Animals"
+          },
+          {
+            "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+            "name": "Birds"
+          },
+          {
+            "id": "324C31EC-7D75-41C7-AA28-EF8ACB5B6BF5",
+            "name": "Bison"
+          },
+          {
+            "id": "2539614A-9646-446E-8251-34D3AAE068FA",
+            "name": "Cats (wild)"
+          },
+          {
+            "id": "EC707104-66CB-466F-90F8-76264F3BE578",
+            "name": "Horses (wild)"
+          },
+          {
+            "id": "393F60FB-80D6-46F7-B0FB-BBF3C90F59FD",
+            "name": "Tortoises and Turtles"
+          },
+          {
+            "id": "4DC11D06-00F1-4A01-81D0-89CCCCE4FF50",
+            "name": "Climate Change"
+          },
+          {
+            "id": "04A39AB8-DD02-432F-AE5F-BA1267D41A0D",
+            "name": "Fire"
+          },
+          {
+            "id": "F6D3A52E-608F-47D6-96DF-1FD64122A2FC",
+            "name": "Fossils and Paleontology"
+          },
+          {
+            "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
+            "name": "Geology"
+          },
+          {
+            "id": "94262026-92F5-48E9-90EF-01CEAEFBA4FF",
+            "name": "Grasslands"
+          },
+          {
+            "id": "1AEDC86F-5792-487F-8CDF-9E92CAB97ACE",
+            "name": "Prairies"
+          },
+          {
+            "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
+            "name": "Night Sky"
+          },
+          {
+            "id": "E06F3C94-AC8A-4B1C-A247-8EBA8910D5EE",
+            "name": "Astronomy"
+          },
+          {
+            "id": "4244F489-6813-4B7A-9D0C-20CE098C8FFF",
+            "name": "Rock Landscapes and Features"
+          },
+          {
+            "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
+            "name": "Scenic Views"
+          },
+          {
+            "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+            "name": "Trails"
+          },
+          {
+            "id": "78E4F4AC-AF97-435A-8C2C-7FB8D67516ED",
+            "name": "Unique Species"
+          },
+          {
+            "id": "489D6333-FD72-44DF-83B0-3D4412DD0A75",
+            "name": "Endangered"
+          },
+          {
+            "id": "B85866E2-0897-4000-9040-605CA335804F",
+            "name": "Wilderness"
+          }
+        ],
+        "states": "SD",
+        "contacts": {
+          "phoneNumbers": [
+            {
+              "phoneNumber": "6054335361",
+              "description": "",
+              "extension": "",
+              "type": "Voice"
+            }
+          ],
+          "emailAddresses": [
+            {
+              "description": "",
+              "emailAddress": "badl_information@nps.gov"
+            }
+          ]
+        },
+        "entranceFees": [
+          {
+            "cost": "30.00",
+            "description": "Fee covers the entry of a private vehicle and its occupants for 7 days",
+            "title": "Private Vehicle"
+          },
+          {
+            "cost": "15.00",
+            "description": "Fee covers the entry of an individual that is hiking, bicycling, etc... for 7 days",
+            "title": "Individual (Hiking, Bicycling, etc...)"
+          },
+          {
+            "cost": "25.00",
+            "description": "Fee covers the entry of a motorcycle and its occupants for 7 days",
+            "title": "Motorcycle"
+          },
+          {
+            "cost": "25.00",
+            "description": "Commercial sedan, 1 to 6 passenger capacity.   $25 plus $10 per person - 7 days for Original Manifest",
+            "title": "Commercial Sedan, 1 to 6 passenger capacity"
+          },
+          {
+            "cost": "50.00",
+            "description": "Commercial van, 7 to 15 passenger capacity; $50 - 7 days for Original Manifest",
+            "title": "Commercial Van, 7 to 15 passenger capacity"
+          },
+          {
+            "cost": "60.00",
+            "description": "Minibus, 16 to 25 passenger capacity; $60 - 7 days for Original Manifest",
+            "title": "Commercial Minibus, 16 to 25 passenger capacity"
+          },
+          {
+            "cost": "150.00",
+            "description": "Motorcoach, 26 or more passenger capacity; $150 - 7 days for Original Manifest",
+            "title": "Commercial Motorcoach, 26 or more passenger capacity"
+          }
+        ],
+        "entrancePasses": [
+          {
+            "cost": "55.00",
+            "description": "This pass admits a single, private, non commercial vehicle and its occupants into the park. This pass does not include camping or give any type of discount at stores inside the park. Valid for one year from month of purchase.",
+            "title": "Badlands National Park Annual Pass"
+          }
+        ],
+        "fees": [],
+        "directionsInfo": "Badlands National Park is located 75 miles east of Rapid City, South Dakota. Physical Addresses for GPS* Park Headquarters: 25216 Ben Reifel Road, Interior, SD 57750. Northeast Entrance (I-90, Exit 131): 21020 SD Hwy 240, Interior, SD 57750. Pinnacles Entrance (I-90, Exit 110): 24240 Hwy 240, Wall, SD 57790. Interior Entrance: 20640 SD Hwy 377, Interior, SD 57750.",
+        "directionsUrl": "http://www.nps.gov/badl/planyourvisit/directions.htm",
+        "operatingHours": [
+          {
+            "exceptions": [],
+            "description": "The park is open to visitors all year with the exception of weather closures.",
+            "standardHours": {
+              "wednesday": "All Day",
+              "monday": "All Day",
+              "thursday": "All Day",
+              "sunday": "All Day",
+              "tuesday": "All Day",
+              "friday": "All Day",
+              "saturday": "All Day"
+            },
+            "name": "Badlands National Park"
+          }
+        ],
+        "addresses": [
+          {
+            "postalCode": "57750",
+            "city": "Interior",
+            "stateCode": "SD",
+            "line1": "25216 Ben Reifel Road",
+            "type": "Physical",
+            "line3": "",
+            "line2": ""
+          },
+          {
+            "postalCode": "57750",
+            "city": "Interior",
+            "stateCode": "SD",
+            "line1": "25216 Ben Reifel Road",
+            "type": "Mailing",
+            "line3": "",
+            "line2": ""
+          }
+        ],
+        "images": [
+          {
+            "credit": "NPS Photo",
+            "title": "Badlands Storm",
+            "altText": "Layered badlands formations behind fields of green grass under cloudy and billowing clouds.",
+            "caption": "Summer storms are frequently violent and unpredictable.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C82EE63-1DD8-B71B-0BD6EE0FDCB5D402.jpg"
+          },
+          {
+            "credit": "NPS Photo",
+            "title": "Badlands Yellow Mounds",
+            "altText": "The yellow mounds are peaking out of the formations in this photo.",
+            "caption": "The yellow mounds are peaking out of the formations in this photo.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C82ED5D-1DD8-B71B-0B2F33D3B39D6D1B.jpg"
+          },
+          {
+            "credit": "NPS Photo",
+            "title": "Badlands Rugged Peaks",
+            "altText": "Badlands formations are very rugged and often have sharp peaks.",
+            "caption": "Badlands formations are very rugged and often have sharp peaks.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C82EBFE-1DD8-B71B-0B21072718DB2A95.jpg"
+          },
+          {
+            "credit": "NPS Photo",
+            "title": "Clover Landscape",
+            "altText": "Jagged badlands buttes extended in horizon amid yellow flowers under a blue sky.",
+            "caption": "The park has seasonal changes in colors so plan ahead!",
+            "url": "https://www.nps.gov/common/uploads/structured_data/28C2C88B-9904-7962-E60BEFC763604963.jpg"
+          },
+          {
+            "credit": "NPS Photo/Brad Barker",
+            "title": "Badlands in the Winter",
+            "altText": "road leading between snow covered badlands formations",
+            "caption": "Winter in Badlands National Park often creates snow covered wonderlands throughout the park.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/36C156B0-F6CA-1972-F3B88C971DE39767.jpg"
+          }
+        ],
+        "weatherInfo": "The Badlands weather is variable and unpredictable with temperature extremes ranging from 116° F to -40° F. Summers are hot and dry with occasional violent thunderstorms. Hailstorms and occasional tornadoes can descend on the Badlands with sudden fury. Winters are typically cold with 12 to 24 inches of total snowfall.",
+        "name": "Badlands",
+        "designation": "National Park"
+      },
+      "selectedEatery": {
+        "businessName": "The Golden Lamb",
+        "description": "Staking a claim as Ohio's oldest continually operated business, this joint's got some serious history. Located between Cincinnati and the old National Rd, the hotel and restaurant welcomed everyone from railroad workers to 12 presidents, writers like Mark Twain and Chuck Dickens, and everyone in between. More importantly, the food's good. And yes, lamb is served in the ancient, historic joint.",
+        "state": "OH",
+        "city": "Lebanon",
+        "id": 37,
+        "ameneties": {
+          "wheelchairAccessible": true,
+          "petFriendly": false,
+          "wifi": false,
+          "diaperFacility": true,
+          "playground": false,
+          "restrooms": true
+        }
+      },
+      "selectedBizarrerie": {
+        "id": 18,
+        "name": "Funny Town Welcome Sign",
+        "city": "Hartford",
+        "state": "KY",
+        "description": "Clearly the town of Hartford has a good sense of humor. 'Home of 2000 happy people and a few soreheads,' reads the iconic welcome sign. Definitely Instagram that!",
+        "ameneties": {
+          "souvenirs": false,
+          "restrooms": false
+        }
+      },
+      "id": 4
     }
   ]
 }
