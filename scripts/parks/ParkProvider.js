@@ -2,16 +2,17 @@ import {
   getParks,
   setSelectedPark,
   getSelectedPark,
-  fetchWeather,
+  fetchWeather
 } from "../data/dataAccess.js";
+
 
 export const parkDropdown = () => {
   const parks = getParks();
   const selectedPark = getSelectedPark();
 
   let html = `
-          <select id="parks" name="parks">
-          <option value="null">Choose a State Park</option>
+          <select id="parks" class="reqInputs" name="parks" >
+          <option value="0">Choose a State Park</option>
       ${parks
         .map((park) => {
           if (park.id === selectedPark.id) {

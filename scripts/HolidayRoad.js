@@ -3,6 +3,8 @@ import { showSelectedWeather } from "./weather/WeatherProvider.js"
 import { eateryDropdown, showSelectedEatery } from "./eateries/EateryProvider.js"
 import { bizarrerieDropdown, showSelectedBizarrerie } from "./bizarreries/bizarrerieProvider.js"
 import { showMoreDetails } from "./attractions/AttractionProvider.js"
+import { savedItineraryHTML } from "./itineraries/savedItineraries.js"
+import { getCurrentItinerary } from "./data/dataAccess.js"
 
 export const HolidayRoad = () => {
   return `
@@ -33,7 +35,7 @@ export const HolidayRoad = () => {
               ${showSelectedEatery()}
               <button class="deets-btn" id="eat-btn">Details</button>
             </div>
-            <button id="save" class="btn">Save</button>
+            ${enableSaveButton()}
             
           </div>
           <div id="moreDetailsContainer">
@@ -51,11 +53,19 @@ export const HolidayRoad = () => {
       </div>
       <div id="savedItineraryListContainer">
         <h3>Saved Itineraries</h3>
-        <ul>
-          <li>First Itinerary</li>
-        </ul>
+        ${savedItineraryHTML()}
       </div>
     </div>
   </div>
   `
+}
+
+const enableSaveButton = () => {
+  const currentItins = getCurrentItinerary();
+  if (Object.keys(currentItins.selectedBizarrerie).length == 0 || Object.keys(currentItins.selectedPark).length == 0 || Object.keys(currentItins.selectedEatery).length == 0) {
+    return `<button disabled="disabled" id="save" class="btn">Save</button>`
+  }
+  else {
+    return `<button id="save" class="btn">Save</button>`
+  }
 }

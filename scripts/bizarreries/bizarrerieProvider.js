@@ -4,11 +4,12 @@ import {
   getSelectedBizarrerie,
 } from "../data/dataAccess.js";
 
+
 export const bizarrerieDropdown = () => {
   const bizarreries = getBizarreries();
   const selectedBizarrerie = getSelectedBizarrerie();
   let html = ``;
-  html += `<select id="bizarrerie">`;
+  html += `<select id="bizarrerie" class="reqInputs" name="bizarreries" >`;
   html += `<option value="0">Select Bizarrerie</option>`;
 
   for (const bizarrerie of bizarreries) {
