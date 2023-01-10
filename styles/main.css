@@ -144,11 +144,11 @@ img {
 
 
 
-#bck_image {
+.var {
   background-image: linear-gradient(
       rgba(255,255,255,0.5), 
-      rgba(255,255,255,0.25)), 
-      url( http://openweathermap.org/img/wn/10d@2x.png);
+      rgba(255,255,255,0.75)), 
+      var(--url);
 
   background-color: rgb(129, 158, 252);
   background-repeat: no-repeat;
@@ -156,10 +156,11 @@ img {
 }
 
 .big_temp {
-  font-size: 45px;
+  font-size: 25px;
   
 }
 .a{
+  height: 35px;
   color:rgb(129, 158, 252)
 }
 
@@ -168,3 +169,11 @@ img {
   margin-left: 10px;
   padding: 0;
 }
+
+.blank {
+  width: 140;
+  height: 74;
+  border: 1 dotted;
+}
+
+

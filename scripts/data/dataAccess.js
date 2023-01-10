@@ -27,8 +27,8 @@ export const fetchParks = () => {
     });
 };
 
-export const fetchWeather = (lat, lon) => {
-  const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${keys.weatherKey}&units=imperial`;
+export const fetchWeather = (lat, lon,cnt) => {
+  const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=${cnt}&appid=${keys.weatherKey}&units=imperial`;
   return fetch(`${weatherURL}`)
     .then((response) => response.json())
     .then((data) => {

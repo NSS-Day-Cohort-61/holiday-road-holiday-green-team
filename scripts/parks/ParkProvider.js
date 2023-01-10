@@ -44,6 +44,11 @@ document.addEventListener("change", (e) => {
     const parksList = getParks();
     const chosenPark = parksList.find((park) => park.id == e.target.value);
     setSelectedPark(chosenPark);
-    fetchWeather(chosenPark.latitude, chosenPark.longitude);
+    const currentTime = new Date( Date.now() )
+  const currentdisplayHour = currentTime.getHours()
+  const cnt = Math.floor(39 - currentdisplayHour/3)
+  console.log(`park: ${cnt}`)
+  
+   fetchWeather(chosenPark.latitude, chosenPark.longitude, cnt);
   }
 });
