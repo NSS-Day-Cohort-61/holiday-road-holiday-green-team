@@ -1,7 +1,10 @@
 import {
   fetchBizarreries,
   fetchParks,
-  getBizarreries,
+  fetchWeather,
+  getCurrentGPS,
+  setCurrentGPS,
+  getPosition,
 } from "./data/dataAccess.js";
 import { fetchEateries } from "./data/dataAccess.js";
 import { HolidayRoad } from "./HolidayRoad.js";
@@ -12,24 +15,22 @@ applicationElement.addEventListener("stateChanged", (customEvent) => {
   renderApp();
 });
 
-// const renderApp = () => {
-//   const promArray = [fetchEateries(), fetchBizarreries(), fetchParks()]
-//   Promise.all(promArray)
-//     .then(() => {
-//       applicationElement.innerHTML = HolidayRoad();
-//     })
-//     .catch(() => {
-//       console.log(`shit happens`)
-//     })
-// };
-
 const renderApp = () => {
-  fetchEateries()
-    .then(() => fetchBizarreries())
-    .then(() => fetchParks())
-    .then(() => {
-      applicationElement.innerHTML = HolidayRoad();
-    });
+  getPosition().then((position) => {
+    if (Object.keys(getCurrentGPS()).length === 0) {
+      setCurrentGPS(position.coords.latitude, position.coords.longitude);
+    }
+    const currentGPS = getCurrentGPS();
+    const lat = currentGPS.lat;
+    const lon = currentGPS.lon;
+    fetchEateries()
+      .then(() => fetchBizarreries())
+      .then(() => fetchParks())
+      .then(() => fetchWeather(lat, lon))
+      .then(() => {
+        applicationElement.innerHTML = HolidayRoad();
+      });
+  });
 };
 
 renderApp();

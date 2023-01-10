@@ -1,59 +1,67 @@
-import { getWeather, fetchWeather } from "../data/dataAccess.js";
-
-
-
+import {
+  getWeather,
+  fetchWeather,
+  getCurrentDay,
+  setCurrentDay,
+} from "../data/dataAccess.js";
 
 export const showSelectedWeather = () => {
-  const weather = getWeather()
+  const isNewDay = (currentDay, oldDay) => {
+    if (currentDay.getDay() !== oldDay) {
+      setCurrentDay(currentDay.getDay());
+      return `</div><h2>${currentDay}</h2><div id='weatherRow'>`;
+    } else {
+      return "";
+    }
+  };
 
-  const currentTime = new Date((weather[0].dt * 1000))
-  const currentdisplayHour = currentTime.getHours()
-  let html = ""
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
-  if (currentdisplayHour !== 0) {
-    for (let i = 0; i <= (currentdisplayHour / 3); i++) {
-      html += `<ul class="dates"><li class="blank"><div "> </div></li></ul>`;
+  const weather = getWeather();
+  const currentDate = new Date(weather[0].dt_txt);
+  const currentDisplayHour = currentDate.getHours();
+  const day = currentDate.getDay();
+  setCurrentDay(day);
+  let html = `<h2>${currentDate}</h2><div id='weatherRow'>`;
 
+  if (currentDisplayHour !== 0) {
+    for (let i = 0; i < currentDisplayHour / 3; i++) {
+      html += `<ul class="dates"><li class="blank"></li></ul>`;
     }
   }
-   html += `
+
+  html += `
     ${weather
       .map((w) => {
-        
-        const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        const d = new Date(`${w.dt_txt}`)
-        const name = month[d.getMonth()];
+        const d = new Date(`${w.dt_txt}`);
+        // const name = month[d.getMonth()];
+        const oldDay = getCurrentDay();
+
         return `
-        
+        ${isNewDay(d, oldDay)}
         <div class="var" style="--url: url(http://openweathermap.org/img/wn/${w.weather[0].icon}@2x.png")">
-            <ul class="dates">
-              <li>${name} ${d.getDate()}</li>
+          <ul class="dates">
             <li> ${d.getHours()}:00</li>
-              <li class="a"></li>
-              <li class="big_temp">${Math.round(w.main.temp)}\u00B0F</li>
-              <li>${w.weather[0].description}</li>
-            </ul>
-        </div>`
-
+            <li class="a"></li>
+            <li class="big_temp">${Math.round(w.main.temp)}\u00B0F</li>
+            <li>${w.weather[0].description}</li>
+          </ul>
+        </div>`;
       })
-      .join("<br>")}
-    `;
-  return html
-}
-
-
-// geo location position
-const successCallback = (position) => {
-  console.log(position);
-  const currentTime = new Date((position.timestamp))
-  const currentdisplayHour = currentTime.getHours()
-  const cnt = Math.floor(39 - currentdisplayHour / 3)
-  console.log(cnt)
-  fetchWeather(position.coords.latitude, position.coords.longitude, cnt)
+      .join("")}`;
+  html += "</div>";
+  return html;
 };
-
-const errorCallback = (error) => {
-  console.log(error);
-};
-
-navigator.geolocation.getCurrentPosition(successCallback, errorCallback);

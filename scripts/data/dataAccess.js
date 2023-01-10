@@ -12,11 +12,13 @@ const applicationState = {
   currentItinerary: {
     selectedPark: {},
     selectedEatery: {},
-    selectedBizarrerie: {}
+    selectedBizarrerie: {},
   },
   weather: [],
   savedItineraries: [],
-  moreDetailsDisplay: 'N',
+  moreDetailsDisplay: "N",
+  currentGPS: {},
+  currentDay: "",
 };
 
 export const fetchParks = () => {
@@ -27,8 +29,8 @@ export const fetchParks = () => {
     });
 };
 
-export const fetchWeather = (lat, lon,cnt) => {
-  const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=${cnt}&appid=${keys.weatherKey}&units=imperial`;
+export const fetchWeather = (lat, lon) => {
+  const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${keys.weatherKey}&units=imperial`;
   return fetch(`${weatherURL}`)
     .then((response) => response.json())
     .then((data) => {
@@ -104,6 +106,29 @@ export const setMoreDetailsDisplay = (detailsState) => {
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
+export const setCurrentGPS = (lat, lon) => {
+  applicationState.currentGPS.lat = lat;
+  applicationState.currentGPS.lon = lon;
+};
+
+export const getCurrentGPS = () => {
+  return { ...applicationState.currentGPS };
+};
+
 export const getCurrentItinerary = () => {
   return { ...applicationState.currentItinerary };
+};
+
+export const getPosition = (options) => {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject, options);
+  });
+};
+
+export const getCurrentDay = () => {
+  return applicationState.currentDay;
+};
+
+export const setCurrentDay = (day) => {
+  applicationState.currentDay = day;
 };
