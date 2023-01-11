@@ -1,4 +1,4 @@
-import { applicationState, getCurrentItinerary, getItineraries, sendItinerary } from "../data/dataAccess.js";
+import { applicationState, getCurrentItinerary, getItineraries, sendItinerary, setCurrentGPS } from "../data/dataAccess.js";
 
 
 //Do I need to save & match IDs?
@@ -41,21 +41,6 @@ applicationElement.addEventListener("click", clickEvent => {
 // 3. set the select/option fields (which should trigger/populate the preview fields?)
 //look thru savedItineraries and reset applicationstate.currentItinerary
 
-export const reviveItinerary = (savedItinerary) => {
-    const savedItins = applicationState.savedItineraries;
-    const currentItinerary = applicationState.currentItinerary;
-    for (const itin of savedItins) {
-        if (itin.selectedPark.id === clickedItin.selectedPark.id) {
-            currentItinerary.selectedPark.push(itin.selectedPark)
-        }
-        if (itin.selectedBizarrerie.id === clickedItin.selectedBizarrerie.id) {
-            currentItinerary.selectedBizarrerie.push(itin.selectedBizarrerie)
-        }
-        if (itin.selectedEatery.id === clickedItin.selectedEatery.id) {
-            currentItinerary.selectedEatery.push(itin.selectedEatery)
-        }
-    }
-}
 
 document.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.className.startsWith("itinId--")) {
@@ -64,6 +49,7 @@ document.addEventListener("click", (clickEvent) => {
         for (const itin of itineraries) {
             if (itin.id === parseInt(savedItinId)) {
                 applicationState.currentItinerary = itin
+                setCurrentGPS(itin.selectedPark.latitude, itin.selectedPark.longitude)
             }
         }
         applicationElement.dispatchEvent(new CustomEvent("stateChanged"));

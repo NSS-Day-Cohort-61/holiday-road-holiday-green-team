@@ -2,7 +2,7 @@ import { keys } from "../Settings.js";
 
 const apiURL = "http://localhost:8088";
 const applicationElement = document.querySelector("#container");
-const parksURL = `https://developer.nps.gov/api/v1/parks?api_key=${keys.npsKey}`;
+const parksURL = `https://developer.nps.gov/api/v1/parks?api_key=${keys.npsKey}&limit=470`;
 
 export const applicationState = {
   itineraries: [],
@@ -21,9 +21,6 @@ export const applicationState = {
   currentGPS: {},
   currentDay: "",
 };
-
-//make sendItin, fetchItin,
-
 
 export const fetchParks = () => {
   return fetch(`${parksURL}`)
@@ -58,6 +55,16 @@ export const fetchBizarreries = () => {
     });
 };
 
+export const fetchItinerary = () => {
+  return fetch(`${apiURL}/itineraries`)
+    .then(response => response.json())
+    .then(
+      (data) => {
+        applicationState.savedItineraries = data
+      }
+    )
+}
+
 export const getParks = () => {
   return applicationState.parks.map((park) => ({ ...park }));
 };
@@ -90,6 +97,28 @@ export const getMoreDetailsDisplay = () => {
   return applicationState.moreDetailsDisplay;
 };
 
+export const getItineraries = () => {
+  return [...applicationState.savedItineraries]
+}
+
+export const getCurrentItinerary = () => {
+  return { ...applicationState.currentItinerary };
+};
+
+export const getPosition = (options) => {
+  return new Promise(function (resolve, reject) {
+    navigator.geolocation.getCurrentPosition(resolve, reject, options);
+  });
+};
+
+export const getCurrentDay = () => {
+  return applicationState.currentDay;
+};
+
+export const getCurrentGPS = () => {
+  return { ...applicationState.currentGPS };
+};
+
 export const setSelectedPark = (parkObject) => {
   applicationState.currentItinerary.selectedPark = parkObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
@@ -115,9 +144,10 @@ export const setCurrentGPS = (lat, lon) => {
   applicationState.currentGPS.lon = lon;
 };
 
-export const getCurrentGPS = () => {
-  return { ...applicationState.currentGPS };
+export const setCurrentDay = (day) => {
+  applicationState.currentDay = day;
 };
+
 
 export const sendItinerary = (currentItin) => {
   const fetchOptions = {
@@ -137,34 +167,3 @@ export const sendItinerary = (currentItin) => {
     )
 }
 
-export const fetchItinerary = () => {
-  return fetch(`${apiURL}/itineraries`)
-    .then(response => response.json())
-    .then(
-      (data) => {
-        applicationState.savedItineraries = data
-      }
-    )
-}
-
-export const getItineraries = () => {
-  return [...applicationState.savedItineraries]
-}
-
-export const getCurrentItinerary = () => {
-  return { ...applicationState.currentItinerary };
-};
-
-export const getPosition = (options) => {
-  return new Promise(function (resolve, reject) {
-    navigator.geolocation.getCurrentPosition(resolve, reject, options);
-  });
-};
-
-export const getCurrentDay = () => {
-  return applicationState.currentDay;
-};
-
-export const setCurrentDay = (day) => {
-  applicationState.currentDay = day;
-};
