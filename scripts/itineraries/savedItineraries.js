@@ -1,4 +1,4 @@
-import { applicationState, getCurrentItinerary, getItineraries, sendItinerary } from "../data/dataAccess.js";
+import { applicationState, getCurrentItinerary, getItineraries, getParks, sendItinerary } from "../data/dataAccess.js";
 
 
 //Do I need to save & match IDs?
@@ -14,7 +14,7 @@ export const savedItineraryHTML = () => {
                 <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Park:</strong> ${itinerary.selectedPark.fullName}</li>
                 <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Bizarrerie:</strong> ${itinerary.selectedBizarrerie.name}</li>
                 <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Eatery:</strong> ${itinerary.selectedEatery.businessName}</li>
-                </ul></li><br>
+                </ul><br><button class="eventBtn" id="eventBtn--${itinerary.id}">Events</button></li><br>
             `
         }
     ).join("")
@@ -33,29 +33,6 @@ applicationElement.addEventListener("click", clickEvent => {
 })
 
 
-// Function to make a saved itinerary clickable.
-// When clicked, the corresponding park, eatery, and bizarrerie should reappear in their respective input fields. 
-// Function will have to reference the savedItineraries in dataAccess.
-// 1. identify the park, eatery, bizarrerie IDs in the saved section.
-// 2. loop through each API and find the matching IDs.
-// 3. set the select/option fields (which should trigger/populate the preview fields?)
-//look thru savedItineraries and reset applicationstate.currentItinerary
-
-export const reviveItinerary = (savedItinerary) => {
-    const savedItins = applicationState.savedItineraries;
-    const currentItinerary = applicationState.currentItinerary;
-    for (const itin of savedItins) {
-        if (itin.selectedPark.id === clickedItin.selectedPark.id) {
-            currentItinerary.selectedPark.push(itin.selectedPark)
-        }
-        if (itin.selectedBizarrerie.id === clickedItin.selectedBizarrerie.id) {
-            currentItinerary.selectedBizarrerie.push(itin.selectedBizarrerie)
-        }
-        if (itin.selectedEatery.id === clickedItin.selectedEatery.id) {
-            currentItinerary.selectedEatery.push(itin.selectedEatery)
-        }
-    }
-}
 
 document.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.className.startsWith("itinId--")) {
@@ -69,3 +46,20 @@ document.addEventListener("click", (clickEvent) => {
         applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
     }
 })
+
+
+document.addEventListener("click", (clickEvent) => {
+    const parks = getParks()
+    const itineraries = getItineraries()
+    if (clickEvent.target.id.startsWith("eventBtn--")) {
+        const [, savedItinId] = clickEvent.target.id.split("--")
+        for (const itin of itineraries){
+            if (itin.id === parseInt(savedItinId)) {
+                window.alert(`${itin.selectedPark.fullName}\n `)
+            }
+                
+            }
+        }
+
+    }
+)
