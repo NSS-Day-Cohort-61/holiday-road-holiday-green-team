@@ -46,7 +46,6 @@ export const showSelectedWeather = () => {
     ${weather
       .map((w) => {
         const d = new Date(w.dt * 1000)
-        console.log(d)
         const oldDay = getCurrentDay();
         const temp = Math.round(w.main.temp)
         let tempColor;

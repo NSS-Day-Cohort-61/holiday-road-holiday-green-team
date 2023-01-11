@@ -40,7 +40,7 @@ h1, h2, h3 {
 #leftSideContainer {
   display: flex;
   flex-direction: column;
-  width: 70%
+  width: 58%
 }
 
 #itineraryPreviewContainer {
@@ -61,10 +61,18 @@ h1, h2, h3 {
   
 }
 
+#directionsContainer {
+  border: 1px solid black;
+  background-color: white;
+  margin: 0px 10px;
+  min-height: 150px;
+  width: 20%;
+}
+
 #savedItineraryListContainer {
   display: flex;
   border: 1px solid black;
-  width: 25%;
+  width: 18%;
   flex-direction: column;
   background-color: white;
 }
@@ -72,7 +80,7 @@ h1, h2, h3 {
 #selectedChoicesContainer {
   display: flex;
   flex-direction: column;
-  width: 53%
+  width: 58%
 }
 
 #selectedChoicesContainer .selectedLabel {
@@ -113,7 +121,7 @@ h1, h2, h3 {
 
 /*******************************************************************************/
 #weather {
-  padding: 0;
+  padding: 10px;
   margin: 0;
   box-sizing: 0;
 }
@@ -134,14 +142,13 @@ h1, h2, h3 {
   text-align: center;
 }
 
-img {
+/* img {
   background-color: rgb(129, 158, 252);
   margin: auto;
-  width:50px;
+  width: 50px;
   height: 50px;
   border: .5px black solid;
- 
-}
+} */
 
 .dates {
   display: flex;
@@ -197,4 +204,13 @@ img {
 .savedSingles {
   border: 1px solid black;
   margin-right: 10px;
+}
+
+.savedItins ol {
+  margin-left: 30px;
+  padding: 0;
+}
+
+.savedItins ol li ul {
+  padding: 5px 0px 5px 25px;
 }
