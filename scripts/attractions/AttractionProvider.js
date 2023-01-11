@@ -6,10 +6,6 @@ import {
 
 const applicationElement = document.querySelector("#container");
 
-export const showMoreDetails2 = () => {
-  return "haha hi";
-};
-
 export const showMoreDetails = () => {
   const moreDetailsDisplay = getMoreDetailsDisplay();
   switch (moreDetailsDisplay) {
