@@ -30,9 +30,10 @@ export const parkActivities = () => {
 
      document.addEventListener("input", (e) => {
    
-        if (document.querySelector === ["data-search"]) {
+        if (e.target === ["data-search"]) {
+            const searchTerm = e.target.elements["data-search"].values
             const parks = getParks()
-            console.log(e.target.value)
+            console.log(searchTerm)
         //     const parkActivity = parks[0].activities.map((activity) => ({ ...activity }))
         //     const value = e.target.value.toLowerCase()
         //  parkActivity.forEach(activity =>{
