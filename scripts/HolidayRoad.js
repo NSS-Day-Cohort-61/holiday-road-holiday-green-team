@@ -5,6 +5,7 @@ import { bizarrerieDropdown, showSelectedBizarrerie } from "./bizarreries/bizarr
 import { showMoreDetails } from "./attractions/AttractionProvider.js"
 import { savedItineraryHTML } from "./itineraries/savedItineraries.js"
 import { getCurrentItinerary } from "./data/dataAccess.js"
+import { showDirections } from "./directions/DirectionProvider.js"
 
 import { parkActivities } from "./search/searchparks.js"
 
@@ -52,6 +53,10 @@ export const HolidayRoad = () => {
           ${showSelectedWeather()}
           </div>
         </div>
+      </div>
+      <div id="directionsContainer">
+        <h3>Directions</h3>
+        ${showDirections()}
       </div>
       <div id="savedItineraryListContainer">
         <h3>Saved Itineraries</h3>
