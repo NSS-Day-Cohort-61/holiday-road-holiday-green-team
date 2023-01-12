@@ -1,14 +1,19 @@
 import {
   fetchBizarreries,
-  fetchItinerary, fetchParks,
+  fetchItinerary, 
+  fetchParks,
   fetchWeather,
   getCurrentGPS,
   setCurrentGPS,
   getPosition,
-  fetchDirections
+  fetchDirections,
+  fetchEateryLatLon,
+  fetchBizLatLon,
+  getDirectionsLocationsArray
 } from "./data/dataAccess.js";
 import { fetchEateries } from "./data/dataAccess.js";
 import { HolidayRoad } from "./HolidayRoad.js";
+import { eateryInfo, bizInfo } from "./directions/DirectionProvider.js"
 
 const applicationElement = document.querySelector("#container");
 
@@ -40,7 +45,9 @@ const renderApp = () => {
     .then(() => fetchParks())
     .then(() => fetchWeather(lat, lon))
     .then(() => fetchItinerary())
-    .then(() => fetchDirections())
+    .then(() => fetchEateryLatLon(eateryInfo()))
+    .then(() => fetchBizLatLon(bizInfo()))
+    .then(() => fetchDirections(getDirectionsLocationsArray()))
     .then(() => {
       applicationElement.innerHTML = HolidayRoad();
     })

@@ -4,7 +4,8 @@ import {
   getSelectedPark,
   fetchWeather,
   getWeather,
-  setCurrentGPS
+  setCurrentGPS,
+  setDirectionsParkLocation
 } from "../data/dataAccess.js";
 
 const applicationElement = document.querySelector("#container");
@@ -53,5 +54,10 @@ document.addEventListener("change", (e) => {
     // const currentDisplayHour = currentTime.getHours();
     // const cnt = Math.floor(40 - currentDisplayHour / 3);
     setCurrentGPS(chosenPark.latitude, chosenPark.longitude)
+    const parkLatLon = [
+      parseFloat(chosenPark.longitude),
+      parseFloat(chosenPark.latitude),
+    ];
+    setDirectionsParkLocation(parkLatLon);
   }
 });

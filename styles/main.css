@@ -11,7 +11,7 @@ html {
 }
 
 #container {
-  max-width: 1600px;
+  max-width: 2000px;
   margin: auto;
 }
 
@@ -35,6 +35,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-around;
   margin-bottom: 10px;
+  max-height: 1300px;
 }
 
 #leftSideContainer {
@@ -64,9 +65,28 @@ h1, h2, h3 {
 #directionsContainer {
   border: 1px solid black;
   background-color: white;
-  margin: 0px 10px;
-  min-height: 150px;
-  width: 20%;
+  margin: 0px 5px;
+  max-height: 100%;
+  width: 25%;
+  overflow: auto;
+}
+
+#instructions {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  text-align: left;
+}
+
+.dir-text {
+  margin-right: 5px;
+}
+
+#instructions p {
+  margin: 5px 0px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 #savedItineraryListContainer {

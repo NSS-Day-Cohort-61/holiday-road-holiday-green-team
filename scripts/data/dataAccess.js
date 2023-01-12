@@ -24,8 +24,10 @@ export const applicationState = {
   directionsLocations: {
     parkLocation: [],
     eateryLocation: [],
-    bizarrerieLocation: []
+    bizarrerieLocation: [],
   },
+  directionsLocationsArray: [[], [], []],
+  directions: {},
 };
 
 export const fetchParks = () => {
@@ -70,13 +72,23 @@ export const fetchItinerary = () => {
 };
 
 export const fetchDirections = (receivedData) => {
+  const usableData = [];
+  receivedData.forEach((arr) => {
+    if (arr.length > 0) {
+      usableData.push(arr);
+    }
+  });
+
   const inputData = {
-    points: [
-      [-96.04091435407086, 41.240088020828075],
-      [-96.04873620250179, 41.2476353253116]
-    ],
-    vehicle: "car"
+    // points: [
+    //   [-96.04091435407086, 41.240088020828075],
+    //   [-96.04873620250179, 41.2476353253116],
+    // ],
+    points: usableData,
+    vehicle: "car",
   };
+
+  console.log("usableData BABY!", usableData);
 
   const fetchOptions = {
     method: "POST",
@@ -85,12 +97,55 @@ export const fetchDirections = (receivedData) => {
     },
     body: JSON.stringify(inputData),
   };
+  if (usableData.length > 1) {
+    return fetch(`${graphHopperURL}`, fetchOptions).then((response) =>
+      response.json().then((data) => {
+        applicationState.directions = data.paths[0];
+      })
+    );
+  }
+};
 
-  if (applicationState.directionsLocations.parkLocation.length > 0) {
-    return fetch(`${graphHopperURL}`, fetchOptions)
+export const fetchEateryLatLon = (address) => {
+  if (address !== 0) {
+    const googleURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyDxxzn9JmF-yYhjwJG3XkGjWVU94pCEzI8`;
+
+    if (
+      Object.keys(applicationState.currentItinerary.selectedEatery).length > 0
+    ) {
+      return fetch(`${googleURL}`)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.results.length === 0) {
+            let selectedEateryName = `${applicationState.currentItinerary.selectedEatery.city} ${applicationState.currentItinerary.selectedEatery.state}`;
+            selectedEateryName = selectedEateryName.replaceAll(" ", "%20");
+            fetchEateryLatLon(selectedEateryName);
+          } else {
+            setDirectionsEateryLocation([
+              data.results[0].geometry.location.lng,
+              data.results[0].geometry.location.lat,
+            ]);
+          }
+        });
+    }
+  }
+};
+
+export const fetchBizLatLon = (address) => {
+  const googleURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyDxxzn9JmF-yYhjwJG3XkGjWVU94pCEzI8`;
+
+  if (
+    Object.keys(applicationState.currentItinerary.selectedBizarrerie).length > 0
+  ) {
+    return fetch(`${googleURL}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log("here chris!", data);
+        if (data.results[0].geometry) {
+          setDirectionsBizarrerieLocation([
+            data.results[0].geometry.location.lng,
+            data.results[0].geometry.location.lat,
+          ]);
+        }
       });
   }
 };
@@ -149,6 +204,18 @@ export const getCurrentGPS = () => {
   return { ...applicationState.currentGPS };
 };
 
+export const getDirectionsLocations = () => {
+  return { ...applicationState.directionsLocations };
+};
+
+export const getDirectionsLocationsArray = () => {
+  return structuredClone(applicationState.directionsLocationsArray);
+};
+
+export const getDirections = () => {
+  return { ...applicationState.directions };
+};
+
 export const setSelectedPark = (parkObject) => {
   applicationState.currentItinerary.selectedPark = parkObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
@@ -180,14 +247,21 @@ export const setCurrentDay = (day) => {
 
 export const setDirectionsParkLocation = (inputLocation) => {
   applicationState.directionsLocations.parkLocation = inputLocation;
-};
-
-export const setDirectionsEateryLocation = (inputLocation) => {
-  applicationState.directionsLocations.eateryLocation = inputLocation;
+  applicationState.directionsLocationsArray[0] = inputLocation;
 };
 
 export const setDirectionsBizarrerieLocation = (inputLocation) => {
   applicationState.directionsLocations.bizarrerieLocation = inputLocation;
+  applicationState.directionsLocationsArray[1] = inputLocation;
+};
+
+export const setDirectionsEateryLocation = (inputLocation) => {
+  applicationState.directionsLocations.eateryLocation = inputLocation;
+  applicationState.directionsLocationsArray[2] = inputLocation;
+};
+
+export const setDirections = (data) => {
+  applicationState.directions = data;
 };
 
 export const sendItinerary = (currentItin) => {
