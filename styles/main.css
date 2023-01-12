@@ -25,6 +25,12 @@ h1, h2, h3 {
   margin: 10px;
 }
 
+#directionsDropdowns {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
 #selectDropdowns select {
   width: 200px;
   height: 30px;

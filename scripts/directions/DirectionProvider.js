@@ -5,10 +5,11 @@ import {
   setDirections,
   getDirections,
   getDirectionsLocationsArray,
+  setTravelOrder,
+  getTravelOrder,
 } from "../data/dataAccess.js";
 
-// let address = "Decatur%20AL";
-// address = "Big%20Bob%20Gibson%20Bar-B-Que";
+const applicationElement = document.querySelector("#container");
 
 export const eateryInfo = () => {
   const currentItinerary = getCurrentItinerary();
@@ -59,7 +60,9 @@ export const showDirections = () => {
       .map((direction) => {
         return `
       <p class="dir-text">${direction.text}</p>
-      <p class="bold">${Math.round(direction.distance * 0.000621371 * 10)/10} miles</p> 
+      <p class="bold">${
+        Math.round(direction.distance * 0.000621371 * 10) / 10
+      } miles</p> 
       `;
       })
       .join("")}
@@ -69,4 +72,83 @@ export const showDirections = () => {
   }
 };
 
-// current thinking: we need to send dirLocArray to fetchDirections in main.js.
+// Directions Dropdown
+
+export const directionsDropdown = () => {
+  const dirArr = [1, 2, 3];
+  const letterArr = ['p', 'b', 'e']
+  const travelOrder = getTravelOrder();
+  let outStr = "";
+  for (let j = 1; j <= travelOrder.length; j++) {
+    outStr += `<select id="directionsDropdown--${j}" name="directions">
+    <option selected disabled value="0">Not selected for directions</option>`;
+    for (let i = 1; i <= travelOrder.length; i++) {
+      if (letterArr[j-1] === travelOrder[i-1]) {
+        outStr += `<option disabled selected value="${i}">Destination ${i}</option>`
+      } else if (travelOrder[i - 1].length > 0) {
+        outStr += `<option disabled value="${i}">Destination ${i}</option>`;
+      } else {
+        outStr += `<option value="${i}">Destination ${i}</option>`;
+      }
+    }
+    outStr += `<option value='4'>Reset this selection</option></select>`
+  }
+  
+  return outStr;
+
+  // return dirArr
+  //   .map((num) => {
+  //     let html = `<select id="directionsDropdown--${num}" name="directions" >
+  //   <option value="0">Not selected for directions</option>`;
+  //     for (let i = 0; i < travelOrder.length; i++) {
+  //       if (travelOrder[i].length > 0) {
+  //         html += `<option disabled value="${i + 1}">Destination ${
+  //           i + 1
+  //         }</option>`;
+  //       } else {
+  //         html += `<option value="${i + 1}">Destination ${i + 1}</option>`;
+  //       }
+  //     }
+  //     html += "<option value='4'>Reset this selection</option></select>";
+  //     return html;
+  //   })
+  //   .join("");
+};
+
+const resetChecker = (input) => {
+  let travelOrder = getTravelOrder();
+  for (let i = 0; i < travelOrder.length; i++) {
+    if (travelOrder[i] === input) {
+      setTravelOrder(i, "");
+    }
+  }
+};
+
+applicationElement.addEventListener("change", (e) => {
+  if (e.target.id.startsWith("directionsDropdown")) {
+    let [, clickedDropdown] = e.target.id.split("--");
+    clickedDropdown = parseInt(clickedDropdown);
+    if (clickedDropdown === 1) {
+      if (e.target.value === "4") {
+        resetChecker("p");
+      } else {
+        setTravelOrder(parseInt(e.target.value) - 1, "p");
+      }
+    }
+    if (clickedDropdown === 2) {
+      if (e.target.value === "4") {
+        resetChecker("b");
+      } else {
+        setTravelOrder(parseInt(e.target.value) - 1, "b");
+      }
+    }
+    if (clickedDropdown === 3) {
+      if (e.target.value === "4") {
+        resetChecker("e");
+      } else {
+        setTravelOrder(parseInt(e.target.value) - 1, "e");
+      }
+    }
+    applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+  }
+});

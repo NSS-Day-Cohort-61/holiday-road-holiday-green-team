@@ -28,6 +28,7 @@ export const applicationState = {
   },
   directionsLocationsArray: [[], [], []],
   directions: {},
+  travelOrder: ["", "", ""],
 };
 
 export const fetchParks = () => {
@@ -80,10 +81,6 @@ export const fetchDirections = (receivedData) => {
   });
 
   const inputData = {
-    // points: [
-    //   [-96.04091435407086, 41.240088020828075],
-    //   [-96.04873620250179, 41.2476353253116],
-    // ],
     points: usableData,
     vehicle: "car",
   };
@@ -216,6 +213,10 @@ export const getDirections = () => {
   return { ...applicationState.directions };
 };
 
+export const getTravelOrder = () => {
+  return applicationState.travelOrder.slice();
+};
+
 export const setSelectedPark = (parkObject) => {
   applicationState.currentItinerary.selectedPark = parkObject;
   applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
@@ -262,6 +263,19 @@ export const setDirectionsEateryLocation = (inputLocation) => {
 
 export const setDirections = (data) => {
   applicationState.directions = data;
+};
+
+export const setTravelOrder = (index, value) => {
+  let travelOrder = getTravelOrder();
+  for (let i = 0; i < travelOrder.length; i++) {
+    if (travelOrder[i] === value) {
+      applicationState.travelOrder[i] = "";
+    }
+  }
+  if (index !== -1) {
+    applicationState.travelOrder[index] = value;
+    console.log(applicationState.travelOrder);
+  }
 };
 
 export const sendItinerary = (currentItin) => {
