@@ -365,3 +365,79 @@ h3 {
 .eventBtn:hover, .deets-btn:hover {
   background-color: #8b3401;
 }
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+.hidden {
+  display: none;
+}
+
+.gold-box {
+  position: absolute;
+  padding: 75px;
+  z-index: 3; 
+  background: rgb(240, 239, 232);
+  background-image: linear-gradient(#00caaf, #0d7669);
+  transition: box-shadow .3s;;
+  width: 50%;
+  height:fit-content;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 10em;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+}
+
+
+
+.results-list {
+  padding:15px;
+  
+}
+.add-button {
+
+  margin-left: 25px;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+.hidden {
+  display: none;
+}
+
+.gold-box {
+  position: absolute;
+  padding: 75px;
+  z-index: 3; 
+  background: rgb(240, 239, 232);
+  background-image: linear-gradient(#00caaf, #0d7669);
+  transition: box-shadow .3s;;
+  width: 50%;
+  height:fit-content;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 10em;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+}
+
+
+
+.results-list {
+  padding:15px;
+  
+}
+.add-button {
+
+  margin-left: 25px;
+}
