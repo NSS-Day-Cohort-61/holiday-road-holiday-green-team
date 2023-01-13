@@ -1,8 +1,6 @@
 import { applicationState, getCurrentItinerary, getEvents, getItineraries, getParks, sendItinerary, setCurrentGPS } from "../data/dataAccess.js";
 
 
-//Do I need to save & match IDs?
-//Does does event listener need anything other than to run the function to display?
 export const savedItineraryHTML = () => {
     const itineraries = getItineraries()
     let html = `<article class="savedItins">
@@ -11,9 +9,9 @@ export const savedItineraryHTML = () => {
     ${itineraries.map(
         itinerary => {
             return `<li id="itinId--${itinerary.id}" class="savedSingles itinId--${itinerary.id}"><ul class="itinId--${itinerary.id}">
-                <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Park:</strong> ${itinerary.selectedPark.fullName}</li>
-                <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Bizarrerie:</strong> ${itinerary.selectedBizarrerie.name}</li>
-                <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Eatery:</strong> ${itinerary.selectedEatery.businessName}</li>
+                <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Park:</strong><div class="selectedNames"> ${itinerary.selectedPark.fullName}</div></li>
+                <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Bizarrerie:</strong><div class="selectedNames"> ${itinerary.selectedBizarrerie.name}</div></li>
+                <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Eatery:</strong><div class="selectedNames"> ${itinerary.selectedEatery.businessName}</div></li>
                 </ul><br><button class="eventBtn" id="eventBtn--${itinerary.id}">Events</button></li><br>
             `
         }
@@ -47,9 +45,6 @@ document.addEventListener("click", (clickEvent) => {
     }
 })
 
-//EL needs to match the itin's park.fullName with the event's park.fullName
-//Then display the first two event's title, dateStart, timeStart, timeEnd, description and feel info in a dialogue box.
-
 document.addEventListener("click", (clickEvent) => {
     const itineraries = getItineraries()
     if (clickEvent.target.id.startsWith("eventBtn--")) {
@@ -62,27 +57,24 @@ document.addEventListener("click", (clickEvent) => {
     }
 })
 
-//function that takes an itinerary as an argument
-//function will iterate through each event's index to find a fullname to itin's parkFullName
-//after 2 matches are found window.alert "title, dateStart, timeStart, timeEnd, description" for both events
-//if no matches are found use activities?
-
 const parkEventMatcher = (itinerary) => {
     const events = getEvents()
     let eventMatch = []
+    let alertString = ""
     for (const event of events) {
-            if (event.parkfullname === itinerary.selectedPark.fullName) {
-                eventMatch.push(event)
-            }
-            else {const a=0}
+        if (event.parkfullname == itinerary.selectedPark.fullName) {
+            eventMatch.push(event)
+        }
+        else { const a = 0 } // means absolutely nothing. 
     }
     if (eventMatch.length === 0) {
         window.alert("No events planned for this park")
     }
     else {
-        window.alert(`${eventMatch[0].parkfullname}\n${eventMatch[0].date}\n${eventMatch[0].times[0].timestart}\n${eventMatch[0].times[0].timeend}\n${eventMatch[0].description}`)
+        for (let i = 0; i < 2; i++) {
+            alertString += eventMatch[i]
+            window.alert(`${eventMatch[i].parkfullname}\n${eventMatch[i].date}\n${eventMatch[i].times[0].timestart}\n${eventMatch[i].times[0].timeend}\n${eventMatch[i].description.replaceAll(/<p>/g, '').replace(/<\/p>/g, '').replace(/<ul>/g,'').replace(/<\/ul>/g, '').replace(/<li>/g, "").replace(/<\/li>/g,'').replace(/<strong>/g, '').replace(/<\/strong>/g, '').replace(/<br \/>/g,'').replace(/<a href=/g, '').replace(/<\/a>/g, '').replace(/target="_blank"/g, '').replace(/rel="noopener noreferrer">/g)}`)
+        }
     }
 }
-
-// window.alert(`${event.parkfullname}\n${event.date}\n${event.times[0].timestart}\n${event.times[0].timeend}\n${event.description}`)
-// window.alert("No events planned for this park")
+//
