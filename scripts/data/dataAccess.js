@@ -20,25 +20,32 @@ export const applicationState = {
   savedItineraries: [],
   moreDetailsDisplay: "N",
   currentGPS: {},
+  currentGPSCityName: [],
+  currentSelectedWeather: "park",
   currentDay: "",
   directionsLocations: {
     parkLocation: [],
     eateryLocation: [],
-    bizarrerieLocation: []
+    bizarrerieLocation: [],
   },
+  directionsLocationsArray: [[], [], []],
+  directions: {},
+  travelOrder: ["p", "b", "e"],
   events: [],
   searchOptions:     [{id: 1, dataName: "parks"},
   {id: 2, dataName: "bizarreries"},
   {id: 3, dataName: "eateries"}
-  ]
+  ],
 };
 
 export const fetchParks = () => {
-  return fetch(`${parksURL}`)
-    .then((response) => response.json())
-    .then((data) => {
-      applicationState.parks = data.data;
-    });
+  if (applicationState.parks.length === 0) {
+    return fetch(`${parksURL}`)
+      .then((response) => response.json())
+      .then((data) => {
+        applicationState.parks = data.data;
+      });
+  }
 };
 
 export const fetchWeather = (lat, lon) => {
@@ -46,6 +53,7 @@ export const fetchWeather = (lat, lon) => {
   return fetch(`${weatherURL}`)
     .then((response) => response.json())
     .then((data) => {
+      // console.log("weather data", data);
       applicationState.weather = data.list;
     });
 };
@@ -67,11 +75,15 @@ export const fetchBizarreries = () => {
 };
 
 export const fetchEvents = () => {
-  return fetch(`https://developer.nps.gov/api/v1/events?&pageSize=600&api_key=${keys.npsKey}`)
+  if (!applicationState.events.data) {
+    return fetch(
+      `https://developer.nps.gov/api/v1/events?&pageSize=600&api_key=${keys.npsKey}`
+    )
       .then((response) => response.json())
       .then((data) => {
         applicationState.events = data;
       });
+  }
 };
 
 export const fetchItinerary = () => {
@@ -83,12 +95,37 @@ export const fetchItinerary = () => {
 };
 
 export const fetchDirections = (receivedData) => {
+  const usableData = [];
+  const travelOrder = getTravelOrder();
+  let reorderedReceivedData = ["", "", ""];
+
+  travelOrder.forEach((item, index) => {
+    if (item === "p") {
+      reorderedReceivedData[index] =
+        receivedData[0].length === 0 ? "" : receivedData[0];
+    } else if (item === "b") {
+      reorderedReceivedData[index] =
+        receivedData[1].length === 0 ? "" : receivedData[1];
+    } else if (item === "e") {
+      reorderedReceivedData[index] =
+        receivedData[2].length === 0 ? "" : receivedData[2];
+    } else if (item === "") {
+      reorderedReceivedData[index] = "";
+    }
+  });
+  // console.log("received", receivedData);
+  // console.log("reordered", reorderedReceivedData);
+
+  reorderedReceivedData.forEach((arr) => {
+    if (arr.length > 0) {
+      usableData.push(arr);
+    }
+  });
+  // console.log("usable", usableData);
+
   const inputData = {
-    points: [
-      [-96.04091435407086, 41.240088020828075],
-      [-96.04873620250179, 41.2476353253116]
-    ],
-    vehicle: "car"
+    points: usableData,
+    vehicle: "car",
   };
 
   const fetchOptions = {
@@ -98,14 +135,92 @@ export const fetchDirections = (receivedData) => {
     },
     body: JSON.stringify(inputData),
   };
+  if (usableData.length > 1) {
+    return fetch(`${graphHopperURL}`, fetchOptions).then((response) =>
+      response.json().then((data) => {
+        // console.log("directions", data);
+        if (!data.message) {
+          applicationState.directions = setDirections(data.paths[0]);
+        } else {
+          window.alert("GPS data for this location is weirdly broken");
+        }
+      })
+    );
+  }
+};
 
-  if (applicationState.directionsLocations.parkLocation.length > 0) {
-    return fetch(`${graphHopperURL}`, fetchOptions)
+export const setDirections = (data) => {
+  let arr1 = [];
+  let arr2 = [];
+  let arrived = false;
+  for (let item of data.instructions) {
+    if (item.text !== "Waypoint 1" && !arrived) {
+      arr1.push(item);
+    } else {
+      arrived = true;
+      arr2.push(item);
+    }
+  }
+  return [arr1, arr2];
+};
+
+export const fetchEateryLatLon = (address) => {
+  if (address !== 0) {
+    const googleURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyDxxzn9JmF-yYhjwJG3XkGjWVU94pCEzI8`;
+
+    if (
+      Object.keys(applicationState.currentItinerary.selectedEatery).length > 0
+    ) {
+      return fetch(`${googleURL}`)
+        .then((response) => response.json())
+        .then((data) => {
+          // console.log("gpsdata", data)
+          if (data.results.length === 0) {
+            let selectedEateryName = `${applicationState.currentItinerary.selectedEatery.city} ${applicationState.currentItinerary.selectedEatery.state}`;
+            selectedEateryName = selectedEateryName.replaceAll(" ", "%20");
+            fetchEateryLatLon(selectedEateryName);
+          } else {
+            setDirectionsEateryLocation([
+              data.results[0].geometry.location.lng,
+              data.results[0].geometry.location.lat,
+            ]);
+          }
+        });
+    }
+  }
+};
+
+export const fetchBizLatLon = (address) => {
+  const googleURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyDxxzn9JmF-yYhjwJG3XkGjWVU94pCEzI8`;
+
+  if (
+    Object.keys(applicationState.currentItinerary.selectedBizarrerie).length > 0
+  ) {
+    return fetch(`${googleURL}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log("here chris!", data);
+        // console.log('biz loc', data)
+        if (data.results[0].geometry) {
+          setDirectionsBizarrerieLocation([
+            data.results[0].geometry.location.lng,
+            data.results[0].geometry.location.lat,
+          ]);
+        }
       });
   }
+};
+
+export const fetchGPSCityName = () => {
+  let googleURL = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${
+    getCurrentGPS().lat
+  },${getCurrentGPS().lon}&key=AIzaSyDxxzn9JmF-yYhjwJG3XkGjWVU94pCEzI8`;
+
+  return fetch(`${googleURL}`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("weather gps data!", data);
+      applicationState.currentGPSCityName = data.results;
+    });
 };
 
 export const getParks = () => {
@@ -125,8 +240,8 @@ export const getBizarreries = () => {
 };
 
 export const getEvents = () => {
-  return applicationState.events.data.map((event) => ({...event}));
-}
+  return applicationState.events.data.map((event) => ({ ...event }));
+};
 
 export const getSelectedPark = () => {
   return { ...applicationState.currentItinerary.selectedPark };
@@ -166,19 +281,45 @@ export const getCurrentGPS = () => {
   return { ...applicationState.currentGPS };
 };
 
+export const getDirectionsLocations = () => {
+  return { ...applicationState.directionsLocations };
+};
+
+export const getDirectionsLocationsArray = () => {
+  return structuredClone(applicationState.directionsLocationsArray);
+};
+
+export const getDirections = () => {
+  return structuredClone(applicationState.directions);
+};
+
+export const getTravelOrder = () => {
+  return applicationState.travelOrder.slice();
+};
+
+export const getGPSCityName = () => {
+  return structuredClone(applicationState.currentGPSCityName);
+};
+
+export const getCurrentSelectedWeather = () => {
+  return applicationState.currentSelectedWeather;
+}
+
 export const setSelectedPark = (parkObject) => {
   applicationState.currentItinerary.selectedPark = parkObject;
-  applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+  setCurrentGPS(parkObject.latitude, parkObject.longitude)
+  setDirectionsParkLocation([parseFloat(parkObject.longitude), parseFloat(parkObject.latitude)])
+  // applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
 export const setSelectedEatery = (eateryObject) => {
   applicationState.currentItinerary.selectedEatery = eateryObject;
-  applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+  // applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
 export const setSelectedBizarrerie = (bizObject) => {
   applicationState.currentItinerary.selectedBizarrerie = bizObject;
-  applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+  // applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
 export const setMoreDetailsDisplay = (detailsState) => {
@@ -197,15 +338,40 @@ export const setCurrentDay = (day) => {
 
 export const setDirectionsParkLocation = (inputLocation) => {
   applicationState.directionsLocations.parkLocation = inputLocation;
+  applicationState.directionsLocationsArray[0] = inputLocation;
+};
+
+export const setDirectionsBizarrerieLocation = (inputLocation) => {
+  // console.log('biz loc 2', inputLocation)
+  applicationState.directionsLocations.bizarrerieLocation = inputLocation;
+  applicationState.directionsLocationsArray[1] = inputLocation;
 };
 
 export const setDirectionsEateryLocation = (inputLocation) => {
   applicationState.directionsLocations.eateryLocation = inputLocation;
+  applicationState.directionsLocationsArray[2] = inputLocation;
 };
 
-export const setDirectionsBizarrerieLocation = (inputLocation) => {
-  applicationState.directionsLocations.bizarrerieLocation = inputLocation;
+// export const setDirections = (data) => {
+//   applicationState.directions = data;
+// };
+
+export const setTravelOrder = (index, value) => {
+  let travelOrder = getTravelOrder();
+  for (let i = 0; i < travelOrder.length; i++) {
+    if (travelOrder[i] === value) {
+      applicationState.travelOrder[i] = "";
+    }
+  }
+  if (index !== -1) {
+    applicationState.travelOrder[index] = value;
+    // console.log(applicationState.travelOrder);
+  }
 };
+
+export const setCurrentSelectedWeather = (input) => {
+  applicationState.currentSelectedWeather = input;
+}
 
 export const sendItinerary = (currentItin) => {
   const fetchOptions = {

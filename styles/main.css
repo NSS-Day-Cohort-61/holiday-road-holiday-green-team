@@ -17,7 +17,7 @@ html {
 }
 
 #container {
-  max-width: 1600px;
+  max-width: 2000px;
   margin: auto;
 }
 
@@ -80,22 +80,48 @@ h3 {
   margin: 10px;
 }
 
+#directionsDropdowns {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+#directionsDropdowns select {
+  text-align: center;
+}
+
 #selectDropdowns select {
   width: 200px;
   height: 30px;
   text-align: center;
 }
 
+#weatherSelectRadios {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0px 3px 0px;
+}
+
 #mainContent {
   display: flex;
   justify-content: space-around;
+  margin-top: 5px;
   margin-bottom: 10px;
+  max-height: 1300px;
 }
 
 #leftSideContainer {
   display: flex;
   flex-direction: column;
   width: 58%
+}
+
+.reqInputs {
+  cursor: pointer;
+}
+
+.dirDrop {
+  cursor: pointer;
 }
 
 #itineraryPreviewContainer {
@@ -122,9 +148,28 @@ h3 {
   border: 3px solid #F35B04;
   border-radius: 8px;
   background-image: linear-gradient(#ffe084 1%, #ad850d);
-  margin: 0px 10px;
-  min-height: 150px;
-  width: 20%;
+  margin: 0px 5px;
+  max-height: 100%;
+  width: 25%;
+  overflow: auto;
+}
+
+#instructions {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  text-align: left;
+}
+
+.dir-text {
+  margin-right: 5px;
+}
+
+#instructions p {
+  margin: 5px 0px;
+}
+
+.bold {
+  font-weight: bold;
   padding-left: 4px;
 }
 
@@ -167,6 +212,7 @@ h3 {
 .flexRow {
   display: flex;
   align-items: center;
+  text-align: left;
 }
 
 #selectedPark, #selectedBizarrerie, #selectedEatery {
@@ -180,6 +226,18 @@ h3 {
 .btn {
   width: 100px;
   margin: 10px;
+}
+
+#header {
+  display: flex;
+}
+
+#leftHeader {
+  width: 80%;
+}
+
+#rightHeader {
+  width: 20%;
 }
 
 /*******************************************************************************/
@@ -259,6 +317,7 @@ h3 {
   background-color: #F35B04;
   color: #ffffff;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .blank {
@@ -275,6 +334,11 @@ h3 {
   padding-left: 4px;
   background-image: linear-gradient(#0d7669, #00caaf);
   transition: box-shadow .3s;
+  cursor: pointer;
+}
+
+.savedSingles:hover {
+  background-image: linear-gradient(#0d766a94, #00caaf);
 }
 
 .selectedNames {
@@ -308,6 +372,49 @@ h3 {
   background-color: #F35B04;
   border-radius: 4px;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.eventBtn:hover, .deets-btn:hover {
+  background-color: #8b3401;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+.hidden {
+  display: none;
+}
+
+.gold-box {
+  position: absolute;
+  padding: 75px;
+  z-index: 3; 
+  background: rgb(240, 239, 232);
+  background-image: linear-gradient(#00caaf, #0d7669);
+  transition: box-shadow .3s;;
+  width: 50%;
+  height:fit-content;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 10em;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+}
+
+
+
+.results-list {
+  padding:15px;
+  
+}
+.add-button {
+
+  margin-left: 25px;
 }
 
 .wrapper {

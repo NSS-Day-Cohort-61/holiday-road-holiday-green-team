@@ -1,25 +1,38 @@
 import { parkDropdown, showSelectedPark } from "./parks/ParkProvider.js"
-import { showSelectedWeather } from "./weather/WeatherProvider.js"
+import { selectWeatherLocation, setWeatherGPS, showSelectedWeather } from "./weather/WeatherProvider.js"
 import { eateryDropdown, showSelectedEatery } from "./eateries/EateryProvider.js"
 import { bizarrerieDropdown, showSelectedBizarrerie } from "./bizarreries/bizarrerieProvider.js"
 import { showMoreDetails } from "./attractions/AttractionProvider.js"
 import { savedItineraryHTML } from "./itineraries/savedItineraries.js"
 import { getCurrentItinerary } from "./data/dataAccess.js"
-import { showDirections } from "./directions/DirectionProvider.js"
+import { showDirections, directionsDropdown } from "./directions/DirectionProvider.js"
 
 import { searchFeature,searchOptionList } from "./search/search.js"
 
 export const HolidayRoad = () => {
+  // setWeatherGPS()
   return `
   <div id="body">
     <div class="backdrop">
     <h1 id="hRoad"><u> . . . : : : Holiday Road : : : . . . </u></h1>
     </div>
-    <div id="selectDropdowns">
-      ${parkDropdown()}
-      ${bizarrerieDropdown()}
-      ${eateryDropdown()}
-      ${searchFeature()}
+    <div id="header">
+      <div id="leftHeader">
+        <div id="selectDropdowns">
+          ${parkDropdown()}
+          ${bizarrerieDropdown()}
+          ${eateryDropdown()}
+        </div>
+        <div id="directionsDropdowns">
+          ${directionsDropdown()}
+        </div>
+        <div id="weatherSelectRadios">
+          ${selectWeatherLocation()}
+        </div>
+      </div>
+      <div id="rightHeader">
+          ${searchFeature()}
+      </div>
     </div>
     <div id="mainContent">
       <div id="leftSideContainer">

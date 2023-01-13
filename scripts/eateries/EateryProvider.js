@@ -1,7 +1,6 @@
 import { getEateries, getSelectedEatery, setSelectedEatery } from "../data/dataAccess.js"
 
-
-
+const applicationElement = document.querySelector("#container");
 
 export const eateryDropdown = () => {
     const eateries = getEateries()
@@ -9,7 +8,7 @@ export const eateryDropdown = () => {
 
     let html = `
             <select id="eatery" class="reqInputs" name="eateries">
-            <option value="0">Select Eatery</option>
+            <option value="0">Select an Eatery</option>
             ${eateries
                 .map((eatery) => {
                 if (eatery.id === selectedEatery.id){
@@ -43,5 +42,6 @@ document.addEventListener("change", (e) => {
       const eateryList = getEateries();
       const chosenEatery = eateryList.find((eatery) => eatery.id === parseInt(e.target.value));
       setSelectedEatery(chosenEatery);
+      applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
     }
   });

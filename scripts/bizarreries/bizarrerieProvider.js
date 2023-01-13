@@ -4,13 +4,14 @@ import {
   getSelectedBizarrerie,
 } from "../data/dataAccess.js";
 
+const applicationElement = document.querySelector("#container");
 
 export const bizarrerieDropdown = () => {
   const bizarreries = getBizarreries();
   const selectedBizarrerie = getSelectedBizarrerie();
   let html = ``;
   html += `<select id="bizarrerie" class="reqInputs" name="bizarreries" >`;
-  html += `<option value="0">Select Bizarrerie</option>`;
+  html += `<option value="0">Select a Bizarrerie</option>`;
 
   for (const bizarrerie of bizarreries) {
     if (bizarrerie.id === selectedBizarrerie.id) {
@@ -40,5 +41,6 @@ document.addEventListener("change", (e) => {
       (biz) => biz.id === parseInt(e.target.value)
     );
     setSelectedBizarrerie(chosenBizarrerie);
+    applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
   }
 });

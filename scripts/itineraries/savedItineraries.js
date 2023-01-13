@@ -1,27 +1,35 @@
-import { applicationState, getCurrentItinerary, getEvents, getItineraries, getParks, sendItinerary, setCurrentGPS } from "../data/dataAccess.js";
-
+import {
+  applicationState,
+  getCurrentItinerary,
+  getEvents, getItineraries,
+  getParks, sendItinerary,
+  setCurrentGPS,
+  setSelectedBizarrerie,
+  setSelectedPark,
+  setSelectedEatery,
+  setDirectionsParkLocation,
+} from "../data/dataAccess.js";
 
 export const savedItineraryHTML = () => {
-    const itineraries = getItineraries()
-    let html = `<article class="savedItins">
-        <ol>`
-    html += `
-    ${itineraries.map(
-        itinerary => {
-            return `<li id="itinId--${itinerary.id}" class="savedSingles itinId--${itinerary.id}"><ul class="itinId--${itinerary.id}">
+  const itineraries = getItineraries();
+  let html = `<article class="savedItins">
+        <ol>`;
+  html += `
+    ${itineraries
+      .map((itinerary) => {
+        return `<li id="itinId--${itinerary.id}" class="savedSingles itinId--${itinerary.id}"><ul class="itinId--${itinerary.id}">
                 <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Park:</strong><div class="selectedNames"> ${itinerary.selectedPark.fullName}</div></li>
                 <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Bizarrerie:</strong><div class="selectedNames"> ${itinerary.selectedBizarrerie.name}</div></li>
                 <li class="itinId--${itinerary.id}"><strong class="itinId--${itinerary.id}">Eatery:</strong><div class="selectedNames"> ${itinerary.selectedEatery.businessName}</div></li>
                 </ul><br><button class="eventBtn" id="eventBtn--${itinerary.id}">Events</button></li><br>
-            `
-        }
-    ).join("")
-        }`
-    html += `</ol> `
-    return html
-}
+            `;
+      })
+      .join("")}`;
+  html += `</ol> `;
+  return html;
+};
 
-const applicationElement = document.querySelector("#container")
+const applicationElement = document.querySelector("#container");
 
 applicationElement.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "save") {
@@ -32,18 +40,27 @@ applicationElement.addEventListener("click", clickEvent => {
 
 
 document.addEventListener("click", (clickEvent) => {
-    if (clickEvent.target.className.startsWith("itinId--")) {
-        const [, savedItinId] = clickEvent.target.className.split("--")
-        const itineraries = getItineraries();
-        for (const itin of itineraries) {
-            if (itin.id === parseInt(savedItinId)) {
-                applicationState.currentItinerary = itin
-                setCurrentGPS(itin.selectedPark.latitude, itin.selectedPark.longitude)
-            }
-        }
-        applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+  if (clickEvent.target.className.startsWith("itinId--")) {
+    const [, savedItinId] = clickEvent.target.className.split("--");
+    const itineraries = getItineraries();
+    for (const itin of itineraries) {
+      if (itin.id === parseInt(savedItinId)) {
+        // applicationState.currentItinerary = itin
+        setSelectedPark(itin.selectedPark);
+        setSelectedEatery(itin.selectedEatery);
+        setSelectedBizarrerie(itin.selectedBizarrerie);
+        setCurrentGPS(itin.selectedPark.latitude, itin.selectedPark.longitude);
+        const parkLatLon = [
+          parseFloat(itin.selectedPark.longitude),
+          parseFloat(itin.selectedPark.latitude),
+        ];
+        setDirectionsParkLocation(parkLatLon)
+        break;
+      }
     }
-})
+    applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+  }
+});
 
 document.addEventListener("click", (clickEvent) => {
     const itineraries = getItineraries()
