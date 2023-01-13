@@ -59,5 +59,6 @@ document.addEventListener("change", (e) => {
       parseFloat(chosenPark.latitude),
     ];
     setDirectionsParkLocation(parkLatLon);
+    applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
   }
 });

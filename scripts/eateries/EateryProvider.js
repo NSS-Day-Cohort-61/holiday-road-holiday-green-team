@@ -1,7 +1,6 @@
 import { getEateries, getSelectedEatery, setSelectedEatery } from "../data/dataAccess.js"
 
-
-
+const applicationElement = document.querySelector("#container");
 
 export const eateryDropdown = () => {
     const eateries = getEateries()
@@ -43,5 +42,6 @@ document.addEventListener("change", (e) => {
       const eateryList = getEateries();
       const chosenEatery = eateryList.find((eatery) => eatery.id === parseInt(e.target.value));
       setSelectedEatery(chosenEatery);
+      applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
     }
   });

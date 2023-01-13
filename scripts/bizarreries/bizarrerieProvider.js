@@ -4,6 +4,7 @@ import {
   getSelectedBizarrerie,
 } from "../data/dataAccess.js";
 
+const applicationElement = document.querySelector("#container");
 
 export const bizarrerieDropdown = () => {
   const bizarreries = getBizarreries();
@@ -40,5 +41,6 @@ document.addEventListener("change", (e) => {
       (biz) => biz.id === parseInt(e.target.value)
     );
     setSelectedBizarrerie(chosenBizarrerie);
+    applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
   }
 });

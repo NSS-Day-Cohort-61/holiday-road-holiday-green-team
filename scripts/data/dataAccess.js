@@ -28,7 +28,7 @@ export const applicationState = {
   },
   directionsLocationsArray: [[], [], []],
   directions: {},
-  travelOrder: ["", "", ""],
+  travelOrder: ["p", "b", "e"],
 };
 
 export const fetchParks = () => {
@@ -74,18 +74,37 @@ export const fetchItinerary = () => {
 
 export const fetchDirections = (receivedData) => {
   const usableData = [];
-  receivedData.forEach((arr) => {
+  const travelOrder = getTravelOrder();
+  let reorderedReceivedData = ["", "", ""];
+
+  travelOrder.forEach((item, index) => {
+    if (item === "p") {
+      reorderedReceivedData[index] =
+        receivedData[0].length === 0 ? "" : receivedData[0];
+    } else if (item === "b") {
+      reorderedReceivedData[index] =
+        receivedData[1].length === 0 ? "" : receivedData[1];
+    } else if (item === "e") {
+      reorderedReceivedData[index] =
+        receivedData[2].length === 0 ? "" : receivedData[2];
+    } else if (item === "") {
+      reorderedReceivedData[index] = "";
+    }
+  });
+  console.log("received", receivedData);
+  console.log("reordered", reorderedReceivedData);
+
+  reorderedReceivedData.forEach((arr) => {
     if (arr.length > 0) {
       usableData.push(arr);
     }
   });
+  // console.log("usable", usableData);
 
   const inputData = {
     points: usableData,
     vehicle: "car",
   };
-
-  console.log("usableData BABY!", usableData);
 
   const fetchOptions = {
     method: "POST",
@@ -97,10 +116,25 @@ export const fetchDirections = (receivedData) => {
   if (usableData.length > 1) {
     return fetch(`${graphHopperURL}`, fetchOptions).then((response) =>
       response.json().then((data) => {
-        applicationState.directions = data.paths[0];
+        applicationState.directions = setDirections(data.paths[0]);
       })
     );
   }
+};
+
+export const setDirections = (data) => {
+  let arr1 = [];
+  let arr2 = [];
+  let arrived = false;
+  for (let item of data.instructions) {
+    if (item.text !== "Waypoint 1" && !arrived) {
+      arr1.push(item);
+    } else {
+      arrived = true;
+      arr2.push(item);
+    }
+  }
+  return [arr1, arr2];
 };
 
 export const fetchEateryLatLon = (address) => {
@@ -210,7 +244,7 @@ export const getDirectionsLocationsArray = () => {
 };
 
 export const getDirections = () => {
-  return { ...applicationState.directions };
+  return structuredClone(applicationState.directions);
 };
 
 export const getTravelOrder = () => {
@@ -219,17 +253,17 @@ export const getTravelOrder = () => {
 
 export const setSelectedPark = (parkObject) => {
   applicationState.currentItinerary.selectedPark = parkObject;
-  applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+  // applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
 export const setSelectedEatery = (eateryObject) => {
   applicationState.currentItinerary.selectedEatery = eateryObject;
-  applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+  // applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
 export const setSelectedBizarrerie = (bizObject) => {
   applicationState.currentItinerary.selectedBizarrerie = bizObject;
-  applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+  // applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
 export const setMoreDetailsDisplay = (detailsState) => {
@@ -261,9 +295,9 @@ export const setDirectionsEateryLocation = (inputLocation) => {
   applicationState.directionsLocationsArray[2] = inputLocation;
 };
 
-export const setDirections = (data) => {
-  applicationState.directions = data;
-};
+// export const setDirections = (data) => {
+//   applicationState.directions = data;
+// };
 
 export const setTravelOrder = (index, value) => {
   let travelOrder = getTravelOrder();
@@ -274,7 +308,7 @@ export const setTravelOrder = (index, value) => {
   }
   if (index !== -1) {
     applicationState.travelOrder[index] = value;
-    console.log(applicationState.travelOrder);
+    // console.log(applicationState.travelOrder);
   }
 };
 
