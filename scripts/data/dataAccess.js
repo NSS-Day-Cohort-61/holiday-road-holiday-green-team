@@ -26,7 +26,11 @@ export const applicationState = {
     eateryLocation: [],
     bizarrerieLocation: []
   },
-  events: []
+  events: [],
+  searchOptions:     [{id: 1, dataName: "parks"},
+  {id: 2, dataName: "bizarreries"},
+  {id: 3, dataName: "eateries"}
+  ]
 };
 
 export const fetchParks = () => {
@@ -218,3 +222,17 @@ export const sendItinerary = (currentItin) => {
       applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
     });
 };
+
+export const getData = (data) => {
+  return applicationState[data].map(arr =>({...arr}))
+}
+
+export const setData = (result,data) => {
+  applicationState[data] = result;
+
+};
+export const setSelected = (dataObject,toWhere) => {
+applicationState.currentItinerary[toWhere] = dataObject
+applicationElement.dispatchEvent(new CustomEvent("stateChanged"))
+}
+

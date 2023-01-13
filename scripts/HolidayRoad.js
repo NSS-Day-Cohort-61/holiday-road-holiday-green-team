@@ -7,6 +7,8 @@ import { savedItineraryHTML } from "./itineraries/savedItineraries.js"
 import { getCurrentItinerary } from "./data/dataAccess.js"
 import { showDirections } from "./directions/DirectionProvider.js"
 
+import { searchFeature,searchOptionList } from "./search/search.js"
+
 export const HolidayRoad = () => {
   return `
   <div id="body">
@@ -41,6 +43,8 @@ export const HolidayRoad = () => {
             ${enableSaveButton()}
             
           </div>
+         
+          
           <div id="moreDetailsContainer">
             <div id="moreDetailsInfo">
             ${showMoreDetails()}
@@ -48,6 +52,9 @@ export const HolidayRoad = () => {
           </div>
         </div>
         <div id="weatherContainer">
+        <div>      
+        ${searchFeature()}
+        </div>
           <div id="weather">
           ${showSelectedWeather()}
           </div>
@@ -60,9 +67,7 @@ export const HolidayRoad = () => {
       <div id="savedItineraryListContainer">
         <h3>Saved Itineraries</h3>
         ${savedItineraryHTML()}
-      </div>
-    </div>
-  </div>
+ 
   `
 }
 
