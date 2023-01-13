@@ -5,6 +5,7 @@ import {
   getCurrentGPS,
   setCurrentGPS,
   getPosition,
+  fetchEvents,
   fetchDirections
 } from "./data/dataAccess.js";
 import { fetchEateries } from "./data/dataAccess.js";
@@ -40,6 +41,7 @@ const renderApp = () => {
     .then(() => fetchParks())
     .then(() => fetchWeather(lat, lon))
     .then(() => fetchItinerary())
+    .then(() => fetchEvents())
     .then(() => fetchDirections())
     .then(() => {
       applicationElement.innerHTML = HolidayRoad();

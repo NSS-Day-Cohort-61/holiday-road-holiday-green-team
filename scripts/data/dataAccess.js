@@ -26,6 +26,7 @@ export const applicationState = {
     eateryLocation: [],
     bizarrerieLocation: []
   },
+  events: []
   searchOptions:     [{id: 1, dataName: "parks"},
   {id: 2, dataName: "bizarreries"},
   {id: 3, dataName: "eateries"}
@@ -63,6 +64,14 @@ export const fetchBizarreries = () => {
     .then((data) => {
       applicationState.bizarreries = data;
     });
+};
+
+export const fetchEvents = () => {
+  return fetch(`https://developer.nps.gov/api/v1/events?&pageSize=600&api_key=${keys.npsKey}`)
+      .then((response) => response.json())
+      .then((data) => {
+        applicationState.events = data;
+      });
 };
 
 export const fetchItinerary = () => {
@@ -114,6 +123,10 @@ export const getEateries = () => {
 export const getBizarreries = () => {
   return applicationState.bizarreries.map((arr) => ({ ...arr }));
 };
+
+export const getEvents = () => {
+  return applicationState.events.data.map((event) => ({...event}));
+}
 
 export const getSelectedPark = () => {
   return { ...applicationState.currentItinerary.selectedPark };
