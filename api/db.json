@@ -2,14 +2,14 @@
   "itineraries": [
     {
       "selectedPark": {
-        "id": "6DA17C86-088E-4B4D-B862-7C1BD5CF236B",
-        "url": "https://www.nps.gov/acad/index.htm",
-        "fullName": "Acadia National Park",
-        "parkCode": "acad",
-        "description": "Acadia National Park protects the natural beauty of the highest rocky headlands along the Atlantic coastline of the United States, an abundance of habitats, and a rich cultural heritage. At 4 million visits a year, it's one of the top 10 most-visited national parks in the United States. Visitors enjoy 27 miles of historic motor roads, 158 miles of hiking trails, and 45 miles of carriage roads.",
-        "latitude": "44.409286",
-        "longitude": "-68.247501",
-        "latLong": "lat:44.409286, long:-68.247501",
+        "id": "B7FF43E5-3A95-4C8E-8DBE-72D8608D6588",
+        "url": "https://www.nps.gov/grca/index.htm",
+        "fullName": "Grand Canyon National Park",
+        "parkCode": "grca",
+        "description": "Grand Canyon National Park, in Northern Arizona, encompasses 278 miles (447 km) of the Colorado River and adjacent uplands. Located on ancestral homeland of 11 Associated Tribes, Grand Canyon is one of the most spectacular examples of erosion anywhere in the world—unmatched in the incomparable vistas it offers visitors from the rim. South Rim is open. North Rim closed for winter. Daily updates >",
+        "latitude": "36.0001165336",
+        "longitude": "-112.121516363",
+        "latLong": "lat:36.0001165336, long:-112.121516363",
         "activities": [
           {
             "id": "09DF0950-D319-4557-A57E-04CD2F63FF42",
@@ -18,6 +18,14 @@
           {
             "id": "FAED7F97-3474-4C21-AB42-FB0768A2F826",
             "name": "Cultural Demonstrations"
+          },
+          {
+            "id": "5F723BAD-7359-48FC-98FA-631592256E35",
+            "name": "Auto and ATV"
+          },
+          {
+            "id": "0B4A5320-216D-451A-9990-626E1D5ACE28",
+            "name": "Scenic Driving"
           },
           {
             "id": "13A57703-BB1A-41A2-94B8-53B692EB7238",
@@ -40,1046 +48,6 @@
             "name": "Camping"
           },
           {
-            "id": "7CFF5F03-5ECC-4F5A-8572-75D1F0976C0C",
-            "name": "Group Camping"
-          },
-          {
-            "id": "B12FAAB9-713F-4B38-83E4-A273F5A43C77",
-            "name": "Climbing"
-          },
-          {
-            "id": "87D3B1CD-3903-4561-ABB1-2DD870C43F2F",
-            "name": "Rock Climbing"
-          },
-          {
-            "id": "C11D3746-5063-4BD0-B245-7178D1AD866C",
-            "name": "Compass and GPS"
-          },
-          {
-            "id": "CA3641A0-FADC-497F-B036-3FE426D0DDCC",
-            "name": "Geocaching"
-          },
-          {
-            "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
-            "name": "Fishing"
-          },
-          {
-            "id": "25FB188F-5AAD-459A-9092-28A9801709FF",
-            "name": "Freshwater Fishing"
-          },
-          {
-            "id": "9BC03FAF-28F1-4609-BF6F-643F58071AED",
-            "name": "Fly Fishing"
-          },
-          {
-            "id": "17411C8D-5769-4D0F-ABD1-52ED03840C18",
-            "name": "Saltwater Fishing"
-          },
-          {
-            "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
-            "name": "Food"
-          },
-          {
-            "id": "C6D3230A-2CEA-4AFE-BFF3-DC1E2C2C4BB4",
-            "name": "Picnicking"
-          },
-          {
-            "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
-            "name": "Guided Tours"
-          },
-          {
-            "id": "3DE599E2-22ED-40BF-B383-EDA073563C1E",
-            "name": "Bus/Shuttle Guided Tour"
-          },
-          {
-            "id": "5A241412-0CFB-497A-9B5F-0AB8C03CDE72",
-            "name": "Boat Tour"
-          },
-          {
-            "id": "42FD78B9-2B90-4AA9-BC43-F10E9FEA8B5A",
-            "name": "Hands-On"
-          },
-          {
-            "id": "31F88DA6-696F-441F-89CF-D7B1415C4CB9",
-            "name": "Citizen Science"
-          },
-          {
-            "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
-            "name": "Hiking"
-          },
-          {
-            "id": "45261C0A-00D8-4C27-A1F8-029F933A0D34",
-            "name": "Front-Country Hiking"
-          },
-          {
-            "id": "0307955A-B65C-4CE4-A780-EB36BAAADF0B",
-            "name": "Horse Trekking"
-          },
-          {
-            "id": "1886DA47-0AEC-4568-B9C2-8E9BC316AAAC",
-            "name": "Horseback Riding"
-          },
-          {
-            "id": "5FF5B286-E9C3-430E-B612-3380D8138600",
-            "name": "Ice Skating"
-          },
-          {
-            "id": "4D224BCA-C127-408B-AC75-A51563C42411",
-            "name": "Paddling"
-          },
-          {
-            "id": "21DB3AFC-8AAC-4665-BC1F-7198C0685983",
-            "name": "Canoeing"
-          },
-          {
-            "id": "F353A9ED-4A08-456E-8DEC-E61974D0FEB6",
-            "name": "Kayaking"
-          },
-          {
-            "id": "B3EF12AF-D951-419E-BD3C-6B36CBCC1E16",
-            "name": "Stand Up Paddleboarding"
-          },
-          {
-            "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
-            "name": "Junior Ranger Program"
-          },
-          {
-            "id": "F9B1D433-6B86-4804-AED7-B50A519A3B7C",
-            "name": "Skiing"
-          },
-          {
-            "id": "EAB1EBDE-5B72-493F-8F8F-0EE5B1724436",
-            "name": "Cross-Country Skiing"
-          },
-          {
-            "id": "C38B3C62-1BBF-4EA1-A1A2-35DE21B74C17",
-            "name": "Snow Play"
-          },
-          {
-            "id": "7C912B83-1B1B-4807-9B66-97C12211E48E",
-            "name": "Snowmobiling"
-          },
-          {
-            "id": "01D717BC-18BB-4FE4-95BA-6B13AD702038",
-            "name": "Snowshoeing"
-          },
-          {
-            "id": "587BB2D3-EC35-41B2-B3F7-A39E2B088AEE",
-            "name": "Swimming"
-          },
-          {
-            "id": "82C3230F-6F87-452C-A01B-F8458867B26A",
-            "name": "Freshwater Swimming"
-          },
-          {
-            "id": "C2801992-F34D-4974-A0F2-80FF04309EE4",
-            "name": "Saltwater Swimming"
-          },
-          {
-            "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
-            "name": "Wildlife Watching"
-          },
-          {
-            "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
-            "name": "Birdwatching"
-          },
-          {
-            "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
-            "name": "Park Film"
-          },
-          {
-            "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
-            "name": "Shopping"
-          },
-          {
-            "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
-            "name": "Bookstore and Park Store"
-          }
-        ],
-        "topics": [
-          {
-            "id": "00F3C3F9-2D67-4802-81AE-CCEA5D3BA370",
-            "name": "Arts"
-          },
-          {
-            "id": "05B7868A-3F3C-433D-876E-A886C4BE7A12",
-            "name": "Painting"
-          },
-          {
-            "id": "9BD60DC0-C82B-42BA-A170-456B7423429D",
-            "name": "Photography"
-          },
-          {
-            "id": "156AD9B6-B377-418C-BC9A-F6E682D4BAF7",
-            "name": "Poetry and Literature"
-          },
-          {
-            "id": "0DE2D6B3-46DE-44B1-BB5F-E9E8874630D5",
-            "name": "Sculpture"
-          },
-          {
-            "id": "7F12224B-217A-4B07-A4A2-636B1CE7F221",
-            "name": "Colonization and Settlement"
-          },
-          {
-            "id": "4C9D4777-A9DA-47D1-A0B9-F4A3C98BC1B3",
-            "name": "Maritime"
-          },
-          {
-            "id": "263BAC6E-4DEC-47E4-909D-DA8AD351E06E",
-            "name": "Lighthouses"
-          },
-          {
-            "id": "BEB7E470-13B2-4E00-84B2-0402D98DAF69",
-            "name": "Monuments and Memorials"
-          },
-          {
-            "id": "3CDB67A9-1EAC-408D-88EC-F26FA35E90AF",
-            "name": "Schools and Education"
-          },
-          {
-            "id": "FE2C2613-B41E-4531-BC43-03EB6E45CBCF",
-            "name": "Transportation"
-          },
-          {
-            "id": "1015393C-D7B0-47F3-86FB-786F30368CA2",
-            "name": "Bridges"
-          },
-          {
-            "id": "0BBD4A42-2B3D-4E82-B5C4-1A3874C8682E",
-            "name": "Roads, Routes and Highways"
-          },
-          {
-            "id": "A160B3D9-1603-4D89-B82F-21FCAF9EEE3B",
-            "name": "Tragic Events"
-          },
-          {
-            "id": "C373F02B-7335-4F8A-A3ED-3E2E37CD4085",
-            "name": "Catastrophic Fires"
-          },
-          {
-            "id": "7DA81DAB-5045-4953-9C20-36590AD9FA95",
-            "name": "Women's History"
-          },
-          {
-            "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
-            "name": "Animals"
-          },
-          {
-            "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
-            "name": "Birds"
-          },
-          {
-            "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
-            "name": "Fish"
-          },
-          {
-            "id": "4DC11D06-00F1-4A01-81D0-89CCCCE4FF50",
-            "name": "Climate Change"
-          },
-          {
-            "id": "04A39AB8-DD02-432F-AE5F-BA1267D41A0D",
-            "name": "Fire"
-          },
-          {
-            "id": "41B1A0A3-11FF-4F55-9CB9-034A7E28B087",
-            "name": "Forests and Woodlands"
-          },
-          {
-            "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
-            "name": "Geology"
-          },
-          {
-            "id": "1CF1F6BB-A037-445B-8CF2-81428E50CE52",
-            "name": "Lakes"
-          },
-          {
-            "id": "101F4D51-F99D-45A6-BBB6-CD481E5FACED",
-            "name": "Mountains"
-          },
-          {
-            "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
-            "name": "Night Sky"
-          },
-          {
-            "id": "E06F3C94-AC8A-4B1C-A247-8EBA8910D5EE",
-            "name": "Astronomy"
-          },
-          {
-            "id": "0E6D8503-CB65-467F-BCD6-C6D9E28A4E0B",
-            "name": "Oceans"
-          },
-          {
-            "id": "4244F489-6813-4B7A-9D0C-20CE098C8FFF",
-            "name": "Rock Landscapes and Features"
-          },
-          {
-            "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
-            "name": "Trails"
-          },
-          {
-            "id": "1365C347-952C-475A-B755-731DD523C195",
-            "name": "Wetlands"
-          }
-        ],
-        "states": "ME",
-        "contacts": {
-          "phoneNumbers": [
-            {
-              "phoneNumber": "2072883338",
-              "description": "",
-              "extension": "",
-              "type": "Voice"
-            },
-            {
-              "phoneNumber": "2072888813",
-              "description": "",
-              "extension": "",
-              "type": "Fax"
-            },
-            {
-              "phoneNumber": "2072888800",
-              "description": "",
-              "extension": "",
-              "type": "TTY"
-            }
-          ],
-          "emailAddresses": [
-            {
-              "description": "",
-              "emailAddress": "acadia_information@nps.gov"
-            }
-          ]
-        },
-        "entranceFees": [
-          {
-            "cost": "30.00",
-            "description": "Admits private, non-commercial vehicle (15 passenger capacity or less) and all occupants. Valid for 7 days. If a vehicle pass is purchased, no other pass is necessary.",
-            "title": "Acadia Entrance Fee - Private Vehicle"
-          },
-          {
-            "cost": "25.00",
-            "description": "Admits one or two passengers on a private, non-commercial motorcycle. Valid for 7 days.",
-            "title": "Acadia Entrance Fee - Motorcycle"
-          },
-          {
-            "cost": "15.00",
-            "description": "Admits one individual with no car (bicyclist, hiker, pedestrian). Youth 15 and under are admitted free of charge. Valid for 7 days.",
-            "title": "Acadia Entrance Fee - Per Person"
-          }
-        ],
-        "entrancePasses": [
-          {
-            "cost": "55.00",
-            "description": "Valid for 12 months from purchase date. This pass provides access to Acadia National Park only. This pass admits the pass holder and passengers in a non-commercial vehicle.",
-            "title": "Acadia Annual Pass"
-          }
-        ],
-        "fees": [],
-        "directionsInfo": "From Boston take I-95 north to Augusta, Maine, then Route 3 east to Ellsworth, and on to Mount Desert Island. For an alternate route, continue on I-95 north to Bangor, Maine, then take I-395 to U.S. Route 1A east to Ellsworth. In Ellsworth, take Route 3 to Mount Desert Island.",
-        "directionsUrl": "http://www.nps.gov/acad/planyourvisit/directions.htm",
-        "operatingHours": [
-          {
-            "exceptions": [],
-            "description": "Acadia National Park is open year-round. Check our website for park facilities operating hours, such as Hulls Cove Visitor Center.",
-            "standardHours": {
-              "wednesday": "All Day",
-              "monday": "All Day",
-              "thursday": "All Day",
-              "sunday": "All Day",
-              "tuesday": "All Day",
-              "friday": "All Day",
-              "saturday": "All Day"
-            },
-            "name": "Acadia National Park"
-          }
-        ],
-        "addresses": [
-          {
-            "postalCode": "04609",
-            "city": "Bar Harbor",
-            "stateCode": "ME",
-            "line1": "25 Visitor Center Road",
-            "type": "Physical",
-            "line3": "",
-            "line2": "Hulls Cove Visitor Center"
-          },
-          {
-            "postalCode": "04609",
-            "city": "Bar Harbor",
-            "stateCode": "ME",
-            "line1": "PO Box 177",
-            "type": "Mailing",
-            "line3": "",
-            "line2": ""
-          }
-        ],
-        "images": [
-          {
-            "credit": "NPS / Kristi Rugg",
-            "title": "Acadia's rocky coastline",
-            "altText": "Large puffy clouds dot a brilliant blue sky as wave crash against the rocky coastline of Acadia.",
-            "caption": "Millions of people come to Acadia for our distinctive rocky coastline.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg"
-          },
-          {
-            "credit": "NPS / Kristi Rugg",
-            "title": "Heavy snow-laden trees",
-            "altText": "Hiking tracks carved through three feet of snow wind through a heavy snow-laden forest.",
-            "caption": "During the colder months snows transform our landscape into a winter wonderland.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C7B4BEC-1DD8-B71B-0B2CF833F93140FF.jpg"
-          },
-          {
-            "credit": "NPS / Kristi Rugg",
-            "title": "Sunset atop Cadillac Mountain",
-            "altText": "A brilliant sunset filled with hues of blue, red, orange, magenta, and purple highlight the sky.",
-            "caption": "As the tallest point on the eastern seaboard Cadillac Mountain provides fantastic viewpoints.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C7B477B-1DD8-B71B-0BCB48E009241BAA.jpg"
-          },
-          {
-            "credit": "NPS / Kristi Rugg",
-            "title": "Climbing The Precipice",
-            "altText": "Two hikers ascend a sheer cliff trail by way of historic iron rung ladders.",
-            "caption": "Whether it's a stroll along Ocean Path or a difficult ascent up The Precipice, there are hiking trails for everyone!",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C7B48F9-1DD8-B71B-0BD3B413E58978F8.jpg"
-          }
-        ],
-        "weatherInfo": "Located on Mount Desert Island in Maine, Acadia experiences all four seasons. Summer temperatures range from 45-90F (7-30C). Fall temperatures range from 30-70F (-1-21C). Typically the first frost is in mid-October and first snowfall begins in November and can continue through April with an average accumulation of 73 inches (185 cm). Winter temperatures range from 14-35F (-10 - 2C). Spring temperatures range from 30-70F (-1-21C).",
-        "name": "Acadia",
-        "designation": "National Park"
-      },
-      "selectedBizarrerie": {
-        "id": 4,
-        "name": "Snake World",
-        "state": "AR",
-        "city": "Berryville",
-        "description": "The next time you’re in Arkansas, be sure to stop by Snake World! Owner Dale Ertel claims that the tourist attraction houses over 70 snakes, which is even more than the Little Rock Zoo. The reviews on Trip Advisor are all glowing, and warn visitors not to be dissuaded by Snake World’s sketchy exterior.",
-        "ameneties": {
-          "souvenirs": true,
-          "restrooms": true
-        }
-      },
-      "selectedEatery": {
-        "businessName": "Ocean Pride",
-        "description": "Marylanders have a love affair with seafood, and that love is expressed in their continued support of Ocean Pride. The restaurant steams its crabs fresh each day, and also serves up local oysters and rockfish. And while steamed crabs are the main event here, fried clams and crabcakes often supplement our clawed friends on the dinner table. The setting is as nautical as you'd expect, with photos of old-timey fisherman, fishing nets, and buoys covering the walls. And lest you forget the importance of the Ravens and Orioles in the region, a bar area sports 12 big-screen TVs to watch the game.",
-        "state": "MD",
-        "city": "Lutherville",
-        "id": 22,
-        "ameneties": {
-          "wheelchairAccessible": true,
-          "petFriendly": false,
-          "wifi": false,
-          "diaperFacility": true,
-          "playground": false,
-          "restrooms": true
-        }
-      },
-      "id": 1
-    },
-    {
-      "selectedPark": {
-        "id": "712044CE-4C85-48C2-813E-310A9C6C74E1",
-        "url": "https://www.nps.gov/blri/index.htm",
-        "fullName": "Blue Ridge Parkway",
-        "parkCode": "blri",
-        "description": "A Blue Ridge Parkway experience is unlike any other: a slow-paced and relaxing drive revealing stunning long-range vistas and close-up views of the rugged mountains and pastoral landscapes of the Appalachian Highlands. The Parkway meanders for 469 miles, protecting a diversity of plants and animals, and providing opportunities for enjoying all that makes this region of the country so special.",
-        "latitude": "35.5657195274",
-        "longitude": "-82.486484587",
-        "latLong": "lat:35.5657195274, long:-82.486484587",
-        "activities": [
-          {
-            "id": "09DF0950-D319-4557-A57E-04CD2F63FF42",
-            "name": "Arts and Culture"
-          },
-          {
-            "id": "C0FFC3D5-0E74-4B6F-B69D-6F95B78906CE",
-            "name": "Live Music"
-          },
-          {
-            "id": "5F723BAD-7359-48FC-98FA-631592256E35",
-            "name": "Auto and ATV"
-          },
-          {
-            "id": "0B4A5320-216D-451A-9990-626E1D5ACE28",
-            "name": "Scenic Driving"
-          },
-          {
-            "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
-            "name": "Biking"
-          },
-          {
-            "id": "8D778629-F603-4C50-A121-6F4BB2FE2C4B",
-            "name": "Road Biking"
-          },
-          {
-            "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
-            "name": "Camping"
-          },
-          {
-            "id": "9159DF0F-951D-4AAE-9987-CEB3CE2A9ADA",
-            "name": "Car or Front Country Camping"
-          },
-          {
-            "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
-            "name": "Fishing"
-          },
-          {
-            "id": "25FB188F-5AAD-459A-9092-28A9801709FF",
-            "name": "Freshwater Fishing"
-          },
-          {
-            "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
-            "name": "Food"
-          },
-          {
-            "id": "C6D3230A-2CEA-4AFE-BFF3-DC1E2C2C4BB4",
-            "name": "Picnicking"
-          },
-          {
-            "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
-            "name": "Hiking"
-          },
-          {
-            "id": "7C37B79B-D02D-49EB-9020-3DB8299B748A",
-            "name": "Backcountry Hiking"
-          },
-          {
-            "id": "45261C0A-00D8-4C27-A1F8-029F933A0D34",
-            "name": "Front-Country Hiking"
-          },
-          {
-            "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
-            "name": "Junior Ranger Program"
-          },
-          {
-            "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
-            "name": "Wildlife Watching"
-          },
-          {
-            "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
-            "name": "Shopping"
-          },
-          {
-            "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
-            "name": "Bookstore and Park Store"
-          }
-        ],
-        "topics": [
-          {
-            "id": "FE005582-12C5-472C-8229-3CB004DB050E",
-            "name": "Engineering"
-          },
-          {
-            "id": "AF4F1CDF-E6C4-4886-BA91-8BC887DC2793",
-            "name": "Landscape Design"
-          },
-          {
-            "id": "571E1597-4C6A-4814-A7E9-FC4EF8293CE8",
-            "name": "Music"
-          },
-          {
-            "id": "FE2C2613-B41E-4531-BC43-03EB6E45CBCF",
-            "name": "Transportation"
-          },
-          {
-            "id": "1015393C-D7B0-47F3-86FB-786F30368CA2",
-            "name": "Bridges"
-          },
-          {
-            "id": "0BBD4A42-2B3D-4E82-B5C4-1A3874C8682E",
-            "name": "Roads, Routes and Highways"
-          },
-          {
-            "id": "8785B770-396D-4A2B-9C26-3E94F6253B71",
-            "name": "Tunnels"
-          },
-          {
-            "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
-            "name": "Animals"
-          },
-          {
-            "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
-            "name": "Birds"
-          },
-          {
-            "id": "344CE561-4E98-49BF-ACD2-438E3684DA5D",
-            "name": "Elk"
-          },
-          {
-            "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
-            "name": "Fish"
-          },
-          {
-            "id": "9F6A7003-59D6-4438-935F-760FD04C1073",
-            "name": "Foothills, Plains and Valleys"
-          },
-          {
-            "id": "41B1A0A3-11FF-4F55-9CB9-034A7E28B087",
-            "name": "Forests and Woodlands"
-          },
-          {
-            "id": "DE2F0F3C-C0C4-410F-90D3-97EEC33D348E",
-            "name": "Deciduous Forests"
-          },
-          {
-            "id": "101F4D51-F99D-45A6-BBB6-CD481E5FACED",
-            "name": "Mountains"
-          },
-          {
-            "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
-            "name": "Scenic Views"
-          },
-          {
-            "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
-            "name": "Trails"
-          }
-        ],
-        "states": "NC,VA",
-        "contacts": {
-          "phoneNumbers": [
-            {
-              "phoneNumber": "8283483400",
-              "description": "",
-              "extension": "",
-              "type": "Voice"
-            }
-          ],
-          "emailAddresses": [
-            {
-              "description": "",
-              "emailAddress": "blri_info@nps.gov"
-            }
-          ]
-        },
-        "entranceFees": [
-          {
-            "cost": "0.00",
-            "description": "Driving the parkway is free.",
-            "title": "No entrance fee"
-          }
-        ],
-        "entrancePasses": [],
-        "fees": [],
-        "directionsInfo": "The parkway is a 469-mile-long scenic road connecting Shenandoah National Park in Virginia to Great Smoky Mountains National Park in North Carolina. Numerous federal and state highways provide access to the parkway. Milepost markers are positioned every mile along the parkway, starting at 0 in Virginia and ending at 469 in North Carolina. We suggest using a map to identify the area you want to visit, as GPS directions often do not incorporate the parkway's milepost system.",
-        "directionsUrl": "http://www.nps.gov/blri/planyourvisit/directions.htm",
-        "operatingHours": [
-          {
-            "exceptions": [],
-            "description": "The road is open 24 hours a day, weather permitting. Road closures due to inclement weather occur most frequently during winter. Sections of the road may also be closed during road maintenance projects. Check our road closure map to verify that the parkway is open before traveling.\n\nVisitor centers and other facilities have hours and seasons that vary. Most picnic areas, campgrounds, and visitor centers are closed from the beginning of November until early May.",
-            "standardHours": {
-              "wednesday": "All Day",
-              "monday": "All Day",
-              "thursday": "All Day",
-              "sunday": "All Day",
-              "tuesday": "All Day",
-              "friday": "All Day",
-              "saturday": "All Day"
-            },
-            "name": "Parkway Road Hours"
-          }
-        ],
-        "addresses": [
-          {
-            "postalCode": "28803",
-            "city": "Asheville",
-            "stateCode": "NC",
-            "line1": "Milepost 384",
-            "type": "Physical",
-            "line3": "",
-            "line2": ""
-          },
-          {
-            "postalCode": "28803",
-            "city": "Asheville",
-            "stateCode": "NC",
-            "line1": "199 Hemphill Knob Rd",
-            "type": "Mailing",
-            "line3": "",
-            "line2": ""
-          }
-        ],
-        "images": [
-          {
-            "credit": "Harold Blackwood Photo",
-            "title": "Evening on the Blue Ridge",
-            "altText": "A long pine tree stands in front of distant mountain ridges beneath an orange sunset",
-            "caption": "Evening on the Blue Ridge Parkway",
-            "url": "https://www.nps.gov/common/uploads/structured_data/87E985D9-BF92-9DC3-74B91467FBA15010.jpg"
-          },
-          {
-            "credit": "David Smart",
-            "title": "Mountain vista",
-            "altText": "Mountain vista and clouds on the Blue Ridge Parkway",
-            "caption": "Beautiful mountain in North Carolina draw visitors from around the world to the Blue Ridge Parkway",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C80E7D5-1DD8-B71B-0B44F2F58F98099D.jpg"
-          },
-          {
-            "credit": "Jim Ruff Photo",
-            "title": "Sunset from Cowee Mountain Overlook",
-            "altText": "Storm clouds breaking over the mountains at sunset, with fog hugging the valleys",
-            "caption": "Sunset from Cowee Mountain Overlook",
-            "url": "https://www.nps.gov/common/uploads/structured_data/A7DF66E8-E20E-7839-71FA8E9735088BB8.jpg"
-          },
-          {
-            "credit": "Harold Blackwood Photo",
-            "title": "Linn Cove Viaduct",
-            "altText": "A roadway on piers follows the curve of a mountainside, running toward distant mountains.",
-            "caption": "Linn Cove Viaduct is one of the most iconic features of the Blue Ridge Parkway",
-            "url": "https://www.nps.gov/common/uploads/structured_data/88321370-F808-59B5-820F10686B1E531A.jpg"
-          },
-          {
-            "credit": "Harold Blackwood Photo",
-            "title": "Black Bear",
-            "altText": "Black Bear sitting on large rocks at the edge of a forest",
-            "caption": "Black bears are among the many mammals found across the Blue Ridge Parkway.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/88113186-C82C-0C45-EB7789FE6E4D8DC2.jpg"
-          },
-          {
-            "credit": "NPS Photo",
-            "title": "Mabry Mill",
-            "altText": "Summer colors at Mabry Mill",
-            "caption": "Located in Virginia's Plateau district, picturesque Mabry Mill is one of the most iconic features of the Blue Ridge Parkway",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C80E68A-1DD8-B71B-0B6752AF1737BF62.jpg"
-          },
-          {
-            "credit": "NPS Photo",
-            "title": "Linville Falls",
-            "altText": "water cascading into Linville Falls plunge basin",
-            "caption": "The Linville Gorge offers visitors the opportunity to learn about fascinating geology and view magnificent waterfalls.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C80E949-1DD8-B71B-0B1ECE00402BA348.jpg"
-          }
-        ],
-        "weatherInfo": "The weather on the parkway can vary widely along its 469-mile route. Precipitation is possible any time of the year. Winter can be cold and snowy, especially at the higher elevations. Spring and fall can have large temperature swings, from near freezing to over 80 degrees Fahrenheit. Summers are hot in the lower elevations, but the highest elevations remain cooler. Summertime thunderstorms are common, so be prepared for weather changes.",
-        "name": "Blue Ridge",
-        "designation": "Parkway"
-      },
-      "selectedBizarrerie": {
-        "id": 30,
-        "name": "Hot Dog Man",
-        "city": "Winchester",
-        "state": "NH",
-        "description": "He’s a little creepy, because he appears to be carved out of a dead tree, but he’s also kind of cute! What’s not to like about an enormous hot dog by the side of the road wearing nothing but a baseball cap, a tasteful smear of mustard, a bun, and a charming smile?",
-        "ameneties": {
-          "souvenirs": false,
-          "restrooms": false
-        }
-      },
-      "selectedEatery": {
-        "businessName": "Wall Drug",
-        "description": "You begin to see signs for it about 1,000 miles before you arrive in South Dakota. They promise free ice water. Five-cent coffee. A goddamned Tyrannosaurus rex! There are many, many, many finer restaurants in South Dakota, but none are as famous, for good or ill, as the one in Wall Drug. It's impossible to avoid the Badlands-bordering, 76,000sqft wonder of tourist-trapping randomness, so just go in. Hit the cafe and score a hot beef sandwich and a maple donut. It won't hold a candle to the many, many better food options in the state. But you will emerge with a 'Where the Heck is Wall Drug' sticker. You will have chased that sandwich with a T. rex viewing. And you'll be happy you stopped every time you see a roadside Wall Drug sign every five minutes for the next 300 miles",
-        "state": "SD",
-        "city": "Wall",
-        "id": 43,
-        "ameneties": {
-          "wheelchairAccessible": true,
-          "petFriendly": false,
-          "wifi": true,
-          "diaperFacility": true,
-          "playground": false,
-          "restrooms": true
-        }
-      },
-      "id": 2
-    },
-    {
-      "selectedPark": {
-        "id": "9463E25C-7342-4A34-9537-4A6DA74B2B06",
-        "url": "https://www.nps.gov/anac/index.htm",
-        "fullName": "Anacostia Park",
-        "parkCode": "anac",
-        "description": "Welcome to Anacostia Park, your neighborhood national park in the heart of Washington, DC! Enjoy exercise along the river trail or relax by the water, Anacostia Park is a breath of fresh air and a space to unwind amid a bustling city.",
-        "latitude": "38.8782",
-        "longitude": "-76.9703",
-        "latLong": "lat:38.8782, long:-76.9703",
-        "activities": [
-          {
-            "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
-            "name": "Biking"
-          },
-          {
-            "id": "8D778629-F603-4C50-A121-6F4BB2FE2C4B",
-            "name": "Road Biking"
-          },
-          {
-            "id": "071BA73C-1D3C-46D4-A53C-00D5602F7F0E",
-            "name": "Boating"
-          },
-          {
-            "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
-            "name": "Fishing"
-          },
-          {
-            "id": "25FB188F-5AAD-459A-9092-28A9801709FF",
-            "name": "Freshwater Fishing"
-          },
-          {
-            "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
-            "name": "Food"
-          },
-          {
-            "id": "C6D3230A-2CEA-4AFE-BFF3-DC1E2C2C4BB4",
-            "name": "Picnicking"
-          },
-          {
-            "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
-            "name": "Guided Tours"
-          },
-          {
-            "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
-            "name": "Self-Guided Tours - Walking"
-          },
-          {
-            "id": "4D224BCA-C127-408B-AC75-A51563C42411",
-            "name": "Paddling"
-          },
-          {
-            "id": "21DB3AFC-8AAC-4665-BC1F-7198C0685983",
-            "name": "Canoeing"
-          },
-          {
-            "id": "F353A9ED-4A08-456E-8DEC-E61974D0FEB6",
-            "name": "Kayaking"
-          },
-          {
-            "id": "7779241F-A70B-49BC-86F0-829AE332C708",
-            "name": "Playground"
-          },
-          {
-            "id": "94369BFD-F186-477E-8713-AE2A745154DA",
-            "name": "Team Sports"
-          },
-          {
-            "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
-            "name": "Wildlife Watching"
-          }
-        ],
-        "topics": [
-          {
-            "id": "3B0D607D-9933-425A-BFA0-21529AC4734C",
-            "name": "Military"
-          },
-          {
-            "id": "97CCB419-196C-4B95-BB3A-621458F78415",
-            "name": "US Army"
-          },
-          {
-            "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
-            "name": "Native American Heritage"
-          },
-          {
-            "id": "846E5C56-E5AC-489C-B3BF-11F4C73F12C2",
-            "name": "Urban America"
-          },
-          {
-            "id": "27BF8807-54EA-4A3D-B073-AA7AA361CD7E",
-            "name": "Wars and Conflicts"
-          },
-          {
-            "id": "F94E78D3-EC70-4B99-AB57-BC70C4E79D65",
-            "name": "War of 1812"
-          },
-          {
-            "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
-            "name": "Animals"
-          },
-          {
-            "id": "A155238F-0DD2-4610-9B87-05FCE1C59283",
-            "name": "River and Riparian"
-          },
-          {
-            "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
-            "name": "Scenic Views"
-          },
-          {
-            "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
-            "name": "Trails"
-          },
-          {
-            "id": "596BAA6D-F66B-4348-8433-FEFF35A8005E",
-            "name": "Water Trails"
-          },
-          {
-            "id": "1365C347-952C-475A-B755-731DD523C195",
-            "name": "Wetlands"
-          }
-        ],
-        "states": "DC",
-        "contacts": {
-          "phoneNumbers": [
-            {
-              "phoneNumber": "2026926080",
-              "description": "",
-              "extension": "",
-              "type": "Voice"
-            },
-            {
-              "phoneNumber": "2026926080",
-              "description": "",
-              "extension": "",
-              "type": "TTY"
-            }
-          ],
-          "emailAddresses": [
-            {
-              "description": "",
-              "emailAddress": "nace_superintendent@nps.gov"
-            }
-          ]
-        },
-        "entranceFees": [
-          {
-            "cost": "0.00",
-            "description": "There are no entrance fees to this park.",
-            "title": "Entrance Fees"
-          }
-        ],
-        "entrancePasses": [
-          {
-            "cost": "0.00",
-            "description": "There are no entrance passes for this park.",
-            "title": "Entrance Passes"
-          }
-        ],
-        "fees": [],
-        "directionsInfo": "Anacostia Park is located in South East Washington DC running parallel to the Anacostia river. The park can be accessed from the South Capitol bridge over the Anacostia river across from the Nationals baseball stadium. You can also enter the park from the Baltimore-Washington Parkway (295). You can enter the park from Good Hope Road or from Nicholson Street.",
-        "directionsUrl": "http://www.nps.gov/anac/planyourvisit/directions.htm",
-        "operatingHours": [
-          {
-            "exceptions": [],
-            "description": "The park is open from Dawn until Dusk.",
-            "standardHours": {
-              "wednesday": "Sunrise to Sunset",
-              "monday": "Sunrise to Sunset",
-              "thursday": "Sunrise to Sunset",
-              "sunday": "Sunrise to Sunset",
-              "tuesday": "Sunrise to Sunset",
-              "friday": "Sunrise to Sunset",
-              "saturday": "Sunrise to Sunset"
-            },
-            "name": "Park Hours"
-          }
-        ],
-        "addresses": [
-          {
-            "postalCode": "20020",
-            "city": "Washington",
-            "stateCode": "DC",
-            "line1": "1900 Anacostia Drive, S.E.",
-            "type": "Physical",
-            "line3": "",
-            "line2": ""
-          },
-          {
-            "postalCode": "20020",
-            "city": "Washington",
-            "stateCode": "DC",
-            "line1": "1900 Anacostia Drive, S.E.",
-            "type": "Mailing",
-            "line3": "",
-            "line2": ""
-          }
-        ],
-        "images": [
-          {
-            "credit": "NPS Photo/Miguel Marquez",
-            "title": "Anacostia Drive",
-            "altText": "Aerial view of Anacostia Drive and the playground",
-            "caption": "Anacostia Drive and the Anacostia river Trail run along side the Anacostia river. Views of the Navy Yard and Nats. Stadium can be seen as across the river.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C82A965-1DD8-B71B-0B42F2CD698E11A7.jpg"
-          },
-          {
-            "credit": "NPS",
-            "title": "Recreation at Anacostia",
-            "altText": "A few men are playing basketball at Anacostia with the Anacostia River in the background.",
-            "caption": "Anacostia is a great place for sports, including basketball and tennis courts.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/E90FE9D6-0571-1A74-ECA594CE99431972.jpg"
-          },
-          {
-            "credit": "NPS",
-            "title": "The Anacostia River Trail",
-            "altText": "A view of the Anacostia River and a marina from the Anacostia River Trail.",
-            "caption": "The Anacostia River trail is a wonderful paved trail that is great for biking, jogging and walking.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/E92300B8-A71B-CCA4-3E64717D74B8149A.jpg"
-          },
-          {
-            "credit": "NPS",
-            "title": "The Anacostia Skating Pavilion",
-            "altText": "A sidewalk approaches the Anacostia skating pavilion.",
-            "caption": "The Anacostia skating pavilion is a great place to roller skate. It is an open-air rink that has a cover for rain and sun protection.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/E93463E4-973F-F00C-F3FD4C81F20D5A8F.jpg"
-          },
-          {
-            "credit": "NPS",
-            "title": "Bring your dog to the park!",
-            "altText": "A man jogs his two dogs along a paved multi-use trial.",
-            "caption": "The Anacostia River trail is a great place to bring your dog for some exercise. Dogs must be on a leash and please clean up after your pet.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/E99A9CE8-911F-16D5-752156D21DD9C15A.jpg"
-          }
-        ],
-        "weatherInfo": "Spring brings mild temperatures and a light breeze along with springtime flower blooms. Summer can be hot and humid. Fall cools down and changing of the seasons brings changing of the colors in leaves. Winter gets cold and temperatures may drop below freezing.",
-        "name": "Anacostia",
-        "designation": "Park"
-      },
-      "selectedBizarrerie": {
-        "id": 47,
-        "name": "Love Butt",
-        "city": "Charlottesville",
-        "state": "VA",
-        "description": "This 10-foot-tall, 1,600-pound piece of artwork was originally featured on a comedy show pilot but is now a permanent fixture in Charlottesville, Virginia. Big, pink, and embarrassing, it’s the perfect road trip attraction for using the “I’m just pulling over to use the restroom” excuse.",
-        "ameneties": {
-          "souvenirs": false,
-          "restrooms": false
-        }
-      },
-      "selectedEatery": {
-        "businessName": "Wall Drug",
-        "description": "You begin to see signs for it about 1,000 miles before you arrive in South Dakota. They promise free ice water. Five-cent coffee. A goddamned Tyrannosaurus rex! There are many, many, many finer restaurants in South Dakota, but none are as famous, for good or ill, as the one in Wall Drug. It's impossible to avoid the Badlands-bordering, 76,000sqft wonder of tourist-trapping randomness, so just go in. Hit the cafe and score a hot beef sandwich and a maple donut. It won't hold a candle to the many, many better food options in the state. But you will emerge with a 'Where the Heck is Wall Drug' sticker. You will have chased that sandwich with a T. rex viewing. And you'll be happy you stopped every time you see a roadside Wall Drug sign every five minutes for the next 300 miles",
-        "state": "SD",
-        "city": "Wall",
-        "id": 43,
-        "ameneties": {
-          "wheelchairAccessible": true,
-          "petFriendly": false,
-          "wifi": true,
-          "diaperFacility": true,
-          "playground": false,
-          "restrooms": true
-        }
-      },
-      "id": 3
-    },
-    {
-      "selectedPark": {
-        "id": "B170CCF7-7AB9-48FF-950E-31815FD4DBB2",
-        "url": "https://www.nps.gov/badl/index.htm",
-        "fullName": "Badlands National Park",
-        "parkCode": "badl",
-        "description": "The rugged beauty of the Badlands draws visitors from around the world. These striking geologic deposits contain one of the world’s richest fossil beds. Ancient horses and rhinos once roamed here. The park’s 244,000 acres protect an expanse of mixed-grass prairie where bison, bighorn sheep, prairie dogs, and black-footed ferrets live today.",
-        "latitude": "43.68584846",
-        "longitude": "-102.482942",
-        "latLong": "lat:43.68584846, long:-102.482942",
-        "activities": [
-          {
-            "id": "5F723BAD-7359-48FC-98FA-631592256E35",
-            "name": "Auto and ATV"
-          },
-          {
-            "id": "0B4A5320-216D-451A-9990-626E1D5ACE28",
-            "name": "Scenic Driving"
-          },
-          {
-            "id": "13A57703-BB1A-41A2-94B8-53B692EB7238",
-            "name": "Astronomy"
-          },
-          {
-            "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
-            "name": "Biking"
-          },
-          {
-            "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
-            "name": "Camping"
-          },
-          {
             "id": "4A58AF13-E8FB-4530-B41A-97DF0B0C77B7",
             "name": "Backcountry Camping"
           },
@@ -1096,447 +64,60 @@
             "name": "Compass and GPS"
           },
           {
+            "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
+            "name": "Fishing"
+          },
+          {
             "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
             "name": "Food"
           },
           {
-            "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
-            "name": "Hiking"
-          },
-          {
-            "id": "0307955A-B65C-4CE4-A780-EB36BAAADF0B",
-            "name": "Horse Trekking"
-          },
-          {
-            "id": "788C7572-5425-49EF-A0BF-5A0DF93F7542",
-            "name": "Horse Camping (see also camping)"
-          },
-          {
-            "id": "1886DA47-0AEC-4568-B9C2-8E9BC316AAAC",
-            "name": "Horseback Riding"
-          },
-          {
-            "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
-            "name": "Junior Ranger Program"
-          },
-          {
-            "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
-            "name": "Wildlife Watching"
-          },
-          {
-            "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
-            "name": "Birdwatching"
-          },
-          {
-            "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
-            "name": "Park Film"
-          },
-          {
-            "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
-            "name": "Shopping"
-          },
-          {
-            "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
-            "name": "Bookstore and Park Store"
-          },
-          {
-            "id": "43800AD1-D439-40F3-AAB3-9FB651FE45BB",
-            "name": "Gift Shop and Souvenirs"
-          }
-        ],
-        "topics": [
-          {
-            "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
-            "name": "Archeology"
-          },
-          {
-            "id": "00F3C3F9-2D67-4802-81AE-CCEA5D3BA370",
-            "name": "Arts"
-          },
-          {
-            "id": "7F12224B-217A-4B07-A4A2-636B1CE7F221",
-            "name": "Colonization and Settlement"
-          },
-          {
-            "id": "1F833C99-A75D-4F9E-9256-B96523485466",
-            "name": "Farming and  Agriculture"
-          },
-          {
-            "id": "3B0D607D-9933-425A-BFA0-21529AC4734C",
-            "name": "Military"
-          },
-          {
-            "id": "6766B838-9493-4EF8-830E-2D1EFB917461",
-            "name": "Indigenous and Native Warrior"
-          },
-          {
-            "id": "BEB7E470-13B2-4E00-84B2-0402D98DAF69",
-            "name": "Monuments and Memorials"
-          },
-          {
-            "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
-            "name": "Native American Heritage"
-          },
-          {
-            "id": "FE2C2613-B41E-4531-BC43-03EB6E45CBCF",
-            "name": "Transportation"
-          },
-          {
-            "id": "A160B3D9-1603-4D89-B82F-21FCAF9EEE3B",
-            "name": "Tragic Events"
-          },
-          {
-            "id": "CB405E14-E2A3-4C2E-A91C-AFF8AEB3DEA0",
-            "name": "Massacres"
-          },
-          {
-            "id": "27BF8807-54EA-4A3D-B073-AA7AA361CD7E",
-            "name": "Wars and Conflicts"
-          },
-          {
-            "id": "53798A16-7CDB-4F17-9C28-095F92D2ED8D",
-            "name": "Indian and Frontier Wars"
-          },
-          {
-            "id": "C9C749E3-39C3-45F7-BCC5-9A609E30AA05",
-            "name": "Westward Expansion"
-          },
-          {
-            "id": "D1722DD1-E314-4B6D-8116-DED86305C4A4",
-            "name": "Homesteading"
-          },
-          {
-            "id": "FB3641FE-67A3-4EC7-B9C4-0A0867776798",
-            "name": "Ancient Seas"
-          },
-          {
-            "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
-            "name": "Animals"
-          },
-          {
-            "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
-            "name": "Birds"
-          },
-          {
-            "id": "324C31EC-7D75-41C7-AA28-EF8ACB5B6BF5",
-            "name": "Bison"
-          },
-          {
-            "id": "2539614A-9646-446E-8251-34D3AAE068FA",
-            "name": "Cats (wild)"
-          },
-          {
-            "id": "EC707104-66CB-466F-90F8-76264F3BE578",
-            "name": "Horses (wild)"
-          },
-          {
-            "id": "393F60FB-80D6-46F7-B0FB-BBF3C90F59FD",
-            "name": "Tortoises and Turtles"
-          },
-          {
-            "id": "4DC11D06-00F1-4A01-81D0-89CCCCE4FF50",
-            "name": "Climate Change"
-          },
-          {
-            "id": "04A39AB8-DD02-432F-AE5F-BA1267D41A0D",
-            "name": "Fire"
-          },
-          {
-            "id": "F6D3A52E-608F-47D6-96DF-1FD64122A2FC",
-            "name": "Fossils and Paleontology"
-          },
-          {
-            "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
-            "name": "Geology"
-          },
-          {
-            "id": "94262026-92F5-48E9-90EF-01CEAEFBA4FF",
-            "name": "Grasslands"
-          },
-          {
-            "id": "1AEDC86F-5792-487F-8CDF-9E92CAB97ACE",
-            "name": "Prairies"
-          },
-          {
-            "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
-            "name": "Night Sky"
-          },
-          {
-            "id": "E06F3C94-AC8A-4B1C-A247-8EBA8910D5EE",
-            "name": "Astronomy"
-          },
-          {
-            "id": "4244F489-6813-4B7A-9D0C-20CE098C8FFF",
-            "name": "Rock Landscapes and Features"
-          },
-          {
-            "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
-            "name": "Scenic Views"
-          },
-          {
-            "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
-            "name": "Trails"
-          },
-          {
-            "id": "78E4F4AC-AF97-435A-8C2C-7FB8D67516ED",
-            "name": "Unique Species"
-          },
-          {
-            "id": "489D6333-FD72-44DF-83B0-3D4412DD0A75",
-            "name": "Endangered"
-          },
-          {
-            "id": "B85866E2-0897-4000-9040-605CA335804F",
-            "name": "Wilderness"
-          }
-        ],
-        "states": "SD",
-        "contacts": {
-          "phoneNumbers": [
-            {
-              "phoneNumber": "6054335361",
-              "description": "",
-              "extension": "",
-              "type": "Voice"
-            }
-          ],
-          "emailAddresses": [
-            {
-              "description": "",
-              "emailAddress": "badl_information@nps.gov"
-            }
-          ]
-        },
-        "entranceFees": [
-          {
-            "cost": "30.00",
-            "description": "Fee covers the entry of a private vehicle and its occupants for 7 days",
-            "title": "Private Vehicle"
-          },
-          {
-            "cost": "15.00",
-            "description": "Fee covers the entry of an individual that is hiking, bicycling, etc... for 7 days",
-            "title": "Individual (Hiking, Bicycling, etc...)"
-          },
-          {
-            "cost": "25.00",
-            "description": "Fee covers the entry of a motorcycle and its occupants for 7 days",
-            "title": "Motorcycle"
-          },
-          {
-            "cost": "25.00",
-            "description": "Commercial sedan, 1 to 6 passenger capacity.   $25 plus $10 per person - 7 days for Original Manifest",
-            "title": "Commercial Sedan, 1 to 6 passenger capacity"
-          },
-          {
-            "cost": "50.00",
-            "description": "Commercial van, 7 to 15 passenger capacity; $50 - 7 days for Original Manifest",
-            "title": "Commercial Van, 7 to 15 passenger capacity"
-          },
-          {
-            "cost": "60.00",
-            "description": "Minibus, 16 to 25 passenger capacity; $60 - 7 days for Original Manifest",
-            "title": "Commercial Minibus, 16 to 25 passenger capacity"
-          },
-          {
-            "cost": "150.00",
-            "description": "Motorcoach, 26 or more passenger capacity; $150 - 7 days for Original Manifest",
-            "title": "Commercial Motorcoach, 26 or more passenger capacity"
-          }
-        ],
-        "entrancePasses": [
-          {
-            "cost": "55.00",
-            "description": "This pass admits a single, private, non commercial vehicle and its occupants into the park. This pass does not include camping or give any type of discount at stores inside the park. Valid for one year from month of purchase.",
-            "title": "Badlands National Park Annual Pass"
-          }
-        ],
-        "fees": [],
-        "directionsInfo": "Badlands National Park is located 75 miles east of Rapid City, South Dakota. Physical Addresses for GPS* Park Headquarters: 25216 Ben Reifel Road, Interior, SD 57750. Northeast Entrance (I-90, Exit 131): 21020 SD Hwy 240, Interior, SD 57750. Pinnacles Entrance (I-90, Exit 110): 24240 Hwy 240, Wall, SD 57790. Interior Entrance: 20640 SD Hwy 377, Interior, SD 57750.",
-        "directionsUrl": "http://www.nps.gov/badl/planyourvisit/directions.htm",
-        "operatingHours": [
-          {
-            "exceptions": [],
-            "description": "The park is open to visitors all year with the exception of weather closures.",
-            "standardHours": {
-              "wednesday": "All Day",
-              "monday": "All Day",
-              "thursday": "All Day",
-              "sunday": "All Day",
-              "tuesday": "All Day",
-              "friday": "All Day",
-              "saturday": "All Day"
-            },
-            "name": "Badlands National Park"
-          }
-        ],
-        "addresses": [
-          {
-            "postalCode": "57750",
-            "city": "Interior",
-            "stateCode": "SD",
-            "line1": "25216 Ben Reifel Road",
-            "type": "Physical",
-            "line3": "",
-            "line2": ""
-          },
-          {
-            "postalCode": "57750",
-            "city": "Interior",
-            "stateCode": "SD",
-            "line1": "25216 Ben Reifel Road",
-            "type": "Mailing",
-            "line3": "",
-            "line2": ""
-          }
-        ],
-        "images": [
-          {
-            "credit": "NPS Photo",
-            "title": "Badlands Storm",
-            "altText": "Layered badlands formations behind fields of green grass under cloudy and billowing clouds.",
-            "caption": "Summer storms are frequently violent and unpredictable.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C82EE63-1DD8-B71B-0BD6EE0FDCB5D402.jpg"
-          },
-          {
-            "credit": "NPS Photo",
-            "title": "Badlands Yellow Mounds",
-            "altText": "The yellow mounds are peaking out of the formations in this photo.",
-            "caption": "The yellow mounds are peaking out of the formations in this photo.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C82ED5D-1DD8-B71B-0B2F33D3B39D6D1B.jpg"
-          },
-          {
-            "credit": "NPS Photo",
-            "title": "Badlands Rugged Peaks",
-            "altText": "Badlands formations are very rugged and often have sharp peaks.",
-            "caption": "Badlands formations are very rugged and often have sharp peaks.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C82EBFE-1DD8-B71B-0B21072718DB2A95.jpg"
-          },
-          {
-            "credit": "NPS Photo",
-            "title": "Clover Landscape",
-            "altText": "Jagged badlands buttes extended in horizon amid yellow flowers under a blue sky.",
-            "caption": "The park has seasonal changes in colors so plan ahead!",
-            "url": "https://www.nps.gov/common/uploads/structured_data/28C2C88B-9904-7962-E60BEFC763604963.jpg"
-          },
-          {
-            "credit": "NPS Photo/Brad Barker",
-            "title": "Badlands in the Winter",
-            "altText": "road leading between snow covered badlands formations",
-            "caption": "Winter in Badlands National Park often creates snow covered wonderlands throughout the park.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/36C156B0-F6CA-1972-F3B88C971DE39767.jpg"
-          }
-        ],
-        "weatherInfo": "The Badlands weather is variable and unpredictable with temperature extremes ranging from 116° F to -40° F. Summers are hot and dry with occasional violent thunderstorms. Hailstorms and occasional tornadoes can descend on the Badlands with sudden fury. Winters are typically cold with 12 to 24 inches of total snowfall.",
-        "name": "Badlands",
-        "designation": "National Park"
-      },
-      "selectedEatery": {
-        "businessName": "The Golden Lamb",
-        "description": "Staking a claim as Ohio's oldest continually operated business, this joint's got some serious history. Located between Cincinnati and the old National Rd, the hotel and restaurant welcomed everyone from railroad workers to 12 presidents, writers like Mark Twain and Chuck Dickens, and everyone in between. More importantly, the food's good. And yes, lamb is served in the ancient, historic joint.",
-        "state": "OH",
-        "city": "Lebanon",
-        "id": 37,
-        "ameneties": {
-          "wheelchairAccessible": true,
-          "petFriendly": false,
-          "wifi": false,
-          "diaperFacility": true,
-          "playground": false,
-          "restrooms": true
-        }
-      },
-      "selectedBizarrerie": {
-        "id": 18,
-        "name": "Funny Town Welcome Sign",
-        "city": "Hartford",
-        "state": "KY",
-        "description": "Clearly the town of Hartford has a good sense of humor. 'Home of 2000 happy people and a few soreheads,' reads the iconic welcome sign. Definitely Instagram that!",
-        "ameneties": {
-          "souvenirs": false,
-          "restrooms": false
-        }
-      },
-      "id": 4
-    },
-    {
-      "selectedPark": {
-        "id": "FBF9F793-5114-4B61-A5BA-6F9ADDFDF459",
-        "url": "https://www.nps.gov/bisc/index.htm",
-        "fullName": "Biscayne National Park",
-        "parkCode": "bisc",
-        "description": "Within sight of Miami, yet worlds away, Biscayne protects a rare combination of aquamarine waters, emerald islands, and fish-bejeweled coral reefs. Evidence of 10,000 years of human history is here too; from prehistoric tribes to shipwrecks, and pineapple farmers to presidents. For many, the park is a boating, fishing, and diving destination, while others enjoy a warm breeze and peaceful scenery.",
-        "latitude": "25.490587",
-        "longitude": "-80.21023851",
-        "latLong": "lat:25.490587, long:-80.21023851",
-        "activities": [
-          {
-            "id": "071BA73C-1D3C-46D4-A53C-00D5602F7F0E",
-            "name": "Boating"
-          },
-          {
-            "id": "E0E4CE55-3119-46DE-86EB-6817CD8D5F30",
-            "name": "Motorized Boating"
-          },
-          {
-            "id": "BB0B8CD0-BF4C-4517-9980-CFE2D149C7B4",
-            "name": "Sailing"
-          },
-          {
-            "id": "A510F02B-8938-4679-A4F9-76580BCAE9C7",
-            "name": "Boat Tour"
-          },
-          {
-            "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
-            "name": "Camping"
-          },
-          {
-            "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
-            "name": "Fishing"
+            "id": "D72206E4-6CD1-4441-A355-F8F1827466B1",
+            "name": "Flying"
           },
           {
             "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
             "name": "Guided Tours"
           },
           {
-            "id": "5A241412-0CFB-497A-9B5F-0AB8C03CDE72",
-            "name": "Boat Tour"
+            "id": "42FD78B9-2B90-4AA9-BC43-F10E9FEA8B5A",
+            "name": "Hands-On"
+          },
+          {
+            "id": "9456A40A-AF75-4AD3-8BE1-79C4A7DBEDFC",
+            "name": "Volunteer Vacation"
+          },
+          {
+            "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+            "name": "Hiking"
+          },
+          {
+            "id": "7C37B79B-D02D-49EB-9020-3DB8299B748A",
+            "name": "Backcountry Hiking"
+          },
+          {
+            "id": "45261C0A-00D8-4C27-A1F8-029F933A0D34",
+            "name": "Front-Country Hiking"
+          },
+          {
+            "id": "0307955A-B65C-4CE4-A780-EB36BAAADF0B",
+            "name": "Horse Trekking"
+          },
+          {
+            "id": "B204DE60-5A24-43DD-8902-C81625A09A74",
+            "name": "Living History"
           },
           {
             "id": "4D224BCA-C127-408B-AC75-A51563C42411",
             "name": "Paddling"
           },
           {
-            "id": "21DB3AFC-8AAC-4665-BC1F-7198C0685983",
-            "name": "Canoeing"
-          },
-          {
-            "id": "F353A9ED-4A08-456E-8DEC-E61974D0FEB6",
-            "name": "Kayaking"
-          },
-          {
-            "id": "B3EF12AF-D951-419E-BD3C-6B36CBCC1E16",
-            "name": "Stand Up Paddleboarding"
+            "id": "75B92BEB-A36D-4064-88B7-92EEC6D17611",
+            "name": "Whitewater Rafting"
           },
           {
             "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
             "name": "Junior Ranger Program"
-          },
-          {
-            "id": "42CF4021-8524-428E-866A-D33097A4A764",
-            "name": "SCUBA Diving"
-          },
-          {
-            "id": "3EBF7EAC-68FC-4754-B6A4-0C38A1583D45",
-            "name": "Snorkeling"
-          },
-          {
-            "id": "587BB2D3-EC35-41B2-B3F7-A39E2B088AEE",
-            "name": "Swimming"
-          },
-          {
-            "id": "C2801992-F34D-4974-A0F2-80FF04309EE4",
-            "name": "Saltwater Swimming"
           },
           {
             "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
@@ -1561,6 +142,390 @@
           {
             "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
             "name": "Bookstore and Park Store"
+          }
+        ],
+        "topics": [
+          {
+            "id": "69693007-2DF2-4EDE-BB3B-A25EBA72BDF5",
+            "name": "Architecture and Building"
+          },
+          {
+            "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+            "name": "Archeology"
+          },
+          {
+            "id": "A0C86055-4C79-4F70-9D2E-6B9B738290D0",
+            "name": "Ruins"
+          },
+          {
+            "id": "B912363F-771C-4098-BA3A-938DF38A9D7E",
+            "name": "Aviation"
+          },
+          {
+            "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+            "name": "Native American Heritage"
+          },
+          {
+            "id": "3CDB67A9-1EAC-408D-88EC-F26FA35E90AF",
+            "name": "Schools and Education"
+          },
+          {
+            "id": "FE2C2613-B41E-4531-BC43-03EB6E45CBCF",
+            "name": "Transportation"
+          },
+          {
+            "id": "86525CF5-EB56-41A6-90BF-566C6C0FC945",
+            "name": "Trains and Railroads"
+          },
+          {
+            "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+            "name": "Animals"
+          },
+          {
+            "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+            "name": "Birds"
+          },
+          {
+            "id": "324C31EC-7D75-41C7-AA28-EF8ACB5B6BF5",
+            "name": "Bison"
+          },
+          {
+            "id": "2539614A-9646-446E-8251-34D3AAE068FA",
+            "name": "Cats (wild)"
+          },
+          {
+            "id": "344CE561-4E98-49BF-ACD2-438E3684DA5D",
+            "name": "Elk"
+          },
+          {
+            "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
+            "name": "Fish"
+          },
+          {
+            "id": "E25F3456-43ED-45DD-93BC-057F9B944F7A",
+            "name": "Caves, Caverns and Karst"
+          },
+          {
+            "id": "04A39AB8-DD02-432F-AE5F-BA1267D41A0D",
+            "name": "Fire"
+          },
+          {
+            "id": "F6D3A52E-608F-47D6-96DF-1FD64122A2FC",
+            "name": "Fossils and Paleontology"
+          },
+          {
+            "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
+            "name": "Geology"
+          },
+          {
+            "id": "4BE01DC5-52E6-4F18-8C9A-B22D65965F6D",
+            "name": "Groundwater"
+          },
+          {
+            "id": "0E1A04CC-EB51-4F18-93D4-EC0B0B4EC1E3",
+            "name": "Freshwater Springs"
+          },
+          {
+            "id": "94262026-92F5-48E9-90EF-01CEAEFBA4FF",
+            "name": "Grasslands"
+          },
+          {
+            "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
+            "name": "Night Sky"
+          },
+          {
+            "id": "A155238F-0DD2-4610-9B87-05FCE1C59283",
+            "name": "River and Riparian"
+          },
+          {
+            "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
+            "name": "Scenic Views"
+          },
+          {
+            "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+            "name": "Trails"
+          },
+          {
+            "id": "78E4F4AC-AF97-435A-8C2C-7FB8D67516ED",
+            "name": "Unique Species"
+          },
+          {
+            "id": "489D6333-FD72-44DF-83B0-3D4412DD0A75",
+            "name": "Endangered"
+          },
+          {
+            "id": "BA12B386-49EA-46B0-9121-FCACACC47538",
+            "name": "Watersheds"
+          }
+        ],
+        "states": "AZ",
+        "contacts": {
+          "phoneNumbers": [
+            {
+              "phoneNumber": "928-638-7888",
+              "description": "",
+              "extension": "",
+              "type": "Voice"
+            }
+          ],
+          "emailAddresses": [
+            {
+              "description": "",
+              "emailAddress": "grca_information@nps.gov"
+            }
+          ]
+        },
+        "entranceFees": [
+          {
+            "cost": "35.00",
+            "description": "Admits one single, private, non-commercial vehicle and all its passengers. Organized groups are not eligible for the vehicle permit.",
+            "title": "Grand Canyon National Park Vehicle Permit"
+          },
+          {
+            "cost": "30.00",
+            "description": "Admits one single, private, non-commercial motorcycle and its passenger(s).",
+            "title": "Grand Canyon National Park Motorcycle Permit"
+          },
+          {
+            "cost": "20.00",
+            "description": "Admits one individual when entering by foot, bicycle, park shuttle bus, Grand Canyon Railway and private rafting trip. Individuals 15 years old and younger are admitted free of charge.",
+            "title": "Grand Canyon National Park Individual Permit"
+          }
+        ],
+        "entrancePasses": [
+          {
+            "cost": "70.00",
+            "description": "Valid for twelve months from the date of purchase, for unlimited visits to Grand Canyon National Park. It admits the purchaser and any accompanying persons in a single, private, non-commercial vehicle, or the purchaser and accompanying immediate family (spouse, children, parents) when entry is by other means (train, shuttle, bicycle, and foot).",
+            "title": "Grand Canyon National Park Annual Pass"
+          }
+        ],
+        "fees": [],
+        "directionsInfo": "South Rim: Open all year, is located 60 miles north of Williams, Arizona (via route 64 from Interstate 40) and 80 miles northwest of Flagstaff (via route 180). Grand Canyon lies entirely within the state of Arizona. North Rim: Closed for the Winter between December 1 and May 15. The North Rim is located 30 miles south of Jacob Lake on Highway 67; the actual rim of the canyon is an additional 14 miles south. Jacob Lake, AZ is located in northern Arizona on Highway 89A, not far from the Utah border.",
+        "directionsUrl": "http://www.nps.gov/grca/planyourvisit/directions.htm",
+        "operatingHours": [
+          {
+            "exceptions": [],
+            "description": "Both Desert View (East Entrance) and South Entrance are Open 24 hours/day and 7 Days/week. Credit cards, Recreation.gov, Your Pass Now, and America the Beautiful passes are accepted for entry. Cash is not accepted at this time. The South Entrance Station, near Tusayan, Arizona, receives the most traffic, an experiences long lines and up to 2 hour wait times between 9:30 am and 4 pm. The East Entrance at Desert View (accessed via US 89 to Cameron, AZ, then west on SR 64, usually has shorter wait times.",
+            "standardHours": {
+              "wednesday": "All Day",
+              "monday": "All Day",
+              "thursday": "All Day",
+              "sunday": "All Day",
+              "tuesday": "All Day",
+              "friday": "All Day",
+              "saturday": "All Day"
+            },
+            "name": "South Rim - South Entrance"
+          },
+          {
+            "exceptions": [
+              {
+                "exceptionHours": {
+                  "wednesday": "Sunrise to Sunset",
+                  "monday": "Sunrise to Sunset",
+                  "thursday": "Sunrise to Sunset",
+                  "sunday": "Sunrise to Sunset",
+                  "tuesday": "Sunrise to Sunset",
+                  "friday": "Sunrise to Sunset",
+                  "saturday": "Sunrise to Sunset"
+                },
+                "startDate": "2023-11-01",
+                "name": "North Rim - November Day Use.",
+                "endDate": "2023-11-30"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2022-12-01",
+                "name": "North Rim Closed for Winter",
+                "endDate": "2023-05-14"
+              }
+            ],
+            "description": "The North Rim has a short season. Facilities and lodging are usually open May 15 through October 15, each year. Lodging and Camping Reservations are strongly recommended. The North Rim is over 8000 feet/2438 m. in elevation. Individuals with respiratory or heart problems may experience difficulties. Walking at this elevation can be strenuous. The North Rim is closed to all vehicles between December 1st and May 15th, and no visitor services are available.",
+            "standardHours": {
+              "wednesday": "All Day",
+              "monday": "All Day",
+              "thursday": "All Day",
+              "sunday": "All Day",
+              "tuesday": "All Day",
+              "friday": "All Day",
+              "saturday": "All Day"
+            },
+            "name": "North Rim"
+          },
+          {
+            "exceptions": [],
+            "description": "The East Entrance to the park at Desert View is open 24 hours/day, 7 days/week. Visitors traveling through the Navajo Nation on US 89, turn west at Cameron, Arizona onto State Route 64, then drive 25 miles (40 km) to the park's East Entrance. A stop at Desert View provides spectacular first views of Grand Canyon and Colorado River. Most Desert View services are open for visitors. Desert View Campground is open for the 2022 season between April 15 and October 16. 2022. Reservations are required.",
+            "standardHours": {
+              "wednesday": "All Day",
+              "monday": "All Day",
+              "thursday": "All Day",
+              "sunday": "All Day",
+              "tuesday": "All Day",
+              "friday": "All Day",
+              "saturday": "All Day"
+            },
+            "name": "South Rim - Desert View (East Entrance)"
+          }
+        ],
+        "addresses": [
+          {
+            "postalCode": "86023",
+            "city": "Grand Canyon",
+            "stateCode": "AZ",
+            "line1": "20 South Entrance Road",
+            "type": "Physical",
+            "line3": "",
+            "line2": ""
+          },
+          {
+            "postalCode": "86023",
+            "city": "Grand Canyon",
+            "stateCode": "AZ",
+            "line1": "PO Box 129",
+            "type": "Mailing",
+            "line3": "",
+            "line2": ""
+          }
+        ],
+        "images": [
+          {
+            "credit": "NPS/M.Quinn",
+            "title": "Grand Canyon Mather Point Sunset on the South Rim",
+            "altText": "The canyon glows orange as people visit Mather Point, a rock outcropping that juts into Grand Canyon",
+            "caption": "People come from all over the world to view Grand Canyon's sunset",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C7B12D1-1DD8-B71B-0BCE0712F9CEA155.jpg"
+          },
+          {
+            "credit": "NPS/M.Quinn",
+            "title": "Grand Canyon National Park: View from Cape Royal on the North Rim",
+            "altText": "The Cape Royal viewpoint curves into the distance and closer rock formations jut into the canyon.",
+            "caption": "A popular outdoor site for weddings and receptions, Cape Royal Amphitheater is located 23 miles (37 km) from the North Rim developed area.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C7B143E-1DD8-B71B-0BD4A1EF96847292.jpg"
+          },
+          {
+            "credit": "NPS/M.Quinn",
+            "title": "Grand Canyon National Park: Desert View Watchtower (South Rim)",
+            "altText": "The Desert View Watchtower looms 70 feet into the air over a vast and dramatic view of the canyon.",
+            "caption": "The Watchtower is located at Desert View, the eastern-most developed area on the South Rim of Grand Canyon National Park.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C7B15A4-1DD8-B71B-0BFADECB506765CC.jpg"
+          },
+          {
+            "credit": "NPS/M.Quinn",
+            "title": "Looking down the Colorado River from Nankoweap at river mile 53",
+            "altText": "Tall canyon walls frame the wide Colorado river weaving back and forth.",
+            "caption": "A view down the Colorado river from Nankoweap in Marble canyon.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C7B1720-1DD8-B71B-0B74DCF6F887A960.jpg"
+          },
+          {
+            "credit": "NPS/M.Quinn",
+            "title": "Yavapai Point Sunset - Sept. 2021",
+            "altText": "Several dozen people at a scenic overlook with the sun setting on the horizon above a vast canyon la",
+            "caption": "Experiencing sunset from Yavapai Point on the South Rim.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/2B5BB10B-E098-B63E-6DA18036787C8D6E.jpg"
+          }
+        ],
+        "weatherInfo": "This weather varies with cold winters and mild pleasant summers, moderate humidity, and considerable diurnal temperature changes at the higher elevations, with hot and drier summers at the bottom of the Grand Canyon along with cool damp winters. Summer thunderstorms and winter snowfall adds to the weather variety in this region.",
+        "name": "Grand Canyon",
+        "designation": "National Park"
+      },
+      "selectedEatery": {
+        "businessName": "Wall Drug",
+        "description": "You begin to see signs for it about 1,000 miles before you arrive in South Dakota. They promise free ice water. Five-cent coffee. A goddamned Tyrannosaurus rex! There are many, many, many finer restaurants in South Dakota, but none are as famous, for good or ill, as the one in Wall Drug. It's impossible to avoid the Badlands-bordering, 76,000sqft wonder of tourist-trapping randomness, so just go in. Hit the cafe and score a hot beef sandwich and a maple donut. It won't hold a candle to the many, many better food options in the state. But you will emerge with a 'Where the Heck is Wall Drug' sticker. You will have chased that sandwich with a T. rex viewing. And you'll be happy you stopped every time you see a roadside Wall Drug sign every five minutes for the next 300 miles",
+        "state": "SD",
+        "city": "Wall",
+        "id": 43,
+        "ameneties": {
+          "wheelchairAccessible": true,
+          "petFriendly": false,
+          "wifi": true,
+          "diaperFacility": true,
+          "playground": false,
+          "restrooms": true
+        }
+      },
+      "selectedBizarrerie": {
+        "id": 32,
+        "name": "UFO Crashed Here",
+        "city": "Aztec",
+        "state": "NM",
+        "description": "Supposedly a UFO crash landed on this site in 1948. Now all that remains is a plaque with the gory details of the crash and some rocks gathered into the shape of an alien’s face.",
+        "ameneties": {
+          "souvenirs": false,
+          "restrooms": false
+        }
+      },
+      "id": 1
+    },
+    {
+      "selectedPark": {
+        "id": "5536A389-5457-4E3F-84E2-D67861BB34D9",
+        "url": "https://www.nps.gov/oxhi/index.htm",
+        "fullName": "Oxon Cove Park & Oxon Hill Farm",
+        "parkCode": "oxhi",
+        "description": "The diverse history of Maryland and our national heritage can be experienced at Oxon Cove Park. Through hands-on programs and other activities, you can experience farm life and how its changed over time. Explore how the park evolved from a plantation home during the War of 1812, to a hospital farm, to the park you can visit today.",
+        "latitude": "38.80578214",
+        "longitude": "-77.01131457",
+        "latLong": "lat:38.80578214, long:-77.01131457",
+        "activities": [
+          {
+            "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
+            "name": "Biking"
+          },
+          {
+            "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
+            "name": "Food"
+          },
+          {
+            "id": "C6D3230A-2CEA-4AFE-BFF3-DC1E2C2C4BB4",
+            "name": "Picnicking"
+          },
+          {
+            "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+            "name": "Guided Tours"
+          },
+          {
+            "id": "A0631906-9672-4583-91DE-113B93DB6B6E",
+            "name": "Self-Guided Tours - Walking"
+          },
+          {
+            "id": "42FD78B9-2B90-4AA9-BC43-F10E9FEA8B5A",
+            "name": "Hands-On"
+          },
+          {
+            "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+            "name": "Hiking"
+          },
+          {
+            "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+            "name": "Junior Ranger Program"
+          },
+          {
+            "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+            "name": "Wildlife Watching"
+          },
+          {
+            "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+            "name": "Birdwatching"
+          },
+          {
+            "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+            "name": "Museum Exhibits"
+          },
+          {
+            "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+            "name": "Shopping"
+          },
+          {
+            "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+            "name": "Bookstore and Park Store"
           },
           {
             "id": "43800AD1-D439-40F3-AAB3-9FB651FE45BB",
@@ -1573,72 +538,535 @@
             "name": "African American Heritage"
           },
           {
-            "id": "00F3C3F9-2D67-4802-81AE-CCEA5D3BA370",
-            "name": "Arts"
+            "id": "F3883A66-A7CB-461B-868E-1B5932224B25",
+            "name": "American Revolution"
           },
           {
-            "id": "4C9D4777-A9DA-47D1-A0B9-F4A3C98BC1B3",
-            "name": "Maritime"
+            "id": "7F12224B-217A-4B07-A4A2-636B1CE7F221",
+            "name": "Colonization and Settlement"
           },
           {
-            "id": "7424754D-EB8B-4608-A69A-50D44992931B",
-            "name": "Maritime - Military"
+            "id": "D9FC6D14-F8C7-4EBA-86EA-DFD99B6BB4F5",
+            "name": "Enslavement"
           },
           {
-            "id": "263BAC6E-4DEC-47E4-909D-DA8AD351E06E",
-            "name": "Lighthouses"
+            "id": "1F833C99-A75D-4F9E-9256-B96523485466",
+            "name": "Farming and  Agriculture"
           },
           {
-            "id": "78CF2074-0EE5-48F1-AD0F-B39C6C5A447B",
-            "name": "Piracy and Privateering"
+            "id": "F67CA03D-109F-44B9-9B63-D9EC9FD77A1D",
+            "name": "Plantations"
           },
           {
-            "id": "A079385C-3E71-4E18-9E42-B046BC22EA95",
-            "name": "Ships and Shipwrecks"
+            "id": "69E16062-0E4F-4DE0-91FB-E4EDB2484572",
+            "name": "Migrations"
           },
           {
             "id": "3CDB67A9-1EAC-408D-88EC-F26FA35E90AF",
             "name": "Schools and Education"
           },
           {
-            "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
-            "name": "Animals"
+            "id": "27BF8807-54EA-4A3D-B073-AA7AA361CD7E",
+            "name": "Wars and Conflicts"
           },
           {
-            "id": "921D1471-5F6B-47D5-918D-389E7106083A",
-            "name": "Alligators or Crocodiles"
+            "id": "F94E78D3-EC70-4B99-AB57-BC70C4E79D65",
+            "name": "War of 1812"
+          },
+          {
+            "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+            "name": "Animals"
           },
           {
             "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
             "name": "Birds"
           },
           {
-            "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
-            "name": "Fish"
+            "id": "5BE55D7F-BDB6-4E3D-AC35-2D8EBB974417",
+            "name": "Trails"
+          }
+        ],
+        "states": "MD",
+        "contacts": {
+          "phoneNumbers": [
+            {
+              "phoneNumber": "3018391176",
+              "description": "",
+              "extension": "",
+              "type": "Voice"
+            }
+          ],
+          "emailAddresses": [
+            {
+              "description": "",
+              "emailAddress": "PISC_Superintendent@nps.gov"
+            }
+          ]
+        },
+        "entranceFees": [
+          {
+            "cost": "0.00",
+            "description": "Oxon Cove Park & Oxon Hill Farm does not have an admission fee. All programs are free and open to the public unless otherwise indicated.",
+            "title": "Fee Free Park"
+          }
+        ],
+        "entrancePasses": [],
+        "fees": [],
+        "directionsInfo": "While our mailing address is on Oxon Hill Road, the parking lot entrance to the park is on Bald Eagle Road. Bald Eagle Road can be accessed from the Capital Beltway (I-495/I-95), as well as Indian Head Highway (MD-210) and Oxon Hill Road (MD-414). For detailed directions, please visit our website at http://www.nps.gov/oxhi/planyourvisit/directions.htm",
+        "directionsUrl": "http://www.nps.gov/oxhi/planyourvisit/directions.htm",
+        "operatingHours": [
+          {
+            "exceptions": [
+              {
+                "exceptionHours": {
+                  "thursday": "Closed"
+                },
+                "startDate": "2023-11-24",
+                "name": "Thanksgiving Day",
+                "endDate": "2023-11-24"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2024-01-01",
+                "name": "New Year's Day",
+                "endDate": "2024-01-01"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2023-12-25",
+                "name": "Christmas Day",
+                "endDate": "2023-12-25"
+              },
+              {
+                "exceptionHours": {
+                  "saturday": "8:30AM - 3:00PM"
+                },
+                "startDate": "2023-12-31",
+                "name": "Early Closure",
+                "endDate": "2023-12-31"
+              },
+              {
+                "exceptionHours": {
+                  "saturday": "8:30AM - 3:00PM"
+                },
+                "startDate": "2023-12-31",
+                "name": "Early Closure",
+                "endDate": "2023-12-31"
+              }
+            ],
+            "description": "The park opens at 8:00am, 7 days a week, except January 1, Thanksgiving Day, and December 25.  \nThe gates at the parking lot are locked at 4:30pm every day.",
+            "standardHours": {
+              "wednesday": "8:00AM - 4:30PM",
+              "monday": "8:00AM - 4:30PM",
+              "thursday": "8:00AM - 4:30PM",
+              "sunday": "8:00AM - 4:30PM",
+              "tuesday": "8:00AM - 4:30PM",
+              "friday": "8:00AM - 4:30PM",
+              "saturday": "8:00AM - 4:30PM"
+            },
+            "name": "Park Grounds"
+          }
+        ],
+        "addresses": [
+          {
+            "postalCode": "20745",
+            "city": "Oxon Hill",
+            "stateCode": "MD",
+            "line1": "1967 Bald Eagle Road",
+            "type": "Physical",
+            "line3": "",
+            "line2": ""
           },
           {
-            "id": "393F60FB-80D6-46F7-B0FB-BBF3C90F59FD",
-            "name": "Tortoises and Turtles"
+            "postalCode": "20745",
+            "city": "Oxon Hill",
+            "stateCode": "MD",
+            "line1": "6411 Oxon Hill Road",
+            "type": "Mailing",
+            "line3": "",
+            "line2": ""
+          }
+        ],
+        "images": [
+          {
+            "credit": "(NPS/CLaBarge)",
+            "title": "Cows",
+            "altText": "Two brown cows graze in a field",
+            "caption": "Two Jersey cows graze in their pasture",
+            "url": "https://www.nps.gov/common/uploads/structured_data/34B552FE-055B-F687-3DBC825302910582.jpg"
+          },
+          {
+            "credit": "NPS Photo/Ranger Jamie Euken",
+            "title": "Farm Sunrise",
+            "altText": "Sunrise at the Farm",
+            "caption": "Sunrise at the Farm",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C7C60A9-1DD8-B71B-0BF24255DCA7767D.jpg"
+          },
+          {
+            "credit": "NPS Photo/Ranger Jamie Euken",
+            "title": "Farrier",
+            "altText": "Farrier repairs horse hooves",
+            "caption": "Our farrier regularly maintains the hooves of the horses at Oxon Hill Farm.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C7C64D9-1DD8-B71B-0B4AB0C6DE8DF59C.jpg"
+          },
+          {
+            "credit": "NPS Photo",
+            "title": "Pigs",
+            "altText": "Young visitors meet the pigs.",
+            "caption": "Young visitors meet the pigs at Oxon Hill Farm.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C7C61ED-1DD8-B71B-0BABF301354F80F4.jpg"
+          },
+          {
+            "credit": "(NPS/CLaBarge)",
+            "title": "Mount Welby",
+            "altText": "A white brick two story building",
+            "caption": "Mount Welby is the oldest structure on the farm, built around 1811",
+            "url": "https://www.nps.gov/common/uploads/structured_data/362F6FCA-EADD-B5D5-DBB9659740D07B41.jpg"
+          },
+          {
+            "credit": "(NPS/SBreault)",
+            "title": "Oxon Cove Trail",
+            "altText": "A paved walkway along a wooded shoreline",
+            "caption": "The Oxon Cove trail takes hikers and bikers through forest and meadow ecosystems and along Oxon Cove",
+            "url": "https://www.nps.gov/common/uploads/structured_data/35116E6E-BF03-4E02-7CB0A2BB37A29DE0.jpg"
+          }
+        ],
+        "weatherInfo": "Make sure that you wear appropriate shoes and clothing. Closed-toe shoes are recommended, sneakers or comfortable boots are best. Dress for the season, light clothes in summer, layers in spring and fall, and warm coats in winter. Cooler days are often the best days to visit Oxon Hill Farm if you’re interested in seeing farm animals or wildlife out and about. There are still lots of things to see and do on hotter days, just make sure to keep hydrated and take frequent breaks.",
+        "name": "Oxon Cove Park & Oxon Hill Farm",
+        "designation": ""
+      },
+      "selectedEatery": {
+        "businessName": "The Golden Lamb",
+        "description": "Staking a claim as Ohio's oldest continually operated business, this joint's got some serious history. Located between Cincinnati and the old National Rd, the hotel and restaurant welcomed everyone from railroad workers to 12 presidents, writers like Mark Twain and Chuck Dickens, and everyone in between. More importantly, the food's good. And yes, lamb is served in the ancient, historic joint.",
+        "state": "OH",
+        "city": "Lebanon",
+        "id": 37,
+        "ameneties": {
+          "wheelchairAccessible": true,
+          "petFriendly": false,
+          "wifi": false,
+          "diaperFacility": true,
+          "playground": false,
+          "restrooms": true
+        }
+      },
+      "selectedBizarrerie": {
+        "id": 33,
+        "name": "Ghostbusters Headquarters",
+        "city": "New York",
+        "state": "NY",
+        "description": "The Tribeca firehouse Hook and Ladder Company 8 was used as the Ghostbusters headquarters in the film Ghostbusters and it’s still around and super easy to get to. This New York City attraction is right off of a subway line and full of nods to its film history. According to Roadside America, when actor Harold Ramis died in 2014, fans set up a memorial on the sidewalk outside of the fire house.",
+        "ameneties": {
+          "souvenirs": false,
+          "restrooms": true
+        }
+      },
+      "id": 2
+    },
+    {
+      "selectedPark": {
+        "id": "4324B2B4-D1A3-497F-8E6B-27171FAE4DB2",
+        "url": "https://www.nps.gov/yose/index.htm",
+        "fullName": "Yosemite National Park",
+        "parkCode": "yose",
+        "description": "Not just a great valley, but a shrine to human foresight, the strength of granite, the power of glaciers, the persistence of life, and the tranquility of the High Sierra. First protected in 1864, Yosemite National Park is best known for its waterfalls, but within its nearly 1,200 square miles, you can find deep valleys, grand meadows, ancient giant sequoias, a vast wilderness area, and much more.",
+        "latitude": "37.84883288",
+        "longitude": "-119.5571873",
+        "latLong": "lat:37.84883288, long:-119.5571873",
+        "activities": [
+          {
+            "id": "09DF0950-D319-4557-A57E-04CD2F63FF42",
+            "name": "Arts and Culture"
+          },
+          {
+            "id": "5F723BAD-7359-48FC-98FA-631592256E35",
+            "name": "Auto and ATV"
+          },
+          {
+            "id": "0B4A5320-216D-451A-9990-626E1D5ACE28",
+            "name": "Scenic Driving"
+          },
+          {
+            "id": "13A57703-BB1A-41A2-94B8-53B692EB7238",
+            "name": "Astronomy"
+          },
+          {
+            "id": "7CE6E935-F839-4FEC-A63E-052B1DEF39D2",
+            "name": "Biking"
+          },
+          {
+            "id": "071BA73C-1D3C-46D4-A53C-00D5602F7F0E",
+            "name": "Boating"
+          },
+          {
+            "id": "A59947B7-3376-49B4-AD02-C0423E08C5F7",
+            "name": "Camping"
+          },
+          {
+            "id": "4A58AF13-E8FB-4530-B41A-97DF0B0C77B7",
+            "name": "Backcountry Camping"
+          },
+          {
+            "id": "B12FAAB9-713F-4B38-83E4-A273F5A43C77",
+            "name": "Climbing"
+          },
+          {
+            "id": "AE42B46C-E4B7-4889-A122-08FE180371AE",
+            "name": "Fishing"
+          },
+          {
+            "id": "1DFACD97-1B9C-4F5A-80F2-05593604799E",
+            "name": "Food"
+          },
+          {
+            "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+            "name": "Guided Tours"
+          },
+          {
+            "id": "42FD78B9-2B90-4AA9-BC43-F10E9FEA8B5A",
+            "name": "Hands-On"
+          },
+          {
+            "id": "BFF8C027-7C8F-480B-A5F8-CD8CE490BFBA",
+            "name": "Hiking"
+          },
+          {
+            "id": "7C37B79B-D02D-49EB-9020-3DB8299B748A",
+            "name": "Backcountry Hiking"
+          },
+          {
+            "id": "0307955A-B65C-4CE4-A780-EB36BAAADF0B",
+            "name": "Horse Trekking"
+          },
+          {
+            "id": "1886DA47-0AEC-4568-B9C2-8E9BC316AAAC",
+            "name": "Horseback Riding"
+          },
+          {
+            "id": "5FF5B286-E9C3-430E-B612-3380D8138600",
+            "name": "Ice Skating"
+          },
+          {
+            "id": "B204DE60-5A24-43DD-8902-C81625A09A74",
+            "name": "Living History"
+          },
+          {
+            "id": "4D224BCA-C127-408B-AC75-A51563C42411",
+            "name": "Paddling"
+          },
+          {
+            "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+            "name": "Junior Ranger Program"
+          },
+          {
+            "id": "4D06CEED-90C6-4B69-B264-32CC90B69BA6",
+            "name": "Tubing"
+          },
+          {
+            "id": "67FDB577-518E-4A3E-B608-E78941116223",
+            "name": "Snow Tubing"
+          },
+          {
+            "id": "F9B1D433-6B86-4804-AED7-B50A519A3B7C",
+            "name": "Skiing"
+          },
+          {
+            "id": "C38B3C62-1BBF-4EA1-A1A2-35DE21B74C17",
+            "name": "Snow Play"
+          },
+          {
+            "id": "01D717BC-18BB-4FE4-95BA-6B13AD702038",
+            "name": "Snowshoeing"
+          },
+          {
+            "id": "587BB2D3-EC35-41B2-B3F7-A39E2B088AEE",
+            "name": "Swimming"
+          },
+          {
+            "id": "0B685688-3405-4E2A-ABBA-E3069492EC50",
+            "name": "Wildlife Watching"
+          },
+          {
+            "id": "5A2C91D1-50EC-4B24-8BED-A2E11A1892DF",
+            "name": "Birdwatching"
+          },
+          {
+            "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+            "name": "Park Film"
+          },
+          {
+            "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+            "name": "Museum Exhibits"
+          },
+          {
+            "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+            "name": "Shopping"
+          },
+          {
+            "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+            "name": "Bookstore and Park Store"
+          }
+        ],
+        "topics": [
+          {
+            "id": "69693007-2DF2-4EDE-BB3B-A25EBA72BDF5",
+            "name": "Architecture and Building"
+          },
+          {
+            "id": "28AEAE85-9DDA-45B6-981B-1CFCDCC61E14",
+            "name": "African American Heritage"
+          },
+          {
+            "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+            "name": "Archeology"
+          },
+          {
+            "id": "00F3C3F9-2D67-4802-81AE-CCEA5D3BA370",
+            "name": "Arts"
+          },
+          {
+            "id": "05B7868A-3F3C-433D-876E-A886C4BE7A12",
+            "name": "Painting"
+          },
+          {
+            "id": "9BD60DC0-C82B-42BA-A170-456B7423429D",
+            "name": "Photography"
+          },
+          {
+            "id": "227D2677-28CA-4CBF-997F-61108975A497",
+            "name": "Asian American Heritage"
+          },
+          {
+            "id": "607D41B0-F830-4C07-A557-BCEF880A3929",
+            "name": "Burial, Cemetery and Gravesite"
+          },
+          {
+            "id": "A1BAF33E-EA84-4608-A888-4CEE9541F027",
+            "name": "Native American Heritage"
+          },
+          {
+            "id": "518B32FB-339D-4C52-B2C2-04BF406AA4B0",
+            "name": "Religion and Spirituality"
+          },
+          {
+            "id": "98F41FDF-B73F-4B68-8010-53CCB2891E3B",
+            "name": "Churches"
+          },
+          {
+            "id": "3CDB67A9-1EAC-408D-88EC-F26FA35E90AF",
+            "name": "Schools and Education"
+          },
+          {
+            "id": "D1CF31DE-AFED-412B-9425-DD1FD4CBB5C7",
+            "name": "Science, Technology and Innovation"
+          },
+          {
+            "id": "FE2C2613-B41E-4531-BC43-03EB6E45CBCF",
+            "name": "Transportation"
+          },
+          {
+            "id": "A160B3D9-1603-4D89-B82F-21FCAF9EEE3B",
+            "name": "Tragic Events"
+          },
+          {
+            "id": "D91B6F1A-FED8-490D-B181-9940474CD67C",
+            "name": "Floods"
+          },
+          {
+            "id": "7DA81DAB-5045-4953-9C20-36590AD9FA95",
+            "name": "Women's History"
+          },
+          {
+            "id": "0D00073E-18C3-46E5-8727-2F87B112DDC6",
+            "name": "Animals"
+          },
+          {
+            "id": "957EF2BD-AC6C-4B7B-BD9A-87593ADC6691",
+            "name": "Birds"
+          },
+          {
+            "id": "2539614A-9646-446E-8251-34D3AAE068FA",
+            "name": "Cats (wild)"
+          },
+          {
+            "id": "1608649A-E7D7-4529-BD83-074C90F9FB68",
+            "name": "Fish"
           },
           {
             "id": "4DC11D06-00F1-4A01-81D0-89CCCCE4FF50",
             "name": "Climate Change"
           },
           {
-            "id": "46FC5CBD-9AD5-48F1-B4DA-1357031B1D2E",
-            "name": "Coasts, Islands and Atolls"
+            "id": "04A39AB8-DD02-432F-AE5F-BA1267D41A0D",
+            "name": "Fire"
           },
           {
-            "id": "F79C1242-80FF-40F0-A0C1-5FFCBA172EC0",
-            "name": "Estuaries and Mangroves"
+            "id": "9F6A7003-59D6-4438-935F-760FD04C1073",
+            "name": "Foothills, Plains and Valleys"
           },
           {
-            "id": "0E6D8503-CB65-467F-BCD6-C6D9E28A4E0B",
-            "name": "Oceans"
+            "id": "41B1A0A3-11FF-4F55-9CB9-034A7E28B087",
+            "name": "Forests and Woodlands"
           },
           {
-            "id": "C7FAA779-9AF2-4B50-915E-8E2AF2E7337A",
-            "name": "Coral Reefs"
+            "id": "F0F97E32-2F29-41B4-AF98-9FBE8DAB36B1",
+            "name": "Geology"
+          },
+          {
+            "id": "FBB14C45-1663-4714-9D28-B2B99874644D",
+            "name": "Glaciers"
+          },
+          {
+            "id": "94262026-92F5-48E9-90EF-01CEAEFBA4FF",
+            "name": "Grasslands"
+          },
+          {
+            "id": "AEA4C5FD-F25C-4C3D-97FE-2767ED3EE682",
+            "name": "Meadows"
+          },
+          {
+            "id": "1CF1F6BB-A037-445B-8CF2-81428E50CE52",
+            "name": "Lakes"
+          },
+          {
+            "id": "101F4D51-F99D-45A6-BBB6-CD481E5FACED",
+            "name": "Mountains"
+          },
+          {
+            "id": "F8C2FE93-DEB3-4B12-9A87-913E3E6B448D",
+            "name": "Natural Sounds"
+          },
+          {
+            "id": "A7359FC4-DAD8-45F5-AF15-7FF62F816ED3",
+            "name": "Night Sky"
+          },
+          {
+            "id": "E06F3C94-AC8A-4B1C-A247-8EBA8910D5EE",
+            "name": "Astronomy"
+          },
+          {
+            "id": "A155238F-0DD2-4610-9B87-05FCE1C59283",
+            "name": "River and Riparian"
+          },
+          {
+            "id": "4244F489-6813-4B7A-9D0C-20CE098C8FFF",
+            "name": "Rock Landscapes and Features"
           },
           {
             "id": "9C9FCBB6-360B-4743-8155-6F9341CBE01B",
@@ -1649,23 +1077,31 @@
             "name": "Trails"
           },
           {
-            "id": "596BAA6D-F66B-4348-8433-FEFF35A8005E",
-            "name": "Water Trails"
-          },
-          {
             "id": "78E4F4AC-AF97-435A-8C2C-7FB8D67516ED",
             "name": "Unique Species"
           },
           {
-            "id": "489D6333-FD72-44DF-83B0-3D4412DD0A75",
-            "name": "Endangered"
+            "id": "BA12B386-49EA-46B0-9121-FCACACC47538",
+            "name": "Watersheds"
+          },
+          {
+            "id": "5ED826E0-76BB-47BB-87DD-E081A72B0A04",
+            "name": "Waterfalls"
+          },
+          {
+            "id": "1365C347-952C-475A-B755-731DD523C195",
+            "name": "Wetlands"
+          },
+          {
+            "id": "B85866E2-0897-4000-9040-605CA335804F",
+            "name": "Wilderness"
           }
         ],
-        "states": "FL",
+        "states": "CA",
         "contacts": {
           "phoneNumbers": [
             {
-              "phoneNumber": "3052301144",
+              "phoneNumber": "209/372-0200",
               "description": "",
               "extension": "",
               "type": "Voice"
@@ -1673,32 +1109,87 @@
           ],
           "emailAddresses": [
             {
-              "description": "If you can't find what you are looking for on the park website then e-mail us at bisc_information@nps.gov.",
-              "emailAddress": "bisc_information@nps.gov"
+              "description": "",
+              "emailAddress": "yose_web_manager@nps.gov"
             }
           ]
         },
         "entranceFees": [
           {
-            "cost": "0.00",
-            "description": "The park has no entrance fees.",
-            "title": "No entrance fees."
+            "cost": "35.00",
+            "description": "This fee is valid for seven days.",
+            "title": "Non-commercial car, pickup truck, RV, or van with 15 or fewer passenger seats"
+          },
+          {
+            "cost": "30.00",
+            "description": "This fee is valid for seven days. Cost is per motorcycle (not per person).",
+            "title": "Motorcycle"
+          },
+          {
+            "cost": "20.00",
+            "description": "This fee is valid for seven days. People 15 years and younger are free. Cost is per person.",
+            "title": "Foot, bicycle, horse, or non-commercial bus or van with more than 15 passenger seats"
+          },
+          {
+            "cost": "25.00",
+            "description": "The fee is $25 plus $20 per person.",
+            "title": "Commercial Tour (sedan up to six seats)"
+          },
+          {
+            "cost": "125.00",
+            "description": "",
+            "title": "Commercial Tour (van, 7-15 seats, regardless of occupancy)"
+          },
+          {
+            "cost": "200.00",
+            "description": "",
+            "title": "Commercial Tour (mini bus, 16-25 seats, regardless of occupancy)"
+          },
+          {
+            "cost": "300.00",
+            "description": "",
+            "title": "Commercial Tour (motor coach, 26 or more seats, regardless of occupancy)"
           }
         ],
         "entrancePasses": [
           {
+            "cost": "70.00",
+            "description": "Annual pass providing free entrance to Yosemite for 12 months from the date of purchase.",
+            "title": "Yosemite Annual Pass"
+          },
+          {
+            "cost": "80.00",
+            "description": "Annual pass covering entrance and standard amenity fees for national parks and other federal fee areas, valid for 12 months from date of purchase. This replaces the National Parks Pass and Golden Eagle Pass.",
+            "title": "America the Beautiful—National Parks and Federal Recreational Lands Annual Pass"
+          },
+          {
+            "cost": "80.00",
+            "description": "Lifetime or annual admission and discount pass for US citizens or permanent residents who are age 62 or older. An annual version of this pass, valid for 12 months, costs $20.",
+            "title": "Senior Pass"
+          },
+          {
             "cost": "0.00",
-            "description": "No entrance fees.",
-            "title": "No entrance fees."
+            "description": "Lifetime admission and discount pass for US citizens or permanent residents with permanent disabilities.",
+            "title": "Access Pass"
+          },
+          {
+            "cost": "0.00",
+            "description": "Annual pass covering entrance and standard amenity fees for all active US military personnel and their dependents, valid for 12 months from date of issuance. (For active duty military personnel and dependents with proper identification (CAC Card or DD Form 1173).)",
+            "title": "Annual Pass for US Military"
+          },
+          {
+            "cost": "0.00",
+            "description": "Annual pass covering entrance fees for 4th grade students for 2018–2019 school year.",
+            "title": "Annual 4th Grade Pass"
           }
         ],
         "fees": [],
-        "directionsInfo": "The Dante Fascell Visitor Center may be reached from the Florida Turnpike by taking Exit 6 (Speedway Boulevard). Turn left from exit ramp and continue south to SW 328th Street (North Canal Drive). Turn left on 328th Street and continue for four miles to the end of the road. The park entrance is on the left just before the entrance to Homestead Bayfront Marina.",
-        "directionsUrl": "http://www.nps.gov/bisc/planyourvisit/directions.htm",
+        "directionsInfo": "You can drive to Yosemite year-round and enter via Highways 41, 140, and 120 from the west. Tioga Pass Entrance (via Highway 120 from the east) is closed from approximately November through late May or June. Hetch Hetchy is open all year but may close intermittently due to snow. Please note that GPS units do not always provide accurate directions to or within Yosemite.",
+        "directionsUrl": "http://www.nps.gov/yose/planyourvisit/driving.htm",
         "operatingHours": [
           {
             "exceptions": [],
-            "description": "Park waters are open 24 hours a day, all year.",
+            "description": "Yosemite National Park is open 24 hours per day, 365 days per year.",
             "standardHours": {
               "wednesday": "All Day",
               "monday": "All Day",
@@ -1708,132 +1199,151 @@
               "friday": "All Day",
               "saturday": "All Day"
             },
-            "name": "Park Waters"
+            "name": "Yosemite National Park"
           },
           {
             "exceptions": [],
-            "description": "The Visitor Center features a museum, park films, art gallery, and a spectacular view of Biscayne Bay.",
+            "description": "Hetch Hetchy area is only open during the day (except for permitted backpackers). All day visitors must exit Hetch Hetchy by the closure time.",
             "standardHours": {
-              "wednesday": "9:00AM - 5:00PM",
-              "monday": "9:00AM - 5:00PM",
-              "thursday": "9:00AM - 5:00PM",
-              "sunday": "9:00AM - 5:00PM",
-              "tuesday": "9:00AM - 5:00PM",
-              "friday": "9:00AM - 5:00PM",
-              "saturday": "9:00AM - 5:00PM"
+              "wednesday": "8:00AM - 5:00PM",
+              "monday": "8:00AM - 5:00PM",
+              "thursday": "8:00AM - 5:00PM",
+              "sunday": "8:00AM - 5:00PM",
+              "tuesday": "8:00AM - 5:00PM",
+              "friday": "8:00AM - 5:00PM",
+              "saturday": "8:00AM - 5:00PM"
             },
-            "name": "Dante Fascell Visitor Center"
-          },
-          {
-            "exceptions": [],
-            "description": "Launch your own canoe or kayak from the ramp near the parking area, enjoy a picnic on the lawn, or stroll along the jetty trail.",
-            "standardHours": {
-              "wednesday": "7:00AM - 5:30PM",
-              "monday": "7:00AM - 5:30PM",
-              "thursday": "7:00AM - 5:30PM",
-              "sunday": "7:00AM - 5:30PM",
-              "tuesday": "7:00AM - 5:30PM",
-              "friday": "7:00AM - 5:30PM",
-              "saturday": "7:00AM - 5:30PM"
-            },
-            "name": "Convoy Point Grounds"
+            "name": "Hetch Hetchy"
           }
         ],
         "addresses": [
           {
-            "postalCode": "33033",
-            "city": "Homestead",
-            "stateCode": "FL",
-            "line1": "9700 SW 328th Street",
+            "postalCode": "95389",
+            "city": "Yosemite",
+            "stateCode": "CA",
+            "line1": "9039 Village Drive",
             "type": "Physical",
             "line3": "",
-            "line2": "Sir Lancelot Jones Way"
-          },
-          {
-            "postalCode": "33033",
-            "city": "Homestead",
-            "stateCode": "FL",
-            "line1": "9700 SW 328th Street",
-            "type": "Mailing",
-            "line3": "",
-            "line2": "Sir Lancelot Jones Way"
+            "line2": ""
           }
         ],
         "images": [
           {
-            "credit": "NPS image by Shaun Wolfe",
-            "title": "Snorkeling",
-            "altText": "Coral reef with two snorkelers diving below the surface",
-            "caption": "Snorkeling is a great way to explore the coral reefs in the park",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C8717A4-1DD8-B71B-0B2EED68CFA7E008.jpg"
+            "credit": "NPS Photo",
+            "title": "Upper Yosemite Fall and Merced River in spring",
+            "altText": "Upper Yosemite Fall and Merced River in spring",
+            "caption": "Upper Yosemite Fall and Merced River in spring",
+            "url": "https://www.nps.gov/common/uploads/structured_data/05383E91-AA28-2DDC-AB517507594F9FA6.jpg"
           },
           {
-            "credit": "NPS photo",
-            "title": "Boca Chita Key",
-            "altText": "Downtown Miami in background.",
-            "caption": "Boca Chita Key is the park's most popular island destination.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C870533-1DD8-B71B-0B70CFF5EF6538F1.jpg"
+            "credit": "NPS / Cindy Jacoby",
+            "title": "Yosemite Valley from Tunnel View",
+            "altText": "Glaciated valley with vertical cliffs.",
+            "caption": "Tunnel View is perhaps one of the most photographed views in the park.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C84CAEC-1DD8-B71B-0BA0EEA50BB40F8B.jpg"
           },
           {
-            "credit": "NPS image by Shaun Wolfe",
-            "title": "Coral Reef",
-            "altText": "Underwater view of coral reef with a large school of yellow and blue fish",
-            "caption": "The coral reef is home to many species of fish",
-            "url": "https://www.nps.gov/common/uploads/structured_data/E789390E-C7B5-2B1F-13974FC0EA9C7BD6.jpg"
+            "credit": "NPS / Bob Roney",
+            "title": "Rainbow over Half Dome",
+            "altText": "A rainbow over a mountain in the distance.",
+            "caption": "A hike up to Sentinel Dome rewards people with great views of the landscape around them.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C84C6CF-1DD8-B71B-0B1C7CB883AA8FB1.jpg"
           },
           {
-            "credit": "NPS photo",
-            "title": "Coral Reef",
-            "altText": "The coral reefs are located mostly on the Eastern side of the park.",
-            "caption": "Biscayne National Park is 95% water.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C870833-1DD8-B71B-0BE93D49E0DF6503.jpg"
+            "credit": "NPS / Cindy Jacoby",
+            "title": "Cathedral Peak and Lake in Autumn",
+            "altText": "A mountain reflecting in a lake.",
+            "caption": "Cathedral Peak is one of the most recognizable peaks in the Yosemite Wilderness.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C84C3C0-1DD8-B71B-0BFF90B64283C3D8.jpg"
           },
           {
-            "credit": "NPS photo",
-            "title": "Green sea turtle",
-            "altText": "Green sea turtle",
-            "caption": "Loggerhead, Green and Hawksbill turtles are all commonly observed in park waters.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C870A07-1DD8-B71B-0B9BA7F6549AD537.jpg"
+            "credit": "NPS Photo / Cindy Jacoby",
+            "title": "Lower Yosemite Fall",
+            "altText": "A waterfall flowing down a granite cliff.",
+            "caption": "The walk to Lower Yosemite Fall is a popular and easy hike.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C84CDD0-1DD8-B71B-0B6E5868AFC75B6B.jpg"
           },
           {
-            "credit": "NPS photo",
-            "title": "Totten Key",
-            "altText": "Aerial view of Totten Key.",
-            "caption": "Biscayne National Park includes the northernmost Florida Keys.",
-            "url": "https://www.nps.gov/common/uploads/structured_data/3C871441-1DD8-B71B-0BBD1985ADA0E585.jpg"
+            "credit": "NPS / Cindy Jacoby",
+            "title": "Yosemite Falls on a Winter Morning",
+            "altText": "Two tall waterfalls flowing down snow covered granite walls.",
+            "caption": "Yosemite Falls will sometimes only trickle at the end of summer, but wet winters can rejuvenate the flow.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C84CC4C-1DD8-B71B-0BE967E5E5D93F25.jpg"
+          },
+          {
+            "credit": "NPS",
+            "title": "Glen Aulin",
+            "altText": "Mountains reflecting in water",
+            "caption": "Glen Auilin is one of five High Sierra Camps, located in the Yosemite high country.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C84C82D-1DD8-B71B-0B8D6902B62369E2.jpg"
+          },
+          {
+            "credit": "NPS / Cindy Jacoby",
+            "title": "Giant Sequoia Trees in the Mariposa Grove of Giant Sequoias",
+            "altText": "Cluster of tall trees with cloudy sky.",
+            "caption": "Yosemite National Park's massive giant sequoias (Sequoiadendron giganteum) live in three groves in the park. The most famous of these is the Mariposa Grove, which contains about 500 mature giant sequoias.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C8560E1-1DD8-B71B-0BD3183636F4B861.jpg"
+          },
+          {
+            "credit": "NPS",
+            "title": "Tenaya Lake at Sunset",
+            "altText": "Mountains surrounding a lake.",
+            "caption": "Tenaya Lake is a favorite place to stop along the Tioga Road in summer.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C84C97E-1DD8-B71B-0B5DD2112C58C175.jpg"
+          },
+          {
+            "credit": "NPS / Cindy Jacoby",
+            "title": "Half Dome",
+            "altText": "Granite dome with trace amounts of snow.",
+            "caption": "Half Dome is one of the most recognizable granitic formations in the world.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C84CF74-1DD8-B71B-0B9C7FF83F7C68EB.jpg"
+          },
+          {
+            "credit": "NPS Photo/ Christine Fey",
+            "title": "El Capitan",
+            "altText": "El Capitan and reflection in Merced River with some low clouds",
+            "caption": "El Capitan rises over 3,000 feet above the floor of Yosemite Valley.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/058C8410-D5BA-32F4-BC468014AF42CB0B.jpg"
+          },
+          {
+            "credit": "NPS Photo",
+            "title": "View of Yosemite Valley in Winter",
+            "altText": "El Capitan on left, Cathedral Rocks on the right, all covered in snow, low clouds and sun",
+            "caption": "A rewarding view of Yosemite Valley in winter as seen from Tunnel View.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/232C02DC-BE31-0C6D-E1E2D2FB1EE7E251.jpg"
           }
         ],
-        "weatherInfo": "The park is situated in a subtropical climate, which ensures sunshine year-round. Winters are normally dry and mild, with occasional fronts bringing wind and little rain. Summer brings hot and humid weather with scattered thunderstorms in the afternoons. The average temperature in January is 68 degrees Fahrenheit and 82 in July. The average rainfall for the area is 2.17 inches in January and 3.95 inches in July. June to November is hurricane season.",
-        "name": "Biscayne",
+        "weatherInfo": "Yosemite National Park covers nearly 1,200 square miles (3,100 square km) in the Sierra Nevada, with elevations ranging from about 2,000 feet (600 m) to 13,000 ft (4,000 m). Yosemite receives 95% of its precipitation between October and May (and over 75% between November and March). Most of Yosemite is blanketed in snow from about November through May. (Yosemite Valley can be rainy or snowy in any given winter storm.)",
+        "name": "Yosemite",
         "designation": "National Park"
       },
       "selectedEatery": {
-        "businessName": "H&H Soul Food",
-        "description": "Georgia has music in its blood. Atlanta is the country's epicenter of hip-hop (and also Love & Hip Hop: Atlanta). And Macon, a charming Southern town about an hour and a half outside of ATL, is where the Allman Brothers Band lived, partied, and recorded in the early '70s. As legend has it, they stopped by H&H when they were broke and starving, and one of the co-owners, Mama Louise, fed them. She became the legend after that, and continued to feed legions of Southern musicians who stopped by. Mama Louise shut the place down in 2013, but it recently reopened with new owners and with Mama helping out the kitchen staff, even into her 80s. And perhaps most importantly, Oprah's been here.",
-        "state": "GA",
-        "city": "Macon",
-        "id": 12,
+        "businessName": "Wall Drug",
+        "description": "You begin to see signs for it about 1,000 miles before you arrive in South Dakota. They promise free ice water. Five-cent coffee. A goddamned Tyrannosaurus rex! There are many, many, many finer restaurants in South Dakota, but none are as famous, for good or ill, as the one in Wall Drug. It's impossible to avoid the Badlands-bordering, 76,000sqft wonder of tourist-trapping randomness, so just go in. Hit the cafe and score a hot beef sandwich and a maple donut. It won't hold a candle to the many, many better food options in the state. But you will emerge with a 'Where the Heck is Wall Drug' sticker. You will have chased that sandwich with a T. rex viewing. And you'll be happy you stopped every time you see a roadside Wall Drug sign every five minutes for the next 300 miles",
+        "state": "SD",
+        "city": "Wall",
+        "id": 43,
         "ameneties": {
-          "wheelchairAccessible": false,
+          "wheelchairAccessible": true,
           "petFriendly": false,
-          "wifi": false,
+          "wifi": true,
           "diaperFacility": true,
-          "playground": true,
+          "playground": false,
           "restrooms": true
         }
       },
       "selectedBizarrerie": {
-        "id": 6,
-        "name": "Largest Fork in the US",
-        "state": "CO",
-        "city": "Creede",
-        "description": "Creede, Colorado, is home to the largest fork in the United States. The enormous sculpture by Ted Yund is over 40 feet long and weights over 600 pounds, breaking the record of the previous world’s largest fork, which was in Springfield, Missouri.",
+        "id": 47,
+        "name": "Love Butt",
+        "city": "Charlottesville",
+        "state": "VA",
+        "description": "This 10-foot-tall, 1,600-pound piece of artwork was originally featured on a comedy show pilot but is now a permanent fixture in Charlottesville, Virginia. Big, pink, and embarrassing, it’s the perfect road trip attraction for using the “I’m just pulling over to use the restroom” excuse.",
         "ameneties": {
           "souvenirs": false,
           "restrooms": false
         }
       },
-      "id": 5
+      "id": 3
     }
   ]
 }
