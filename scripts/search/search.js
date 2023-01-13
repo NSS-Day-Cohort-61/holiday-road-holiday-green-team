@@ -45,12 +45,12 @@ const search = (userInput, objectData = [], setReturnedData) => {
 };
 
 export const searchFeature = () => {
-    let html = `
-        <input autocomplete="off" type="search" id="search" placeholder="Search">
+    let html = `<div>
+        <input class="select" autocomplete="off" type="search" id="search" placeholder="Search">
             ${searchOptionList()}
-        <button id="searchDatabase"type="search">Search</button>
-        <button id="clearSearch"type="search">Clear</button>
-        <ul id="result"></ul>`
+        <button class="deets-btn" id="searchDatabase"type="search">Search</button>
+        <button class="deets-btn" id="clearSearch"type="search">Clear</button>
+        </div>`
     return html;
 }
 
@@ -61,6 +61,8 @@ document.addEventListener("click", (clickEvent) => {
         const searchTextBoxElement = document.getElementById("search");
         searchTextBoxElement.value = "";
         searchResultElement.innerHTML = "Lets do another Search";
+        const gethiddenElement = document.getElementById("hidden-Results")
+        gethiddenElement.className = "hidden"
         //function that clears the checked checkbox in the search radio options
         const get = document.getElementsByName('dataList');
         for (let i = 0; i < get.length; i++) {
@@ -139,6 +141,8 @@ document.addEventListener("click", (clickEvent) => {
         const resultsElement = document.getElementById("result")
         //invokes the displayResults function and passes the selected Radio Option 
         resultsElement.innerHTML = displayResults(selectedOption);
+        const gethiddenElement = document.getElementById("hidden-Results")
+        gethiddenElement.className = "gold-box"
     }
 
     }
@@ -149,8 +153,8 @@ const displayResults = (selectedOption) => {
     let searchResultsHTML = " "
     for (const result of searchResultsForDisplay) {
         searchResultsHTML += `
-        <li>${result.name}
-            <button type="search" id="addToDisplay--${selectedOption}--${result.id}">Add</button>
+        <li class="results-list">${result.name}
+            <button type="search" class="add-button deets-btn" id="addToDisplay--${selectedOption}--${result.id}">Add</button>
         </li>`
     }
     return searchResultsHTML;

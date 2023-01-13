@@ -19,6 +19,7 @@ export const HolidayRoad = () => {
       ${parkDropdown()}
       ${bizarrerieDropdown()}
       ${eateryDropdown()}
+      ${searchFeature()}
     </div>
     <div id="mainContent">
       <div id="leftSideContainer">
@@ -40,11 +41,8 @@ export const HolidayRoad = () => {
               ${showSelectedEatery()}
               <button class="deets-btn" id="eat-btn">Details</button>
             </div>
-            ${enableSaveButton()}
-            
+            ${enableSaveButton()}   
           </div>
-         
-          
           <div id="moreDetailsContainer">
             <div id="moreDetailsInfo">
             ${showMoreDetails()}
@@ -52,9 +50,6 @@ export const HolidayRoad = () => {
           </div>
         </div>
         <div id="weatherContainer">
-        <div>      
-        ${searchFeature()}
-        </div>
           <div id="weather">
           ${showSelectedWeather()}
           </div>
@@ -67,6 +62,10 @@ export const HolidayRoad = () => {
       <div id="savedItineraryListContainer">
         <h3>Saved Itineraries</h3>
         ${savedItineraryHTML()}
+        <div id="hidden-Results" class="hidden"><h3>Click Add to Add Selection to Your Itinerary Preview</h3>
+          <button id="clearSearch"type="search" class="deets-btn">Cancel</button>
+        <ul id="result"></ul>
+        <div>
  
   `
 }
