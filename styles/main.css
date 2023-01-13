@@ -86,15 +86,26 @@ h3 {
   margin: 10px;
 }
 
+#directionsDropdowns select {
+  text-align: center;
+}
+
 #selectDropdowns select {
   width: 200px;
   height: 30px;
   text-align: center;
 }
 
+#weatherSelectRadios {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0px 3px 0px;
+}
+
 #mainContent {
   display: flex;
   justify-content: space-around;
+  margin-top: 5px;
   margin-bottom: 10px;
   max-height: 1300px;
 }
@@ -103,6 +114,14 @@ h3 {
   display: flex;
   flex-direction: column;
   width: 58%
+}
+
+.reqInputs {
+  cursor: pointer;
+}
+
+.dirDrop {
+  cursor: pointer;
 }
 
 #itineraryPreviewContainer {
@@ -285,6 +304,7 @@ h3 {
   background-color: #F35B04;
   color: #ffffff;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .blank {
@@ -301,6 +321,11 @@ h3 {
   padding-left: 4px;
   background-image: linear-gradient(#0d7669, #00caaf);
   transition: box-shadow .3s;
+  cursor: pointer;
+}
+
+.savedSingles:hover {
+  background-image: linear-gradient(#0d766a94, #00caaf);
 }
 
 .selectedNames {
@@ -334,4 +359,9 @@ h3 {
   background-color: #F35B04;
   border-radius: 4px;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.eventBtn:hover, .deets-btn:hover {
+  background-color: #8b3401;
 }

@@ -1,5 +1,5 @@
 import { parkDropdown, showSelectedPark } from "./parks/ParkProvider.js"
-import { showSelectedWeather } from "./weather/WeatherProvider.js"
+import { selectWeatherLocation, showSelectedWeather } from "./weather/WeatherProvider.js"
 import { eateryDropdown, showSelectedEatery } from "./eateries/EateryProvider.js"
 import { bizarrerieDropdown, showSelectedBizarrerie } from "./bizarreries/bizarrerieProvider.js"
 import { showMoreDetails } from "./attractions/AttractionProvider.js"
@@ -21,6 +21,7 @@ export const HolidayRoad = () => {
     <div id="directionsDropdowns">
     ${directionsDropdown()}
     </div>
+    <div id="weatherSelectRadios">${selectWeatherLocation()}</div>
     <div id="mainContent">
       <div id="leftSideContainer">
         <div id="itineraryPreviewContainer">

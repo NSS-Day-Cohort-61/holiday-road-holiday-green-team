@@ -16,7 +16,7 @@ export const parkDropdown = () => {
 
   let html = `
           <select id="parks" class="reqInputs" name="parks" >
-          <option value="0">Choose a State Park</option>
+          <option value="0">Select a State Park</option>
       ${parks
         .map((park) => {
           if (park.id === selectedPark.id) {

@@ -7,7 +7,7 @@ import {
   getTravelOrder,
   getSelectedPark,
   getSelectedBizarrerie,
-  getSelectedEatery
+  getSelectedEatery,
 } from "../data/dataAccess.js";
 
 const applicationElement = document.querySelector("#container");
@@ -74,25 +74,42 @@ export const showDirections = () => {
     }
   });
 
-  let directionsArray;
   if (clickedDropdowns > 1 && passable > 1) {
-    directionsArray = allDirections.map((directions, index) => {
-      const legsLengths = getLegsLengths();
-      if (directions.length > 0) {
-        let locationNames = ["", "", ""];
-        let travelOrder = getTravelOrder();
-        let parkName = getSelectedPark().fullName;
-        let bizarrerieName = getSelectedBizarrerie().name;
-        let eateryName = getSelectedEatery().businessName;
-        travelOrder.forEach((item, index) => {
-          if (item === "p") locationNames[index] = parkName;
-          if (item === "b") locationNames[index] = bizarrerieName;
-          if (item === "e") locationNames[index] = eateryName;
-        });
-        console.log("LOC", locationNames)
+    let outHTML = "";
+    const legsLengths = getLegsLengths();
+    let locationNames = ["", "", ""];
+    // let travelOrder = getTravelOrder();
+    let parkName = getSelectedPark().fullName;
+    let bizarrerieName = getSelectedBizarrerie().name;
+    let eateryName = getSelectedEatery().businessName;
+    travelOrder.forEach((item, index) => {
+      if (item === "p") locationNames[index] = parkName;
+      if (item === "b") locationNames[index] = bizarrerieName;
+      if (item === "e") locationNames[index] = eateryName;
+    });
+    let directions = allDirections[0];
+    let index = 0;
+    if (directions) {
+      outHTML += `
+      <h3>Begin at ${locationNames[index]}</h3>
+      <p>Distance: ${Math.round(legsLengths[index] * 0.000621371)} miles</p>
+      <div id="instructions">
+      ${directions
+        .map((direction) => {
+          return `
+        <p class="dir-text">${direction.text}</p>
+        <p class="bold">${
+          Math.round(direction.distance * 0.000621371 * 10) / 10
+        } miles</p> 
+        `;
+        })
+        .join("")}
+        </div><h3>Arrive at ${locationNames[index + 1]}</h3>
+    `;
+      directions = allDirections[1];
+      index = 1;
 
-        return `
-        <h3>Begin at ${locationNames[index]}</h3>
+      outHTML += `
         <p>Distance: ${Math.round(legsLengths[index] * 0.000621371)} miles</p>
         <div id="instructions">
         
@@ -106,26 +123,24 @@ export const showDirections = () => {
           `;
           })
           .join("")}
-          <h3>Arrive at ${locationNames[index+1]}</h3></div>`;
-      } else {
-        return "";
-      }
-    });
+          </div><h3>Arrive at ${locationNames[index + 1]}</h3>
+      `;
+    }
+    return outHTML;
   } else {
-    return "No directions to show yet!";
+    return "<p style='text-align: center'>Select your destinations and route options to see directions</p>";
   }
-  return directionsArray.join("");
 };
 
 // Directions Dropdown
 
 export const directionsDropdown = () => {
-  const dirArr = [1, 2, 3];
+  // const dirArr = [1, 2, 3];
   const letterArr = ["p", "b", "e"];
   const travelOrder = getTravelOrder();
   let html = "";
   for (let j = 1; j <= travelOrder.length; j++) {
-    html += `<select id="directionsDropdown--${j}" name="directions">
+    html += `<select class="dirDrop" id="directionsDropdown--${j}" name="directions">
     <option selected disabled value="0">Not selected for directions</option>`;
     for (let i = 1; i <= travelOrder.length; i++) {
       if (letterArr[j - 1] === travelOrder[i - 1]) {

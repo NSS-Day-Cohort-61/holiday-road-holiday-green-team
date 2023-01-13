@@ -8,7 +8,7 @@ export const eateryDropdown = () => {
 
     let html = `
             <select id="eatery" class="reqInputs" name="eateries">
-            <option value="0">Select Eatery</option>
+            <option value="0">Select an Eatery</option>
             ${eateries
                 .map((eatery) => {
                 if (eatery.id === selectedEatery.id){

@@ -11,7 +11,7 @@ export const bizarrerieDropdown = () => {
   const selectedBizarrerie = getSelectedBizarrerie();
   let html = ``;
   html += `<select id="bizarrerie" class="reqInputs" name="bizarreries" >`;
-  html += `<option value="0">Select Bizarrerie</option>`;
+  html += `<option value="0">Select a Bizarrerie</option>`;
 
   for (const bizarrerie of bizarreries) {
     if (bizarrerie.id === selectedBizarrerie.id) {

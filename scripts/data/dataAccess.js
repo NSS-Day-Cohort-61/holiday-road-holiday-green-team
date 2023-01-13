@@ -20,6 +20,8 @@ export const applicationState = {
   savedItineraries: [],
   moreDetailsDisplay: "N",
   currentGPS: {},
+  currentGPSCityName: [],
+  currentSelectedWeather: "park",
   currentDay: "",
   directionsLocations: {
     parkLocation: [],
@@ -29,15 +31,17 @@ export const applicationState = {
   directionsLocationsArray: [[], [], []],
   directions: {},
   travelOrder: ["p", "b", "e"],
-  events: []
+  events: [],
 };
 
 export const fetchParks = () => {
-  return fetch(`${parksURL}`)
-    .then((response) => response.json())
-    .then((data) => {
-      applicationState.parks = data.data;
-    });
+  if (applicationState.parks.length === 0) {
+    return fetch(`${parksURL}`)
+      .then((response) => response.json())
+      .then((data) => {
+        applicationState.parks = data.data;
+      });
+  }
 };
 
 export const fetchWeather = (lat, lon) => {
@@ -45,6 +49,7 @@ export const fetchWeather = (lat, lon) => {
   return fetch(`${weatherURL}`)
     .then((response) => response.json())
     .then((data) => {
+      // console.log("weather data", data);
       applicationState.weather = data.list;
     });
 };
@@ -66,11 +71,15 @@ export const fetchBizarreries = () => {
 };
 
 export const fetchEvents = () => {
-  return fetch(`https://developer.nps.gov/api/v1/events?&pageSize=600&api_key=${keys.npsKey}`)
+  if (!applicationState.events.data) {
+    return fetch(
+      `https://developer.nps.gov/api/v1/events?&pageSize=600&api_key=${keys.npsKey}`
+    )
       .then((response) => response.json())
       .then((data) => {
         applicationState.events = data;
       });
+  }
 };
 
 export const fetchItinerary = () => {
@@ -100,8 +109,8 @@ export const fetchDirections = (receivedData) => {
       reorderedReceivedData[index] = "";
     }
   });
-  console.log("received", receivedData);
-  console.log("reordered", reorderedReceivedData);
+  // console.log("received", receivedData);
+  // console.log("reordered", reorderedReceivedData);
 
   reorderedReceivedData.forEach((arr) => {
     if (arr.length > 0) {
@@ -125,7 +134,12 @@ export const fetchDirections = (receivedData) => {
   if (usableData.length > 1) {
     return fetch(`${graphHopperURL}`, fetchOptions).then((response) =>
       response.json().then((data) => {
-        applicationState.directions = setDirections(data.paths[0]);
+        // console.log("directions", data);
+        if (!data.message) {
+          applicationState.directions = setDirections(data.paths[0]);
+        } else {
+          window.alert("GPS data for this location is weirdly broken");
+        }
       })
     );
   }
@@ -156,6 +170,7 @@ export const fetchEateryLatLon = (address) => {
       return fetch(`${googleURL}`)
         .then((response) => response.json())
         .then((data) => {
+          // console.log("gpsdata", data)
           if (data.results.length === 0) {
             let selectedEateryName = `${applicationState.currentItinerary.selectedEatery.city} ${applicationState.currentItinerary.selectedEatery.state}`;
             selectedEateryName = selectedEateryName.replaceAll(" ", "%20");
@@ -180,6 +195,7 @@ export const fetchBizLatLon = (address) => {
     return fetch(`${googleURL}`)
       .then((response) => response.json())
       .then((data) => {
+        // console.log('biz loc', data)
         if (data.results[0].geometry) {
           setDirectionsBizarrerieLocation([
             data.results[0].geometry.location.lng,
@@ -188,6 +204,19 @@ export const fetchBizLatLon = (address) => {
         }
       });
   }
+};
+
+export const fetchGPSCityName = () => {
+  let googleURL = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${
+    getCurrentGPS().lat
+  },${getCurrentGPS().lon}&key=AIzaSyDxxzn9JmF-yYhjwJG3XkGjWVU94pCEzI8`;
+
+  return fetch(`${googleURL}`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("weather gps data!", data);
+      applicationState.currentGPSCityName = data.results;
+    });
 };
 
 export const getParks = () => {
@@ -207,8 +236,8 @@ export const getBizarreries = () => {
 };
 
 export const getEvents = () => {
-  return applicationState.events.data.map((event) => ({...event}));
-}
+  return applicationState.events.data.map((event) => ({ ...event }));
+};
 
 export const getSelectedPark = () => {
   return { ...applicationState.currentItinerary.selectedPark };
@@ -264,6 +293,14 @@ export const getTravelOrder = () => {
   return applicationState.travelOrder.slice();
 };
 
+export const getGPSCityName = () => {
+  return structuredClone(applicationState.currentGPSCityName);
+};
+
+export const getCurrentSelectedWeather = () => {
+  return applicationState.currentSelectedWeather;
+}
+
 export const setSelectedPark = (parkObject) => {
   applicationState.currentItinerary.selectedPark = parkObject;
   // applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
@@ -299,6 +336,7 @@ export const setDirectionsParkLocation = (inputLocation) => {
 };
 
 export const setDirectionsBizarrerieLocation = (inputLocation) => {
+  // console.log('biz loc 2', inputLocation)
   applicationState.directionsLocations.bizarrerieLocation = inputLocation;
   applicationState.directionsLocationsArray[1] = inputLocation;
 };
@@ -324,6 +362,10 @@ export const setTravelOrder = (index, value) => {
     // console.log(applicationState.travelOrder);
   }
 };
+
+export const setCurrentSelectedWeather = (input) => {
+  applicationState.currentSelectedWeather = input;
+}
 
 export const sendItinerary = (currentItin) => {
   const fetchOptions = {

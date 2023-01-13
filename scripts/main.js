@@ -10,7 +10,8 @@ import {
   fetchDirections,
   fetchEateryLatLon,
   fetchBizLatLon,
-  getDirectionsLocationsArray
+  getDirectionsLocationsArray,
+  fetchGPSCityName
 } from "./data/dataAccess.js";
 import { fetchEateries } from "./data/dataAccess.js";
 import { HolidayRoad } from "./HolidayRoad.js";
@@ -50,6 +51,7 @@ const renderApp = () => {
     .then(() => fetchBizLatLon(bizInfo()))
     .then(() => fetchEvents())
     .then(() => fetchDirections(getDirectionsLocationsArray()))
+    .then(() => fetchGPSCityName())
     .then(() => {
       applicationElement.innerHTML = HolidayRoad();
     })
