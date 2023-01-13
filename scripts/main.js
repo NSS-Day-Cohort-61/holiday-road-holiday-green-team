@@ -6,6 +6,7 @@ import {
   getCurrentGPS,
   setCurrentGPS,
   getPosition,
+  fetchEvents,
   fetchDirections,
   fetchEateryLatLon,
   fetchBizLatLon,
@@ -47,6 +48,7 @@ const renderApp = () => {
     .then(() => fetchItinerary())
     .then(() => fetchEateryLatLon(eateryInfo()))
     .then(() => fetchBizLatLon(bizInfo()))
+    .then(() => fetchEvents())
     .then(() => fetchDirections(getDirectionsLocationsArray()))
     .then(() => {
       applicationElement.innerHTML = HolidayRoad();
