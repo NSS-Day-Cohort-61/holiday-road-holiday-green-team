@@ -53,12 +53,12 @@ document.addEventListener("change", (e) => {
     // const currentTime = new Date(weather[0].dt_txt);
     // const currentDisplayHour = currentTime.getHours();
     // const cnt = Math.floor(40 - currentDisplayHour / 3);
-    setCurrentGPS(chosenPark.latitude, chosenPark.longitude)
-    const parkLatLon = [
-      parseFloat(chosenPark.longitude),
-      parseFloat(chosenPark.latitude),
-    ];
-    setDirectionsParkLocation(parkLatLon);
+    // setCurrentGPS(chosenPark.latitude, chosenPark.longitude)
+    // const parkLatLon = [
+    //   parseFloat(chosenPark.longitude),
+    //   parseFloat(chosenPark.latitude),
+    // ];
+    // setDirectionsParkLocation(parkLatLon);
     applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
   }
 });

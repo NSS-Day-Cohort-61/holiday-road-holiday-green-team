@@ -307,6 +307,8 @@ export const getCurrentSelectedWeather = () => {
 
 export const setSelectedPark = (parkObject) => {
   applicationState.currentItinerary.selectedPark = parkObject;
+  setCurrentGPS(parkObject.latitude, parkObject.longitude)
+  setDirectionsParkLocation([parseFloat(parkObject.longitude), parseFloat(parkObject.latitude)])
   // applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 

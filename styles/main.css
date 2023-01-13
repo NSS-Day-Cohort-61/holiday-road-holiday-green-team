@@ -212,6 +212,7 @@ h3 {
 .flexRow {
   display: flex;
   align-items: center;
+  text-align: left;
 }
 
 #selectedPark, #selectedBizarrerie, #selectedEatery {
@@ -225,6 +226,18 @@ h3 {
 .btn {
   width: 100px;
   margin: 10px;
+}
+
+#header {
+  display: flex;
+}
+
+#leftHeader {
+  width: 80%;
+}
+
+#rightHeader {
+  width: 20%;
 }
 
 /*******************************************************************************/

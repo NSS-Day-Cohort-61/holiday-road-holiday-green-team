@@ -1,7 +1,8 @@
 
 
-import { getData, setData, setSelected } from "../data/dataAccess.js";
+import { getData, setData, setSelected, setSelectedPark } from "../data/dataAccess.js";
 
+const applicationElement = document.querySelector("#container");
 /*
 -userInput is the user input ie the data passed when the event listener is triggered
 -objectData is the JSON database that we are recieving
@@ -185,7 +186,9 @@ document.addEventListener(
             if (option === "parks") {
                 const parksList = getData("parks");
                 const chosenPark = parksList.find((park) => park.id == selectionId);
-                setSelected(chosenPark, "selectedPark");
+                // setSelected(chosenPark, "selectedPark");
+                setSelectedPark(chosenPark)
+                applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
                 //setCurrentGPS(chosenPark.latitude, chosenPark.longitude)
 
             } else if (option === "eateries") {
