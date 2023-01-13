@@ -216,7 +216,7 @@ export const getData = (data) => {
 
 export const setData = (result,data) => {
   applicationState[data] = result;
-  //applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+
 };
 export const setSelected = (dataObject,toWhere) => {
 applicationState.currentItinerary[toWhere] = dataObject
