@@ -26,7 +26,7 @@ export const applicationState = {
     eateryLocation: [],
     bizarrerieLocation: []
   },
-  events: []
+  events: [],
   searchOptions:     [{id: 1, dataName: "parks"},
   {id: 2, dataName: "bizarreries"},
   {id: 3, dataName: "eateries"}
