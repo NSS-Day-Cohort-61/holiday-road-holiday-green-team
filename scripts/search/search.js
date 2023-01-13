@@ -71,9 +71,21 @@ document.addEventListener("click", (clickEvent) => {
 //Database Search Event Listener
 document.addEventListener("click", (clickEvent) => {
 
-    if (clickEvent.target.id === ("searchDatabase")) {
+    // const dumb = () => {
+    //     const checkRadio = document.querySelector('input[name="dataList"]:checked').value
+    //     if (checkRadio == null) {
+    //         window.alert("Please select a database to search in.") 
 
-        const selectedOption = document.querySelector('input[name="dataList"]:checked').value;
+    // }
+    // dumb()
+
+    if (clickEvent.target.id === ("searchDatabase")) {
+        if  (document.querySelector('input[name="dataList"]:checked')){
+            const selectedOption = document.querySelector('input[name="dataList"]:checked').value;
+
+        
+
+        
 
         //get databases
         const parks = getData("parks")
@@ -129,7 +141,7 @@ document.addEventListener("click", (clickEvent) => {
         resultsElement.innerHTML = displayResults(selectedOption);
     }
 
-
+    }
 })
 
 const displayResults = (selectedOption) => {
