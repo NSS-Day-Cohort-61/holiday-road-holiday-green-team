@@ -2,10 +2,6 @@ import {
   getParks,
   setSelectedPark,
   getSelectedPark,
-  fetchWeather,
-  getWeather,
-  setCurrentGPS,
-  setDirectionsParkLocation
 } from "../data/dataAccess.js";
 
 const applicationElement = document.querySelector("#container");
@@ -16,7 +12,7 @@ export const parkDropdown = () => {
 
   let html = `
           <select id="parks" class="reqInputs" name="parks" >
-          <option value="0">Select a State Park</option>
+          <option value="0" selected disabled>Select a State Park</option>
       ${parks
         .map((park) => {
           if (park.id === selectedPark.id) {
@@ -49,16 +45,6 @@ document.addEventListener("change", (e) => {
     const parksList = getParks();
     const chosenPark = parksList.find((park) => park.id == e.target.value);
     setSelectedPark(chosenPark);
-    // const weather = getWeather();
-    // const currentTime = new Date(weather[0].dt_txt);
-    // const currentDisplayHour = currentTime.getHours();
-    // const cnt = Math.floor(40 - currentDisplayHour / 3);
-    // setCurrentGPS(chosenPark.latitude, chosenPark.longitude)
-    // const parkLatLon = [
-    //   parseFloat(chosenPark.longitude),
-    //   parseFloat(chosenPark.latitude),
-    // ];
-    // setDirectionsParkLocation(parkLatLon);
     applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
   }
 });
