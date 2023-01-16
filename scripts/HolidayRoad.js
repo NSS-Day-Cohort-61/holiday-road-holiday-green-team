@@ -38,7 +38,7 @@ export const HolidayRoad = () => {
       <div id="leftSideContainer">
         <div id="itineraryPreviewContainer">
           <div id="selectedChoicesContainer">
-            <h3>Itinerary Preview</h3>
+            <h2>Itinerary Preview</h2>
             <div class="selectedLabel">Park Name</div>
             <div class="flexRow">
               ${showSelectedPark()}
@@ -69,11 +69,11 @@ export const HolidayRoad = () => {
         </div>
       </div>
       <div id="directionsContainer">
-        <h3>Directions</h3>
+        <h2>Directions</h2>
         ${showDirections()}
       </div>
       <div id="savedItineraryListContainer">
-        <h3>Saved Itineraries</h3>
+        <h2>Saved Itineraries</h2>
         ${savedItineraryHTML()}
         <div id="hidden-Results" class="hidden"><h3>Click Add to Add Selection to Your Itinerary Preview</h3>
           <button id="clearSearch"type="search" class="deets-btn">Cancel</button>

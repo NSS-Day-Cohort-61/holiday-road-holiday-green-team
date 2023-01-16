@@ -57,6 +57,10 @@ export const showSelectedWeather = () => {
         } else {
           tempColor = `245, 17, 1`;
         }
+        let time = d.getHours();
+        let displayTime = time % 12;
+        if (displayTime === 0) displayTime = 12;
+        let amPM = time / 12 >= 1 ? "PM" : "AM";
 
         return `
         ${isNewDay(d, oldDay)}
@@ -64,7 +68,7 @@ export const showSelectedWeather = () => {
           w.weather[0].icon
         }@2x.png); --color: ${tempColor};" >
           <ul class="dates">
-            <li> ${d.getHours()}:00</li>
+            <li> ${displayTime} ${amPM}</li>
             <li class="a"></li>
             <li class="big_temp" style="">${Math.round(w.main.temp)}\u00B0F</li>
             <li>${w.weather[0].description}</li>
