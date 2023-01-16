@@ -21,27 +21,12 @@ export const showSelectedWeather = () => {
     }
   };
 
-  // const month = [
-  //   "January",
-  //   "February",
-  //   "March",
-  //   "April",
-  //   "May",
-  //   "June",
-  //   "July",
-  //   "August",
-  //   "September",
-  //   "October",
-  //   "November",
-  //   "December",
-  // ];
-
   const weather = getWeather();
   const cityName =
-    getGPSCityName()[2].formatted_address.length <
-    getGPSCityName()[3].formatted_address.length
-      ? getGPSCityName()[2].formatted_address
-      : getGPSCityName()[3].formatted_address;
+    getGPSCityName()[3].formatted_address.length <
+    getGPSCityName()[4].formatted_address.length
+      ? getGPSCityName()[4].formatted_address
+      : getGPSCityName()[4].formatted_address;
   const currentDate = new Date(weather[0].dt * 1000);
   const currentDisplayHour = currentDate.getHours();
   const day = currentDate.getDay();
@@ -112,7 +97,7 @@ export const selectWeatherLocation = () => {
   return html;
 };
 
-// weather select event listener
+// Weather select event listener
 
 applicationElement.addEventListener("change", (event) => {
   if (event.target.name === "weatherSelect") {

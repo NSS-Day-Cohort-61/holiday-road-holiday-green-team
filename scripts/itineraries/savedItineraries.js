@@ -1,8 +1,9 @@
 import {
   applicationState,
   getCurrentItinerary,
-  getEvents, getItineraries,
-  getParks, sendItinerary,
+  getEvents,
+  getItineraries,
+  sendItinerary,
   setCurrentGPS,
   setSelectedBizarrerie,
   setSelectedPark,
@@ -31,13 +32,12 @@ export const savedItineraryHTML = () => {
 
 const applicationElement = document.querySelector("#container");
 
-applicationElement.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "save") {
-        const selectedItinerary = getCurrentItinerary()
-        sendItinerary(selectedItinerary)
-    }
-})
-
+applicationElement.addEventListener("click", (clickEvent) => {
+  if (clickEvent.target.id === "save") {
+    const selectedItinerary = getCurrentItinerary();
+    sendItinerary(selectedItinerary);
+  }
+});
 
 document.addEventListener("click", (clickEvent) => {
   if (clickEvent.target.className.startsWith("itinId--")) {
@@ -54,7 +54,7 @@ document.addEventListener("click", (clickEvent) => {
           parseFloat(itin.selectedPark.longitude),
           parseFloat(itin.selectedPark.latitude),
         ];
-        setDirectionsParkLocation(parkLatLon)
+        setDirectionsParkLocation(parkLatLon);
         break;
       }
     }
@@ -63,35 +63,54 @@ document.addEventListener("click", (clickEvent) => {
 });
 
 document.addEventListener("click", (clickEvent) => {
-    const itineraries = getItineraries()
-    if (clickEvent.target.id.startsWith("eventBtn--")) {
-        const [, savedItinId] = clickEvent.target.id.split("--")
-        for (const itin of itineraries) {
-            if (itin.id === parseInt(savedItinId)) {
-                parkEventMatcher(itin)
-            }
-        }
+  const itineraries = getItineraries();
+  if (clickEvent.target.id.startsWith("eventBtn--")) {
+    const [, savedItinId] = clickEvent.target.id.split("--");
+    for (const itin of itineraries) {
+      if (itin.id === parseInt(savedItinId)) {
+        parkEventMatcher(itin);
+      }
     }
-})
+  }
+});
 
 const parkEventMatcher = (itinerary) => {
-    const events = getEvents()
-    let eventMatch = []
-    let alertString = ""
-    for (const event of events) {
-        if (event.parkfullname == itinerary.selectedPark.fullName) {
-            eventMatch.push(event)
-        }
-        else { const a = 0 } // means absolutely nothing. 
+  const events = getEvents();
+  let eventMatch = [];
+  let alertString = "";
+  for (const event of events) {
+    if (event.parkfullname == itinerary.selectedPark.fullName) {
+      eventMatch.push(event);
+    } else {
+      const a = 0;
+    } // means absolutely nothing.
+  }
+  if (eventMatch.length === 0) {
+    window.alert("No events planned for this park");
+  } else {
+    for (let i = 0; i < 2; i++) {
+      if (eventMatch[i]) {
+        alertString += eventMatch[i];
+        window.alert(
+          `${eventMatch[i].parkfullname}\n${eventMatch[i].date}\n${
+            eventMatch[i].times[0].timestart
+          }\n${eventMatch[i].times[0].timeend}\n${eventMatch[i].description
+            .replaceAll(/<p>/g, "")
+            .replace(/<\/p>/g, "")
+            .replace(/<ul>/g, "")
+            .replace(/<\/ul>/g, "")
+            .replace(/<li>/g, "")
+            .replace(/<\/li>/g, "")
+            .replace(/<strong>/g, "")
+            .replace(/<\/strong>/g, "")
+            .replace(/<br \/>/g, "")
+            .replace(/<a href=/g, "")
+            .replace(/<\/a>/g, "")
+            .replace(/target="_blank"/g, "")
+            .replace(/rel="noopener noreferrer">/g)}`
+        );
+      }
     }
-    if (eventMatch.length === 0) {
-        window.alert("No events planned for this park")
-    }
-    else {
-        for (let i = 0; i < 2; i++) {
-            alertString += eventMatch[i]
-            window.alert(`${eventMatch[i].parkfullname}\n${eventMatch[i].date}\n${eventMatch[i].times[0].timestart}\n${eventMatch[i].times[0].timeend}\n${eventMatch[i].description.replaceAll(/<p>/g, '').replace(/<\/p>/g, '').replace(/<ul>/g,'').replace(/<\/ul>/g, '').replace(/<li>/g, "").replace(/<\/li>/g,'').replace(/<strong>/g, '').replace(/<\/strong>/g, '').replace(/<br \/>/g,'').replace(/<a href=/g, '').replace(/<\/a>/g, '').replace(/target="_blank"/g, '').replace(/rel="noopener noreferrer">/g)}`)
-        }
-    }
-}
+  }
+};
 //

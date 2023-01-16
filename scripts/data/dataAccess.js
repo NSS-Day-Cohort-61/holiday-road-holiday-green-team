@@ -1,3 +1,4 @@
+import { bizInfo, eateryInfo } from "../directions/DirectionProvider.js";
 import { keys } from "../Settings.js";
 
 const apiURL = "http://localhost:8088";
@@ -24,17 +25,19 @@ export const applicationState = {
   currentSelectedWeather: "park",
   currentDay: "",
   directionsLocations: {
+    // saved as lon, lat
     parkLocation: [],
     eateryLocation: [],
     bizarrerieLocation: [],
   },
-  directionsLocationsArray: [[], [], []],
+  directionsLocationsArray: [[], [], []], // saved as lon, lat
   directions: {},
   travelOrder: ["p", "b", "e"],
   events: [],
-  searchOptions:     [{id: 1, dataName: "parks"},
-  {id: 2, dataName: "bizarreries"},
-  {id: 3, dataName: "eateries"}
+  searchOptions: [
+    { id: 1, dataName: "parks" },
+    { id: 2, dataName: "bizarreries" },
+    { id: 3, dataName: "eateries" },
   ],
 };
 
@@ -53,7 +56,6 @@ export const fetchWeather = (lat, lon) => {
   return fetch(`${weatherURL}`)
     .then((response) => response.json())
     .then((data) => {
-      // console.log("weather data", data);
       applicationState.weather = data.list;
     });
 };
@@ -113,15 +115,12 @@ export const fetchDirections = (receivedData) => {
       reorderedReceivedData[index] = "";
     }
   });
-  // console.log("received", receivedData);
-  // console.log("reordered", reorderedReceivedData);
 
   reorderedReceivedData.forEach((arr) => {
     if (arr.length > 0) {
       usableData.push(arr);
     }
   });
-  // console.log("usable", usableData);
 
   const inputData = {
     points: usableData,
@@ -138,7 +137,6 @@ export const fetchDirections = (receivedData) => {
   if (usableData.length > 1) {
     return fetch(`${graphHopperURL}`, fetchOptions).then((response) =>
       response.json().then((data) => {
-        // console.log("directions", data);
         if (!data.message) {
           applicationState.directions = setDirections(data.paths[0]);
         } else {
@@ -174,7 +172,6 @@ export const fetchEateryLatLon = (address) => {
       return fetch(`${googleURL}`)
         .then((response) => response.json())
         .then((data) => {
-          // console.log("gpsdata", data)
           if (data.results.length === 0) {
             let selectedEateryName = `${applicationState.currentItinerary.selectedEatery.city} ${applicationState.currentItinerary.selectedEatery.state}`;
             selectedEateryName = selectedEateryName.replaceAll(" ", "%20");
@@ -192,14 +189,10 @@ export const fetchEateryLatLon = (address) => {
 
 export const fetchBizLatLon = (address) => {
   const googleURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyDxxzn9JmF-yYhjwJG3XkGjWVU94pCEzI8`;
-
-  if (
-    Object.keys(applicationState.currentItinerary.selectedBizarrerie).length > 0
-  ) {
+  if (address) {
     return fetch(`${googleURL}`)
       .then((response) => response.json())
       .then((data) => {
-        // console.log('biz loc', data)
         if (data.results[0].geometry) {
           setDirectionsBizarrerieLocation([
             data.results[0].geometry.location.lng,
@@ -218,7 +211,6 @@ export const fetchGPSCityName = () => {
   return fetch(`${googleURL}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log("weather gps data!", data);
       applicationState.currentGPSCityName = data.results;
     });
 };
@@ -303,22 +295,51 @@ export const getGPSCityName = () => {
 
 export const getCurrentSelectedWeather = () => {
   return applicationState.currentSelectedWeather;
-}
+};
 
 export const setSelectedPark = (parkObject) => {
   applicationState.currentItinerary.selectedPark = parkObject;
-  setCurrentGPS(parkObject.latitude, parkObject.longitude)
-  setDirectionsParkLocation([parseFloat(parkObject.longitude), parseFloat(parkObject.latitude)])
+  // setCurrentGPS(parkObject.latitude, parkObject.longitude)
+  if (parkObject) {
+    setDirectionsParkLocation([
+      parseFloat(parkObject.longitude),
+      parseFloat(parkObject.latitude),
+    ]);
+    let currentSelectedWeather = getCurrentSelectedWeather();
+    if (currentSelectedWeather === "park") {
+      setCurrentGPS(
+        parseFloat(parkObject.latitude),
+        parseFloat(parkObject.longitude)
+      );
+    }
+  }
   // applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
 export const setSelectedEatery = (eateryObject) => {
   applicationState.currentItinerary.selectedEatery = eateryObject;
-  // applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+  fetchEateryLatLon(eateryInfo()).then(() => {
+    if (getCurrentSelectedWeather() === "eatery") {
+      setCurrentGPS(
+        getDirectionsLocations().eateryLocation[1],
+        getDirectionsLocations().eateryLocation[0]
+      );
+    }
+  });
 };
 
 export const setSelectedBizarrerie = (bizObject) => {
   applicationState.currentItinerary.selectedBizarrerie = bizObject;
+
+  fetchBizLatLon(bizInfo()).then(() => {
+    if (getCurrentSelectedWeather() === "bizarrerie") {
+      setCurrentGPS(
+        getDirectionsLocations().bizarrerieLocation[1],
+        getDirectionsLocations().bizarrerieLocation[0]
+      );
+    }
+  });
+
   // applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
 };
 
@@ -342,7 +363,6 @@ export const setDirectionsParkLocation = (inputLocation) => {
 };
 
 export const setDirectionsBizarrerieLocation = (inputLocation) => {
-  // console.log('biz loc 2', inputLocation)
   applicationState.directionsLocations.bizarrerieLocation = inputLocation;
   applicationState.directionsLocationsArray[1] = inputLocation;
 };
@@ -351,10 +371,6 @@ export const setDirectionsEateryLocation = (inputLocation) => {
   applicationState.directionsLocations.eateryLocation = inputLocation;
   applicationState.directionsLocationsArray[2] = inputLocation;
 };
-
-// export const setDirections = (data) => {
-//   applicationState.directions = data;
-// };
 
 export const setTravelOrder = (index, value) => {
   let travelOrder = getTravelOrder();
@@ -365,13 +381,12 @@ export const setTravelOrder = (index, value) => {
   }
   if (index !== -1) {
     applicationState.travelOrder[index] = value;
-    // console.log(applicationState.travelOrder);
   }
 };
 
 export const setCurrentSelectedWeather = (input) => {
   applicationState.currentSelectedWeather = input;
-}
+};
 
 export const sendItinerary = (currentItin) => {
   const fetchOptions = {
@@ -390,15 +405,13 @@ export const sendItinerary = (currentItin) => {
 };
 
 export const getData = (data) => {
-  return applicationState[data].map(arr =>({...arr}))
-}
-
-export const setData = (result,data) => {
-  applicationState[data] = result;
-
+  return applicationState[data].map((arr) => ({ ...arr }));
 };
-export const setSelected = (dataObject,toWhere) => {
-applicationState.currentItinerary[toWhere] = dataObject
-applicationElement.dispatchEvent(new CustomEvent("stateChanged"))
-}
 
+export const setData = (result, data) => {
+  applicationState[data] = result;
+};
+export const setSelected = (dataObject, toWhere) => {
+  applicationState.currentItinerary[toWhere] = dataObject;
+  applicationElement.dispatchEvent(new CustomEvent("stateChanged"));
+};

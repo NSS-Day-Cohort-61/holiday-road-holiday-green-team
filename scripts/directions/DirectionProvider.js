@@ -1,6 +1,5 @@
 import {
   getCurrentItinerary,
-  getDirectionsLocations,
   getDirections,
   getDirectionsLocationsArray,
   setTravelOrder,
@@ -23,22 +22,20 @@ export const eateryInfo = () => {
 
 export const bizInfo = () => {
   const currentItinerary = getCurrentItinerary();
-  let selectedBizarrerie = `${currentItinerary.selectedBizarrerie.city} ${currentItinerary.selectedBizarrerie.state}`;
-  return selectedBizarrerie.replaceAll(" ", "%20");
+  if (Object.keys(currentItinerary.selectedBizarrerie).length > 0) {
+    let selectedBizarrerie = `${currentItinerary.selectedBizarrerie.city} ${currentItinerary.selectedBizarrerie.state}`;
+    return selectedBizarrerie.replaceAll(" ", "%20");
+  }
 };
 
-export const setGPSLocations = () => {
-  const currentItinerary = getCurrentItinerary();
-
-  // console.dir(getDirectionsLocations());
-  const dirLoc = getDirectionsLocations();
-  const dirLocArray = [
-    dirLoc.parkLocation,
-    dirLoc.bizarrerieLocation,
-    dirLoc.eateryLocation,
-  ];
-  // console.log("dirLocArray", dirLocArray);
-};
+// export const setGPSLocations = () => {
+//   const dirLoc = getDirectionsLocations();
+//   const dirLocArray = [
+//     dirLoc.parkLocation,
+//     dirLoc.bizarrerieLocation,
+//     dirLoc.eateryLocation,
+//   ];
+// };
 
 const getLegsLengths = () => {
   const allDirections = getDirections();
@@ -51,8 +48,6 @@ const getLegsLengths = () => {
       legsLengths[1] += item.distance;
     }
   }
-  // console.log("directions1", allDirections[0]);
-  // console.log("directions2", allDirections[1]);
   return legsLengths;
 };
 
@@ -78,7 +73,6 @@ export const showDirections = () => {
     let outHTML = "";
     const legsLengths = getLegsLengths();
     let locationNames = ["", "", ""];
-    // let travelOrder = getTravelOrder();
     let parkName = getSelectedPark().fullName;
     let bizarrerieName = getSelectedBizarrerie().name;
     let eateryName = getSelectedEatery().businessName;
@@ -88,6 +82,7 @@ export const showDirections = () => {
       if (item === "e") locationNames[index] = eateryName;
     });
     let directions = allDirections[0];
+
     let index = 0;
     if (directions) {
       outHTML += `
@@ -135,7 +130,6 @@ export const showDirections = () => {
 // Directions Dropdown
 
 export const directionsDropdown = () => {
-  // const dirArr = [1, 2, 3];
   const letterArr = ["p", "b", "e"];
   const travelOrder = getTravelOrder();
   let html = "";
