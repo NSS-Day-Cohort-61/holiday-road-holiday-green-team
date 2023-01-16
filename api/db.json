@@ -1,4 +1,457 @@
 {
   "itineraries": [
+    {
+      "selectedPark": {
+        "id": "E6E1D22A-7A89-47F8-813C-B611059A8CF9",
+        "url": "https://www.nps.gov/afbg/index.htm",
+        "fullName": "African Burial Ground National Monument",
+        "parkCode": "afbg",
+        "description": "African Burial Ground is the oldest and largest known excavated burial ground in North America for both free and enslaved Africans. It protects the historic role slavery played in building New York",
+        "latitude": "40.71452681",
+        "longitude": "-74.00447358",
+        "latLong": "lat:40.71452681, long:-74.00447358",
+        "activities": [
+          {
+            "id": "09DF0950-D319-4557-A57E-04CD2F63FF42",
+            "name": "Arts and Culture"
+          },
+          {
+            "id": "B33DC9B6-0B7D-4322-BAD7-A13A34C584A3",
+            "name": "Guided Tours"
+          },
+          {
+            "id": "DF4A35E0-7983-4A3E-BC47-F37B872B0F25",
+            "name": "Junior Ranger Program"
+          },
+          {
+            "id": "0C0D142F-06B5-4BE1-8B44-491B90F93DEB",
+            "name": "Park Film"
+          },
+          {
+            "id": "C8F98B28-3C10-41AE-AA99-092B3B398C43",
+            "name": "Museum Exhibits"
+          },
+          {
+            "id": "24380E3F-AD9D-4E38-BF13-C8EEB21893E7",
+            "name": "Shopping"
+          },
+          {
+            "id": "467DC8B8-0B7D-436D-A026-80A22358F615",
+            "name": "Bookstore and Park Store"
+          }
+        ],
+        "topics": [
+          {
+            "id": "28AEAE85-9DDA-45B6-981B-1CFCDCC61E14",
+            "name": "African American Heritage"
+          },
+          {
+            "id": "7F81A0CB-B91F-4896-B9A5-41BE9A54A27B",
+            "name": "Archeology"
+          },
+          {
+            "id": "607D41B0-F830-4C07-A557-BCEF880A3929",
+            "name": "Burial, Cemetery and Gravesite"
+          },
+          {
+            "id": "7F12224B-217A-4B07-A4A2-636B1CE7F221",
+            "name": "Colonization and Settlement"
+          },
+          {
+            "id": "D9FC6D14-F8C7-4EBA-86EA-DFD99B6BB4F5",
+            "name": "Enslavement"
+          },
+          {
+            "id": "BEB7E470-13B2-4E00-84B2-0402D98DAF69",
+            "name": "Monuments and Memorials"
+          },
+          {
+            "id": "40C0866A-3890-41A4-84CA-5935DEE181AE",
+            "name": "Social Movements"
+          },
+          {
+            "id": "846E5C56-E5AC-489C-B3BF-11F4C73F12C2",
+            "name": "Urban America"
+          },
+          {
+            "id": "7DA81DAB-5045-4953-9C20-36590AD9FA95",
+            "name": "Women's History"
+          }
+        ],
+        "states": "NY",
+        "contacts": {
+          "phoneNumbers": [
+            {
+              "phoneNumber": "2122384367",
+              "description": "",
+              "extension": "",
+              "type": "Voice"
+            }
+          ],
+          "emailAddresses": [
+            {
+              "description": "",
+              "emailAddress": "african_burial_ground@nps.gov"
+            }
+          ]
+        },
+        "entranceFees": [
+          {
+            "cost": "0.00",
+            "description": "Admission to this park site is free of charge.",
+            "title": "Entrance Fee"
+          }
+        ],
+        "entrancePasses": [
+          {
+            "cost": "0.00",
+            "description": "There are no park-specific passes required or sold at this location.",
+            "title": "Park Specific Passes"
+          }
+        ],
+        "fees": [],
+        "directionsInfo": "The African Burial Ground National Monument is located on the first floor of the Ted Weiss Federal Building located at 290 Broadway in Lower Manhattan; close to Foley Square and just north of City Hall. Our visitor center is located mid-block on Broadway between the cross streets of Duane Street and Reade Streets.",
+        "directionsUrl": "http://www.nps.gov/afbg/planyourvisit/directions.htm",
+        "operatingHours": [
+          {
+            "exceptions": [
+              {
+                "exceptionHours": {
+                  "monday": "10:00AM - 4:00PM"
+                },
+                "startDate": "2023-05-30",
+                "name": "Memorial Day",
+                "endDate": "2023-05-30"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2023-11-24",
+                "name": "Thanksgiving Holiday Closure",
+                "endDate": "2023-11-24"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2024-01-01",
+                "name": "New Year's Day Closure",
+                "endDate": "2024-01-01"
+              },
+              {
+                "exceptionHours": {
+                  "monday": "10:00AM - 4:00PM"
+                },
+                "startDate": "2023-01-16",
+                "name": "Birthday of Dr. Martin Luther King, Jr.",
+                "endDate": "2023-01-16"
+              },
+              {
+                "exceptionHours": {
+                  "monday": "10:00AM - 4:00PM"
+                },
+                "startDate": "2023-02-20",
+                "name": "Washington's Birthday",
+                "endDate": "2023-02-20"
+              },
+              {
+                "exceptionHours": {
+                  "monday": "10:00AM - 4:00PM"
+                },
+                "startDate": "2023-06-19",
+                "name": "Juneteenth National Independence Day",
+                "endDate": "2023-06-19"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2023-07-04",
+                "name": "Independence Day Closure",
+                "endDate": "2023-07-04"
+              },
+              {
+                "exceptionHours": {
+                  "monday": "10:00AM - 4:00PM"
+                },
+                "startDate": "2023-09-04",
+                "name": "Labor Day",
+                "endDate": "2023-09-04"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2023-10-09",
+                "name": "Columbus Day Closure",
+                "endDate": "2023-10-09"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2023-12-25",
+                "name": "Christmas Holiday Closure",
+                "endDate": "2023-12-25"
+              }
+            ],
+            "description": "INDOOR VISITOR CENTER AND MUSEUM",
+            "standardHours": {
+              "wednesday": "10:00AM - 4:00PM",
+              "monday": "Closed",
+              "thursday": "10:00AM - 4:00PM",
+              "sunday": "Closed",
+              "tuesday": "10:00AM - 4:00PM",
+              "friday": "10:00AM - 4:00PM",
+              "saturday": "10:00AM - 4:00PM"
+            },
+            "name": "INDOOR VISITOR CENTER AND MUSEUM"
+          },
+          {
+            "exceptions": [
+              {
+                "exceptionHours": {
+                  "monday": "10:00AM - 4:00PM"
+                },
+                "startDate": "2023-05-30",
+                "name": "Memorial Day",
+                "endDate": "2023-05-30"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2023-11-24",
+                "name": "Thanksgiving Holiday Closure",
+                "endDate": "2023-11-24"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2024-01-01",
+                "name": "New Year's Day Closure",
+                "endDate": "2024-01-01"
+              },
+              {
+                "exceptionHours": {
+                  "monday": "10:00AM - 4:00PM"
+                },
+                "startDate": "2023-01-16",
+                "name": "Birthday of Dr. Martin Luther King, Jr.",
+                "endDate": "2023-01-16"
+              },
+              {
+                "exceptionHours": {
+                  "monday": "10:00AM - 4:00PM"
+                },
+                "startDate": "2023-02-20",
+                "name": "Washington's Birthday",
+                "endDate": "2023-02-20"
+              },
+              {
+                "exceptionHours": {
+                  "monday": "10:00AM - 4:00PM"
+                },
+                "startDate": "2023-06-19",
+                "name": "Juneteenth National Independence Day",
+                "endDate": "2023-06-19"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2023-07-04",
+                "name": "Independence Day Closure",
+                "endDate": "2023-07-04"
+              },
+              {
+                "exceptionHours": {
+                  "monday": "10:00AM - 4:00PM"
+                },
+                "startDate": "2023-09-04",
+                "name": "Labor Day",
+                "endDate": "2023-09-04"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2023-10-09",
+                "name": "Columbus Day Closure",
+                "endDate": "2023-10-09"
+              },
+              {
+                "exceptionHours": {
+                  "wednesday": "Closed",
+                  "monday": "Closed",
+                  "thursday": "Closed",
+                  "sunday": "Closed",
+                  "tuesday": "Closed",
+                  "friday": "Closed",
+                  "saturday": "Closed"
+                },
+                "startDate": "2023-12-25",
+                "name": "Christmas Holiday Closure",
+                "endDate": "2023-12-25"
+              }
+            ],
+            "description": "OUTDOOR MEMORIAL",
+            "standardHours": {
+              "wednesday": "10:00AM - 4:00PM",
+              "monday": "Closed",
+              "thursday": "10:00AM - 4:00PM",
+              "sunday": "Closed",
+              "tuesday": "10:00AM - 4:00PM",
+              "friday": "10:00AM - 4:00PM",
+              "saturday": "10:00AM - 4:00PM"
+            },
+            "name": "OUTDOOR MEMORIAL"
+          }
+        ],
+        "addresses": [
+          {
+            "postalCode": "10007",
+            "city": "New York",
+            "stateCode": "NY",
+            "line1": "African Burial Ground National Monument",
+            "type": "Physical",
+            "line3": "1st Floor",
+            "line2": "290 Broadway"
+          },
+          {
+            "postalCode": "10005",
+            "city": "New York",
+            "stateCode": "NY",
+            "line1": "African Burial Ground NM",
+            "type": "Mailing",
+            "line3": "26 Wall St",
+            "line2": "C/O Federal Hall National Memorial"
+          }
+        ],
+        "images": [
+          {
+            "credit": "NPS Photo",
+            "title": "African Burial Ground Memorial",
+            "altText": "African Burial Ground Memorial",
+            "caption": "African Burial Ground Memorial",
+            "url": "https://www.nps.gov/common/uploads/structured_data/3C8554EA-1DD8-B71B-0BE6FF3BF04C18B8.jpg"
+          },
+          {
+            "credit": "NPS Photo",
+            "title": "Visitor Center Entrance",
+            "altText": "Entrance to visitor center with four banners above doorway.",
+            "caption": "Entrance to the African Burial Ground National Monument visitor center.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/7DD7997F-1DD8-B71B-0B31BFA87CFF6B77.jpg"
+          },
+          {
+            "credit": "NPS Photo",
+            "title": "Outdoor Memorial Entrance",
+            "altText": "Outdoor memorial entrance with closed gate.",
+            "caption": "Outdoor memorial entrance with closed gate.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/7DE9E906-1DD8-B71B-0BE6C87ADBA53620.jpg"
+          },
+          {
+            "credit": "NPS Photo",
+            "title": "Memorial's circle of diaspora.",
+            "altText": "Memorial's circle of diaspora.",
+            "caption": "Memorial's circle of diaspora.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/7DF18622-1DD8-B71B-0BC858B0C844569E.jpg"
+          },
+          {
+            "credit": "NPS Photo",
+            "title": "Exhibits within visitor center.",
+            "altText": "Exhibits within visitor center.",
+            "caption": "Exhibits within visitor center.",
+            "url": "https://www.nps.gov/common/uploads/structured_data/7DF85D09-1DD8-B71B-0BAB5B558B9CEAA9.jpg"
+          }
+        ],
+        "weatherInfo": "http://forecast.weather.gov/MapClick.php?CityName=New+York&state=NY&site=OKX&lat=40.7198&lon=-73.993#.Vqj8OvkrJlZ",
+        "name": "African Burial Ground",
+        "designation": "National Monument"
+      },
+      "selectedEatery": {
+        "businessName": "DeLuca's",
+        "description": "Pittsburgh is the steel city in a state full of proud, hardworking people, and at DeLuca's you can eat like you just got off work at the steel factory, even if you work as a social media manager for a brand of paper towels. Of course, you'll have to wait in line, as this is a hungry city. Inside, you're greeted with spacious, uncomfortable booths, gaudy tiled floors, and a lunch counter you'd expect in a greasy spoon from the '50s. The menu is enormous: it serves up a million different types of omelets, a calorie-bomb burrito called the MOAB (Mother of All Burritos), pancakes, and crepes. Even a social media manager's gotta eat.",
+        "state": "PA",
+        "city": "Pittsburgh",
+        "id": 40,
+        "ameneties": {
+          "wheelchairAccessible": true,
+          "petFriendly": false,
+          "wifi": false,
+          "diaperFacility": true,
+          "playground": true,
+          "restrooms": true
+        }
+      },
+      "selectedBizarrerie": {
+        "id": 21,
+        "name": "Ouija Board Inventor’s Tombstone",
+        "city": "Baltimore",
+        "state": "MD",
+        "description": "Carved into the back of Elijah Jefferson Bond’s tombstone is a Ouija Board with the traditional “yes” and “no” in the left and right corners. It’s the perfect spot to snap a cool Instagram or build your Tumblr aesthetic.",
+        "ameneties": {
+          "souvenirs": false,
+          "restrooms": false
+        }
+      },
+      "id": 1
+    }
   ]
 }
