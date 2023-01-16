@@ -81,8 +81,8 @@ export const showDirections = () => {
       if (item === "b") locationNames[index] = bizarrerieName;
       if (item === "e") locationNames[index] = eateryName;
     });
-    let directions = allDirections[0];
 
+    let directions = allDirections[0];
     let index = 0;
     if (directions) {
       outHTML += `
@@ -104,22 +104,24 @@ export const showDirections = () => {
       directions = allDirections[1];
       index = 1;
 
-      outHTML += `
-        <p>Distance: ${Math.round(legsLengths[index] * 0.000621371)} miles</p>
-        <div id="instructions">
-        
-        ${directions
-          .map((direction) => {
-            return `
-          <p class="dir-text">${direction.text}</p>
-          <p class="bold">${
-            Math.round(direction.distance * 0.000621371 * 10) / 10
-          } miles</p> 
-          `;
-          })
-          .join("")}
-          </div><h3>Arrive at ${locationNames[index + 1]}</h3>
-      `;
+      if (directions.length > 0) {
+        outHTML += `
+          <p>Distance: ${Math.round(legsLengths[index] * 0.000621371)} miles</p>
+          <div id="instructions">
+          
+          ${directions
+            .map((direction) => {
+              return `
+            <p class="dir-text">${direction.text}</p>
+            <p class="bold">${
+              Math.round(direction.distance * 0.000621371 * 10) / 10
+            } miles</p> 
+            `;
+            })
+            .join("")}
+            </div><h3>Arrive at ${locationNames[index + 1]}</h3>
+        `;
+      }
     }
     return outHTML;
   } else {
