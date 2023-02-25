@@ -176,33 +176,3 @@ https://graphhopper.com/api/1/route?point=starting_latitude,starting_longitude&p
    * Left aligned text
 7. Strive for consistency.
 8. Use semantic and valid HTML: validator at [https://validator.w3.org/](https://validator.w3.org/).
-
-## Personas
-
-### Anna
-
-![](./personas/persona-anna.png)
-
-### Betsy
-
-![](./personas/persona-betsy.png)
-
-### Brittany
-
-![](./personas/persona-brittany.png)
-
-### Caroline
-
-![](./personas/persona-caroline.png)
-
-## Charles
-
-![](./personas/persona-charles.png)
-
-### Jake
-
-![](./personas/persona-jake.png)
-
-### Peter
-
-![](./personas/persona-peter.png)
