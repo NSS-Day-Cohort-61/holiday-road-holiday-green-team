@@ -1,7 +1,7 @@
 # Holiday Road
 ### by Alex Fun, John Roberts, and Chris Hanson
 
-Holiday Road is a showcase of the Front-End developer skills we've been learning in Nashville Software School's Web Developer Bootcamp. 
+Holiday Road is a showcase of the front-end developer skills we've learned so far in Nashville Software School's Web Developer Bootcamp. 
 It was made with JavaScript, HTML and CSS.
 This project was organized with GitHub Projects and and was an education in the collaborative experience of working together in GitHub: issuing and assigning tickets, managing and approving pull requests, and keeping source code synced properly throughout the process.
 
