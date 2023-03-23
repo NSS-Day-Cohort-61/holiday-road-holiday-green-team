@@ -164,7 +164,7 @@ export const setDirections = (data) => {
 
 export const fetchEateryLatLon = (address) => {
   if (address !== 0) {
-    const googleURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyDxxzn9JmF-yYhjwJG3XkGjWVU94pCEzI8`;
+    const googleURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${keys.googleMapsKey}`;
 
     if (
       Object.keys(applicationState.currentItinerary.selectedEatery).length > 0
@@ -188,7 +188,7 @@ export const fetchEateryLatLon = (address) => {
 };
 
 export const fetchBizLatLon = (address) => {
-  const googleURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyDxxzn9JmF-yYhjwJG3XkGjWVU94pCEzI8`;
+  const googleURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${keys.googleMapsKey}`;
   if (address) {
     return fetch(`${googleURL}`)
       .then((response) => response.json())
@@ -206,7 +206,7 @@ export const fetchBizLatLon = (address) => {
 export const fetchGPSCityName = () => {
   let googleURL = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${
     getCurrentGPS().lat
-  },${getCurrentGPS().lon}&key=AIzaSyDxxzn9JmF-yYhjwJG3XkGjWVU94pCEzI8`;
+  },${getCurrentGPS().lon}&key=${keys.googleMapsKey}`;
 
   return fetch(`${googleURL}`)
     .then((response) => response.json())
